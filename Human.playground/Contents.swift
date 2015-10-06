@@ -35,5 +35,79 @@ class Ears: BodyPart
     }
 }
 
+class Nose: BodyPart
+{
+    
+}
 
+class Mouth: BodyPart {
+    <#properties and methods#>
+}
 
+class Head: BodyPart {
+    <#properties and methods#>
+}
+
+class Legs: BodyPart {
+    
+}
+
+class Eyes: BodyPart {
+    <#properties and methods#>
+}
+
+class Hands: BodyPart {
+    <#properties and methods#>
+}
+
+class Brain: BodyPart {
+    <#properties and methods#>
+}
+
+class Neck: BodyPart {
+    <#properties and methods#>
+}
+
+class Torso: BodyPart {
+    
+}
+
+class Knees: BodyPart{
+    
+}
+
+class Navel: BodyPart {
+    
+}
+
+class Back: BodyPart {
+    
+}
+
+class Abdomen: BodyPart {
+    
+}
+
+class Hips: BodyPart {
+    
+}
+
+class Stomach: BodyPart {
+    
+}
+
+class Chin: BodyPart {
+    
+}
+
+class Heart: BodyPart {
+    
+}
+
+class Intestines: BodyPart {
+    
+}
+
+class Liver: BodyPart {
+    
+}
