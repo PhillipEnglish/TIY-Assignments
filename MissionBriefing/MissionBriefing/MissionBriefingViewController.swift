@@ -11,9 +11,9 @@ import UIKit
 class MissionBriefingViewController: UIViewController
 {
     // Place IBOutlet properties below
-    @IBOutlet var agentName = UITextField!
-    @IBOutlet var agentPassWord = UITextField!
-    @IBOutlet var 
+    @IBOutlet var agentName : UITextField!
+    @IBOutlet var agentPassWord : UITextField!
+    @IBOutlet var agentLabel : UILabel!
     
     override func viewDidLoad()
     {
