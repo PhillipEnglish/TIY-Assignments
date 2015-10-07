@@ -27,11 +27,11 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KmO-Yw-Ye5">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KmO-Yw-Ye5">
                                 <rect key="frame" x="256" y="120" width="88" height="30"/>
                                 <state key="normal" title="Authenticate"/>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BrQ-yb-8TZ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BrQ-yb-8TZ">
                                 <rect key="frame" x="279" y="158" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -63,8 +63,6 @@
                             <constraint firstItem="KmO-Yw-Ye5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HSv-nZ-Nj3"/>
                             <constraint firstItem="pZV-sm-YK5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Iei-lP-OC9"/>
                             <constraint firstItem="BrQ-yb-8TZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MiF-Tb-R0c"/>
-                            <constraint firstItem="fjL-yp-QUO" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="OeS-ju-hBj"/>
-                            <constraint firstItem="fjL-yp-QUO" firstAttribute="top" secondItem="BrQ-yb-8TZ" secondAttribute="bottom" constant="24" id="RSv-qb-qcp"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="fjL-yp-QUO" secondAttribute="bottom" constant="367" id="SUX-rQ-ml9"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="9dg-81-xnZ" secondAttribute="bottom" constant="494" id="U1R-IO-D1K"/>
                             <constraint firstItem="BrQ-yb-8TZ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="hse-hb-DhI"/>
