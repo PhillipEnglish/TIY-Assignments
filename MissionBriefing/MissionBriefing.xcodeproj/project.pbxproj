@@ -12,6 +12,7 @@
 		C346394E1BC57C3900C43422 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C346394C1BC57C3900C43422 /* Main.storyboard */; };
 		C34639501BC57C3900C43422 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C346394F1BC57C3900C43422 /* Assets.xcassets */; };
 		C34639531BC57C3900C43422 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C34639511BC57C3900C43422 /* LaunchScreen.storyboard */; };
+		C346395D1BC5AB6900C43422 /* TIYLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = C346395C1BC5AB6900C43422 /* TIYLogo.png */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		C346394F1BC57C3900C43422 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C34639521BC57C3900C43422 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C34639541BC57C3900C43422 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C346395C1BC5AB6900C43422 /* TIYLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = TIYLogo.png; path = "../../../2015--FALL--iOS/03--Good-Morning-Agent-Hunt/images/TIYLogo.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 		C34639471BC57C3900C43422 /* MissionBriefing */ = {
 			isa = PBXGroup;
 			children = (
+				C346395C1BC5AB6900C43422 /* TIYLogo.png */,
 				C34639481BC57C3900C43422 /* AppDelegate.swift */,
 				C346394A1BC57C3900C43422 /* MissionBriefingViewController.swift */,
 				C346394C1BC57C3900C43422 /* Main.storyboard */,
@@ -122,6 +125,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C34639531BC57C3900C43422 /* LaunchScreen.storyboard in Resources */,
+				C346395D1BC5AB6900C43422 /* TIYLogo.png in Resources */,
 				C34639501BC57C3900C43422 /* Assets.xcassets in Resources */,
 				C346394E1BC57C3900C43422 /* Main.storyboard in Resources */,
 			);
