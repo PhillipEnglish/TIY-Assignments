@@ -31,19 +31,35 @@
                                 <rect key="frame" x="256" y="120" width="88" height="30"/>
                                 <state key="normal" title="Authenticate"/>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9dg-81-xnZ">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9dg-81-xnZ">
                                 <rect key="frame" x="60" y="76" width="480" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" text="Hello    adg;lkgjad;lhjga;ldkj;aljkgh;lakjh;lafdgjda;gl" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="VvI-yL-kgc">
-                                <rect key="frame" x="60" y="277" width="480" height="77"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="TIYLogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="yfR-H8-nje">
                                 <rect key="frame" x="180" y="339" width="240" height="195"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gfJ-uC-5ad">
+                                <rect key="frame" x="279" y="158" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" text="Hello    adg;lkgjad;lhjga;ldkj;aljkgh;lakjh;lafdgjda;gl" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="VvI-yL-kgc">
+                                <rect key="frame" x="0.0" y="170" width="600" height="0.0"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="FZ3-MU-STA"/>
+                                    <constraint firstAttribute="width" constant="90" id="yzO-e8-jAB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="FZ3-MU-STA"/>
+                                        <exclude reference="yzO-e8-jAB"/>
+                                    </mask>
+                                </variation>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -51,10 +67,12 @@
                             <constraint firstItem="9dg-81-xnZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5EV-GF-Dwr"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="9Nd-dX-xSR" secondAttribute="bottom" constant="532" id="64P-Lf-2ZM"/>
                             <constraint firstItem="9Nd-dX-xSR" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="BRZ-vB-lfg"/>
+                            <constraint firstItem="gfJ-uC-5ad" firstAttribute="top" secondItem="KmO-Yw-Ye5" secondAttribute="bottom" id="FEe-VY-M3d"/>
                             <constraint firstItem="KmO-Yw-Ye5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HSv-nZ-Nj3"/>
                             <constraint firstItem="VvI-yL-kgc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Q3C-Ni-l2y"/>
                             <constraint firstItem="yfR-H8-nje" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TZp-bb-jgl"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="9dg-81-xnZ" secondAttribute="bottom" constant="494" id="U1R-IO-D1K"/>
+                            <constraint firstItem="yfR-H8-nje" firstAttribute="top" secondItem="VvI-yL-kgc" secondAttribute="bottom" constant="24" id="d4u-ia-gRJ"/>
                             <constraint firstItem="9Nd-dX-xSR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ieA-86-HEh"/>
                             <constraint firstItem="p5z-tg-R1O" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="jMA-wU-cdg"/>
                             <constraint firstItem="9dg-81-xnZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jVN-uY-OAx"/>
@@ -64,12 +82,21 @@
                             <constraint firstItem="VvI-yL-kgc" firstAttribute="width" secondItem="9dg-81-xnZ" secondAttribute="width" id="nG7-D3-xd3"/>
                             <constraint firstItem="9Nd-dX-xSR" firstAttribute="top" secondItem="p5z-tg-R1O" secondAttribute="bottom" constant="8" id="s5r-Ez-XuP"/>
                             <constraint firstItem="9dg-81-xnZ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="toI-iq-5pR"/>
+                            <constraint firstItem="gfJ-uC-5ad" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uX6-4R-F03"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="jMA-wU-cdg"/>
                                 <exclude reference="BRZ-vB-lfg"/>
+                                <exclude reference="5EV-GF-Dwr"/>
+                                <exclude reference="jVN-uY-OAx"/>
+                                <exclude reference="kVP-tt-XxK"/>
                                 <exclude reference="toI-iq-5pR"/>
+                                <exclude reference="Q3C-Ni-l2y"/>
+                                <exclude reference="nG7-D3-xd3"/>
+                                <exclude reference="FEe-VY-M3d"/>
+                                <exclude reference="d4u-ia-gRJ"/>
+                                <exclude reference="U1R-IO-D1K"/>
                             </mask>
                         </variation>
                     </view>
