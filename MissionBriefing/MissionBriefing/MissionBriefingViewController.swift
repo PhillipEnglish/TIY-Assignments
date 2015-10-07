@@ -14,6 +14,7 @@ class MissionBriefingViewController: UIViewController
     @IBOutlet var agentName : UITextField!
     @IBOutlet var agentPassWord : UITextField!
     @IBOutlet var agentLabel : UILabel!
+    @IBOutlet var authenticateButton: UIButton!
     
     override func viewDidLoad()
     {
@@ -41,9 +42,9 @@ class MissionBriefingViewController: UIViewController
     @IBAction func authenticateAgent(sender: UIButton)
     {
         // This will cause the keyboard to dismiss when the authenticate button is tapped
-        if <#name text field property identifier goes here#>.isFirstResponder
+        if authenticateButton.isFirstResponder
         {
-            <#name text field property identifier goes here#>.resignFirstResponder
+            authenticateButton.resignFirstResponder
         }
         
         //

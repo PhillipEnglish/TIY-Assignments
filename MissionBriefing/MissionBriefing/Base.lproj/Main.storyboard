@@ -30,6 +30,9 @@
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KmO-Yw-Ye5">
                                 <rect key="frame" x="256" y="120" width="88" height="30"/>
                                 <state key="normal" title="Authenticate"/>
+                                <connections>
+                                    <action selector="authenticateAgent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IRV-Fs-iNV"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9dg-81-xnZ">
                                 <rect key="frame" x="60" y="76" width="480" height="30"/>
@@ -115,6 +118,7 @@
                         <outlet property="agentLabel" destination="gfJ-uC-5ad" id="31q-lO-OIm"/>
                         <outlet property="agentName" destination="9Nd-dX-xSR" id="vXi-IW-VAe"/>
                         <outlet property="agentPassWord" destination="9dg-81-xnZ" id="O5g-H7-7yA"/>
+                        <outlet property="authenticateButton" destination="KmO-Yw-Ye5" id="7tW-Iu-bv1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
