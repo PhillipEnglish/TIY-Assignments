@@ -24,6 +24,9 @@ class MissionBriefingViewController: UIViewController
         // 3. The three UI elements need to be emptied on launch
         //    Hint: there is a string literal that represents empty
         //
+        agentName.text = ""
+        agentPassWord.text = ""
+        agentLabel.text = ""
         
     }
     
