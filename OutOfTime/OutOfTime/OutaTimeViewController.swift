@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  OutaTimeViewController.swift
 //  OutOfTime
 //
 //  Created by Phillip English on 10/8/15.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class OutaTimeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
