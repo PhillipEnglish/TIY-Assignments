@@ -50,9 +50,19 @@ class MissionBriefingViewController: UIViewController
         //
         // 4. Check whether there is text in BOTH the name and password textfields
         //
-        if (agentName.text  != nil) && (agentPassWord.text != nil)
-
+        func authentication() ->Bool
         {
+            var rc = false
+        
+        if (agentName.text  != nil) && (agentPassWord.text != nil)
+         {
+            let nameOfAgent = agentName.text
+            rc = true
+            let nameSplit = nameOfAgent!.characters.split(" ").map { String($0) }
+            let lastName = nameSplit[1]
+         
+
+        
             //
             // 5. The greeting label needs to be populated with the the string "Good evening, Agent #", where # is the last name of
             //    the agent logging in. The agent's full name is listed in the text field, but you need to pull out just the last
@@ -60,8 +70,7 @@ class MissionBriefingViewController: UIViewController
             //    Strings". You should be able to find a method that allows you to break up a string using a delimiter. In our case,
             //    the delimiter would be a space character.
             //
-           
-            
+            agentLabel.text = "Good evening, Agent\(lastName)"
             
             
             
@@ -72,6 +81,7 @@ class MissionBriefingViewController: UIViewController
             //    How would you inject that last name into the paragraph of the mission briefing?
             //    Set the textview text property to the paragraph in "MissionBriefing.txt"
             //
+            
             
             
             
@@ -90,7 +100,7 @@ class MissionBriefingViewController: UIViewController
             
             
             
-            
+            }
             
         }
         else
