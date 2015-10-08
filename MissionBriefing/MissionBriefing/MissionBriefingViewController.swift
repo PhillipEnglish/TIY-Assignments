@@ -42,9 +42,9 @@ class MissionBriefingViewController: UIViewController
     @IBAction func authenticateAgent(sender: UIButton)
     {
         // This will cause the keyboard to dismiss when the authenticate button is tapped
-        if agentName.isFirstResponder
+        if agentName.isFirstResponder()
         {
-            agentName.resignFirstResponder
+            agentName.resignFirstResponder()
         }
         
         //
