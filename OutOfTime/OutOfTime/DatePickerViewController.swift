@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DatePickerViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
+class DatePickerViewController: UIViewController //UIPickerViewDataSource, UIPickerViewDelegate
 {
     
     

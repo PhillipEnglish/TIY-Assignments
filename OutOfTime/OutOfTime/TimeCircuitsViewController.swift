@@ -1,5 +1,5 @@
 //
-//  OutaTimeViewController.swift
+//  TimeCircuitsViewController.swift
 //  OutOfTime
 //
 //  Created by Phillip English on 10/8/15.
@@ -8,7 +8,12 @@
 
 import UIKit
 
-class OutaTimeViewController: UIViewController {
+class TimeCircuitsViewController: UIViewController {
+    
+    @IBOutlet var destinationTimeLabel: UILabel!
+    @IBOutlet var presentTimeLabel: UILabel!
+    @IBOutlet var lastTimeDepartedLabel: UILabel!
+    @IBOutlet var speedLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
