@@ -14,6 +14,12 @@ class TimeCircuitsViewController: UIViewController {
     @IBOutlet var presentTimeLabel: UILabel!
     @IBOutlet var lastTimeDepartedLabel: UILabel!
     @IBOutlet var speedLabel: UILabel!
+    
+    let dateFormatter = NSDateFormatter()
+    
+    func formatTheDate() {
+    dateFormatter.dateStyle = NSDateFormatterStyle.MediumStyle
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
