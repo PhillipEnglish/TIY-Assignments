@@ -14,7 +14,7 @@ class TimeCircuitsViewController: UIViewController {
     @IBOutlet var presentTimeLabel: UILabel!
     @IBOutlet var lastTimeDepartedLabel: UILabel!
     @IBOutlet var speedLabel: UILabel!
-    //var dateString = "\(formatThe)"
+    var currentSpeed = 0
     
     func formatTheDate (cDate: NSDate) -> String
     {
@@ -31,6 +31,8 @@ class TimeCircuitsViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     //presentTimeLabel.text = STRING(formatTheDate()
         presentTimeLabel.text = formatTheDate(NSDate())
+        speedLabel.text = "\(currentSpeed)"
+        lastTimeDepartedLabel.text = formatTheDate(NSDate())  //Come back to this and possibly re-write.
     }
 
     override func didReceiveMemoryWarning()
