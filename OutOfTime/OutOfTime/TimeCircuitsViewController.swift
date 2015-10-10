@@ -14,23 +14,32 @@ class TimeCircuitsViewController: UIViewController {
     @IBOutlet var presentTimeLabel: UILabel!
     @IBOutlet var lastTimeDepartedLabel: UILabel!
     @IBOutlet var speedLabel: UILabel!
+    //var dateString = "\(formatThe)"
     
+    func formatTheDate (cDate: NSDate) -> String
+    {
     let dateFormatter = NSDateFormatter()
-    
-    func formatTheDate() {
-    dateFormatter.dateStyle = NSDateFormatterStyle.MediumStyle
+    dateFormatter.dateFormat = NSDateFormatter.dateFormatFromTemplate("MMM dd yyyy", options: 0, locale: NSLocale(localeIdentifier: "en-US"))
+        let currentDate = dateFormatter.stringFromDate(cDate).uppercaseString
+        
+        return String(currentDate)
     }
-
-    override func viewDidLoad() {
+    
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+    //presentTimeLabel.text = STRING(formatTheDate()
+        presentTimeLabel.text = formatTheDate(NSDate())
     }
 
-    override func didReceiveMemoryWarning() {
+    override func didReceiveMemoryWarning()
+    {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 
-
+  
+    
 }
 
