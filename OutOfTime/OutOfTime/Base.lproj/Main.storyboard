@@ -12,7 +12,7 @@
         </mutableArray>
     </customFonts>
     <scenes>
-        <!--Time Circuits View Controller-->
+        <!--OutaTime-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="TimeCircuitsViewController" customModule="OutOfTime" customModuleProvider="target" sceneMemberID="viewController">
@@ -110,7 +110,7 @@
                             <constraint firstItem="87j-xL-xCg" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="zeS-Ht-V1u"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="O9F-1I-LTl"/>
+                    <navigationItem key="navigationItem" title="OutaTime" id="Buu-em-5vH"/>
                     <connections>
                         <outlet property="destinationTimeLabel" destination="aL6-Aq-pOq" id="agW-qu-0z6"/>
                         <outlet property="lastTimeDepartedLabel" destination="Bdx-hn-vw8" id="U0t-oI-JRZ"/>

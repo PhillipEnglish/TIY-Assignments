@@ -8,10 +8,10 @@
 
 import UIKit
 
-class DatePickerViewController: UIViewController //UIPickerViewDataSource, UIPickerViewDelegate
+class DatePickerViewController: UIViewController //, UIPickerViewDataSource, UIPickerViewDelegate
 {
-    
-    
+    @IBOutlet var picker: UIPickerView!
+    var delegate: DatePickerDelegate?
     
  
     override func viewDidLoad()
@@ -32,6 +32,14 @@ class DatePickerViewController: UIViewController //UIPickerViewDataSource, UIPic
         // Dispose of any resources that can be recreated.
     }
     
- 
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
+    {
+        if segue.identifier == "ShowDatePickerSegue"
+        {
+            let datePickerVC = segue.destinationViewController
+                as! DatePickerViewController
+            datePickerVC.delegate = self
+        }
+    }
     
 }

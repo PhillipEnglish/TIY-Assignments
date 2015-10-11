@@ -8,6 +8,11 @@
 
 import UIKit
 
+@objc protocol DatePickerDelegate
+{
+    func dateWasChosen(chosenDate: NSDate)
+}
+
 class TimeCircuitsViewController: UIViewController {
     
     @IBOutlet var destinationTimeLabel: UILabel!
@@ -39,6 +44,15 @@ class TimeCircuitsViewController: UIViewController {
     {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
+    {
+        if segue.identifier == "ShowDatePickerSegue"
+        {
+          let datePickerVC = segue.destinationViewController as! DatePickerViewController
+            datePickerVC.delegate = self
+        }
     }
 
   
