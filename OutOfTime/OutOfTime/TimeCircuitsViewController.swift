@@ -13,7 +13,9 @@ import UIKit
     func dateWasChosen(chosenDate: NSDate)
 }
 
-class TimeCircuitsViewController: UIViewController {
+class TimeCircuitsViewController: UIViewController, DatePickerDelegate
+
+{
     
     @IBOutlet var destinationTimeLabel: UILabel!
     @IBOutlet var presentTimeLabel: UILabel!
@@ -55,7 +57,14 @@ class TimeCircuitsViewController: UIViewController {
         }
     }
 
-  
+  // MARK: DatePicker Delegate
+    func dateWasChosen(chosenDate: NSDate)
+    {
+        destinationTimeLabel.text = formatTheDate(chosenDate)
+    }
+    
+    
+    
     
 }
 

@@ -8,10 +8,12 @@
 
 import UIKit
 
-class DatePickerViewController: UIViewController //, UIPickerViewDataSource, UIPickerViewDelegate
+class DatePickerViewController: UIViewController
 {
-    @IBOutlet var picker: UIPickerView!
+    
+    @IBOutlet weak var picker: UIDatePicker!
     var delegate: DatePickerDelegate?
+  
     
  
     override func viewDidLoad()
@@ -24,6 +26,8 @@ class DatePickerViewController: UIViewController //, UIPickerViewDataSource, UIP
     {
         super.viewWillDisappear(animated)
       //  delegate?.timerWasChosen(60-picker.selectedRowInComponent(0))
+        //delegate?.dateWasChosen(picker.date)
+        delegate?.dateWasChosen(picker.date)
     }
     
     override func didReceiveMemoryWarning()
@@ -32,14 +36,6 @@ class DatePickerViewController: UIViewController //, UIPickerViewDataSource, UIP
         // Dispose of any resources that can be recreated.
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
-    {
-        if segue.identifier == "ShowDatePickerSegue"
-        {
-            let datePickerVC = segue.destinationViewController
-                as! DatePickerViewController
-            datePickerVC.delegate = self
-        }
-    }
+  
     
 }

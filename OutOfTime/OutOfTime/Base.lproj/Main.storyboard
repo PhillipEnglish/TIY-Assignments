@@ -150,6 +150,10 @@
                             <constraint firstItem="Sqn-Q6-luw" firstAttribute="top" secondItem="UE8-B0-f5J" secondAttribute="bottom" constant="128" id="vwx-ov-gil"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="dPicker" destination="Sqn-Q6-luw" id="5Se-C0-4fQ"/>
+                        <outlet property="picker" destination="Sqn-Q6-luw" id="Lea-eI-pfF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5E8-ZN-7l9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
