@@ -22,6 +22,7 @@ class TimeCircuitsViewController: UIViewController, DatePickerDelegate
     @IBOutlet var lastTimeDepartedLabel: UILabel!
     @IBOutlet var speedLabel: UILabel!
     var currentSpeed = 0
+    var timer : NSTimer?
     
     func formatTheDate (cDate: NSDate) -> String
     {
@@ -64,6 +65,45 @@ class TimeCircuitsViewController: UIViewController, DatePickerDelegate
     }
     
     
+    // MARK: Action Handlers
+    
+    @IBAction func travelBackTapped(sender: UIButton)
+    {
+        startTimer()
+    }
+    
+    // MARK: Private functions
+    
+    private func startTimer()
+    {
+        if timer == nil
+        {
+            timer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: "updateSpeedLabel", userInfo: nil, repeats: true)
+        }
+    }
+    
+    private func stopTimer() //Taken completely from Ben's countdown code. Is there a more original way to do this?
+    {
+        timer?.invalidate()
+        timer = nil
+    }
+    
+    func updateSpeedLabel()
+    {
+        if currentSpeed != 88
+        {
+            currentSpeed += 1
+            speedLabel.text = String(currentSpeed)
+        }
+        
+        else
+        
+        {
+            lastTimeDepartedLabel.text = presentTimeLabel.text
+            presentTimeLabel.text = destinationTimeLabel.text
+            currentSpeed = 0
+        }
+    }
     
     
 }

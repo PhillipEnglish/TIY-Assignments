@@ -78,6 +78,9 @@
                                 <rect key="frame" x="236" y="530" width="129" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="TRAVEL BACK"/>
+                                <connections>
+                                    <action selector="travelBackTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2hZ-hI-XW3"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="JAN 01 2000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aL6-Aq-pOq">
                                 <rect key="frame" x="199" y="66" width="203" height="41"/>
@@ -151,7 +154,6 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="dPicker" destination="Sqn-Q6-luw" id="5Se-C0-4fQ"/>
                         <outlet property="picker" destination="Sqn-Q6-luw" id="Lea-eI-pfF"/>
                     </connections>
                 </viewController>
