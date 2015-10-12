@@ -8,20 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		C35918CC1BCC344F00329DC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35918CB1BCC344F00329DC6 /* AppDelegate.swift */; };
-		C35918CE1BCC344F00329DC6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35918CD1BCC344F00329DC6 /* ViewController.swift */; };
 		C35918D11BCC344F00329DC6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C35918CF1BCC344F00329DC6 /* Main.storyboard */; };
 		C35918D31BCC344F00329DC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C35918D21BCC344F00329DC6 /* Assets.xcassets */; };
 		C35918D61BCC344F00329DC6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C35918D41BCC344F00329DC6 /* LaunchScreen.storyboard */; };
+		C35918E01BCC3A2600329DC6 /* HeroTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35918DF1BCC3A2600329DC6 /* HeroTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		C35918E21BCC3AB200329DC6 /* HeroDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35918E11BCC3AB200329DC6 /* HeroDetailViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C35918C81BCC344F00329DC6 /* HeroTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeroTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C35918CB1BCC344F00329DC6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C35918CD1BCC344F00329DC6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C35918D01BCC344F00329DC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C35918D21BCC344F00329DC6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C35918D51BCC344F00329DC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C35918D71BCC344F00329DC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C35918DF1BCC3A2600329DC6 /* HeroTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HeroTableViewController.swift; path = ../HeroTableViewController.swift; sourceTree = "<group>"; };
+		C35918E11BCC3AB200329DC6 /* HeroDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,9 +56,10 @@
 		C35918CA1BCC344F00329DC6 /* HeroTracker */ = {
 			isa = PBXGroup;
 			children = (
+				C35918DF1BCC3A2600329DC6 /* HeroTableViewController.swift */,
 				C35918CB1BCC344F00329DC6 /* AppDelegate.swift */,
-				C35918CD1BCC344F00329DC6 /* ViewController.swift */,
 				C35918CF1BCC344F00329DC6 /* Main.storyboard */,
+				C35918E11BCC3AB200329DC6 /* HeroDetailViewController.swift */,
 				C35918D21BCC344F00329DC6 /* Assets.xcassets */,
 				C35918D41BCC344F00329DC6 /* LaunchScreen.storyboard */,
 				C35918D71BCC344F00329DC6 /* Info.plist */,
@@ -134,8 +137,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C35918CE1BCC344F00329DC6 /* ViewController.swift in Sources */,
+				C35918E21BCC3AB200329DC6 /* HeroDetailViewController.swift in Sources */,
 				C35918CC1BCC344F00329DC6 /* AppDelegate.swift in Sources */,
+				C35918E01BCC3A2600329DC6 /* HeroTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,6 +287,7 @@
 				C35918DC1BCC344F00329DC6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
