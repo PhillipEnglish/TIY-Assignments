@@ -99,6 +99,7 @@ class TimeCircuitsViewController: UIViewController, DatePickerDelegate
         else
         
         {
+            stopTimer()
             lastTimeDepartedLabel.text = presentTimeLabel.text
             presentTimeLabel.text = destinationTimeLabel.text
             currentSpeed = 0
