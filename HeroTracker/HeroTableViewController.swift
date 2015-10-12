@@ -110,7 +110,7 @@ class HeroTableViewController: UITableViewController {
             {
                 let aHero = Hero(dictionary: heroDictionary as! NSDictionary)
                 heros.append(aHero)
-                //heros.sorted
+                //sort names alphabetically here
             }
             
         }
