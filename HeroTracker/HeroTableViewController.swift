@@ -8,7 +8,8 @@
 
 import UIKit
 
-class HeroTableViewController: UITableViewController {
+class HeroTableViewController: UITableViewController
+{
     
     var heros = Array<Hero>()
 
@@ -16,6 +17,7 @@ class HeroTableViewController: UITableViewController {
         super.viewDidLoad()
         
         title = "S.H.I.E.L.D. Hero Tracker"
+        
         
         loadHeroes()
 
@@ -34,24 +36,33 @@ class HeroTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    {
+        return heros.count
     }
 
-    /*
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("HeroCell", forIndexPath: indexPath)
 
         // Configure the cell...
-
+        let aHero = heros[indexPath.row]
+        cell.textLabel?.text = aHero.name
+        cell.detailTextLabel?.text = aHero.homeWorld
         return cell
     }
-    */
+    
+    
+    override func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath)
+    {
+        let row = heros[indexPath.row]
+        let vc = storyboard?.instantiateViewControllerWithIdentifier("HeroDetailViewController") as! HeroDetailViewController
+        vc.hero = row
+        presentViewController (vc, animated: true, completion: nil)
+    }
 
     /*
     // Override to support conditional editing of the table view.
@@ -98,7 +109,7 @@ class HeroTableViewController: UITableViewController {
     }
     */
 
-    private func loadHeroes()
+    func loadHeroes()
     {
         do
         {
@@ -114,12 +125,14 @@ class HeroTableViewController: UITableViewController {
             }
             
         }
-        
+            
         catch let error as NSError
         {
             print(error)
         }
     }
+    
+    
     
     
 }

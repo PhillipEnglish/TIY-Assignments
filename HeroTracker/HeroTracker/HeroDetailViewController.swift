@@ -8,17 +8,24 @@
 
 import UIKit
 
-class HeroDetailViewController: UIViewController {
+class HeroDetailViewController: UIViewController
+{
 
     
-    @IBOutlet weak var heroName: UILabel!
-    @IBOutlet weak var heroHomeWorld: UILabel!
-    @IBOutlet weak var heroPowers: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var homeworldLabel: UILabel!
+    @IBOutlet weak var powersLabel: UILabel!
     
-    override func viewDidLoad() {
+    var hero = Hero?()
+    
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        nameLabel.text = hero!.name
+        homeworldLabel.text = hero!.homeWorld
+        powersLabel.text = hero!.powers
+        
+       
     }
 
     override func didReceiveMemoryWarning() {
@@ -26,6 +33,12 @@ class HeroDetailViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+   /* func updateLabels ()
+    {
+    nameLabel.text = hero?.name
+    homeworldLabel.text = hero?.homeWorld
+    powersLabel.text = hero?.powers
+    } */
 
     /*
     // MARK: - Navigation
