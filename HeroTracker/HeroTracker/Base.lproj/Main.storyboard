@@ -91,6 +91,11 @@
                             <constraint firstAttribute="leadingMargin" secondItem="EvQ-MR-iJ6" secondAttribute="leading" id="wrN-Hy-NCx"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="heroHomeWorld" destination="PW3-Ab-6zs" id="08r-zE-RqP"/>
+                        <outlet property="heroName" destination="Uov-9V-bog" id="i4g-Kh-RC8"/>
+                        <outlet property="heroPowers" destination="EvQ-MR-iJ6" id="srV-Y4-nET"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qei-1d-xWa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

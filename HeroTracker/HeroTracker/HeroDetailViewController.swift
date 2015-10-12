@@ -10,6 +10,11 @@ import UIKit
 
 class HeroDetailViewController: UIViewController {
 
+    
+    @IBOutlet weak var heroName: UILabel!
+    @IBOutlet weak var heroHomeWorld: UILabel!
+    @IBOutlet weak var heroPowers: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
