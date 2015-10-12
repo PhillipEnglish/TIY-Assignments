@@ -10,9 +10,16 @@ import Foundation
 
 class Hero
 {
+    var name: String
+    var homeWorld: String
+    var powers: String
     
-    
-    
+    init(dictionary: NSDictionary)
+    {
+        name = dictionary["name"] as! String
+        homeWorld = dictionary["homeworld"] as! String
+        powers = dictionary["powers"] as! String
+    }
     
     
 }

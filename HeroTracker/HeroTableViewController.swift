@@ -9,9 +9,15 @@
 import UIKit
 
 class HeroTableViewController: UITableViewController {
+    
+    var heros = Array<Hero>()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        title = "S.H.I.E.L.D. Hero Tracker"
+        
+        loadHeroes()
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -92,4 +98,28 @@ class HeroTableViewController: UITableViewController {
     }
     */
 
+    private func loadHeroes()
+    {
+        do
+        {
+            let filePath = NSBundle.mainBundle().pathForResource("heroes", ofType: "json")
+            let dataFromFile = NSData(contentsOfFile: filePath!)
+            let heroData: NSArray! = try NSJSONSerialization.JSONObjectWithData(dataFromFile!, options: []) as! NSArray
+            
+            for heroDictionary in heroData
+            {
+                let aHero = Hero(dictionary: heroDictionary as! NSDictionary)
+                heros.append(aHero)
+                //heros.sorted
+            }
+            
+        }
+        
+        catch let error as NSError
+        {
+            print(error)
+        }
+    }
+    
+    
 }
