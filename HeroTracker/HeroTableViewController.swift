@@ -58,10 +58,12 @@ class HeroTableViewController: UITableViewController
     
     override func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath)
     {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
         let row = heros[indexPath.row]
         let vc = storyboard?.instantiateViewControllerWithIdentifier("HeroDetailViewController") as! HeroDetailViewController
         vc.hero = row
         presentViewController (vc, animated: true, completion: nil)
+       // navigationController?.pushViewController(vc, animated: true) //bens code
     }
 
     /*
@@ -103,13 +105,13 @@ class HeroTableViewController: UITableViewController
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func ºSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
     */
 
-    func loadHeroes()
+   private func loadHeroes()
     {
         do
         {
@@ -123,7 +125,7 @@ class HeroTableViewController: UITableViewController
                 heros.append(aHero)
                 //sort names alphabetically here
             }
-            
+            heros.sortInPlace({ $0.name < $1.name})
         }
             
         catch let error as NSError
