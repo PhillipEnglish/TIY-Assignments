@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		C38B5EAA1BCD79CB007451AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38B5EA91BCD79CB007451AC /* AppDelegate.swift */; };
-		C38B5EAC1BCD79CB007451AC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38B5EAB1BCD79CB007451AC /* ViewController.swift */; };
 		C38B5EAF1BCD79CC007451AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C38B5EAD1BCD79CC007451AC /* Main.storyboard */; };
 		C38B5EB11BCD79CC007451AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C38B5EB01BCD79CC007451AC /* Assets.xcassets */; };
 		C38B5EB41BCD79CC007451AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C38B5EB21BCD79CC007451AC /* LaunchScreen.storyboard */; };
@@ -17,7 +16,6 @@
 /* Begin PBXFileReference section */
 		C38B5EA61BCD79CB007451AC /* Jackpot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jackpot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C38B5EA91BCD79CB007451AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C38B5EAB1BCD79CB007451AC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C38B5EAE1BCD79CC007451AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C38B5EB01BCD79CC007451AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C38B5EB31BCD79CC007451AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -55,7 +53,6 @@
 			isa = PBXGroup;
 			children = (
 				C38B5EA91BCD79CB007451AC /* AppDelegate.swift */,
-				C38B5EAB1BCD79CB007451AC /* ViewController.swift */,
 				C38B5EAD1BCD79CC007451AC /* Main.storyboard */,
 				C38B5EB01BCD79CC007451AC /* Assets.xcassets */,
 				C38B5EB21BCD79CC007451AC /* LaunchScreen.storyboard */,
@@ -134,7 +131,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C38B5EAC1BCD79CB007451AC /* ViewController.swift in Sources */,
 				C38B5EAA1BCD79CB007451AC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -283,6 +279,7 @@
 				C38B5EBA1BCD79CC007451AC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
