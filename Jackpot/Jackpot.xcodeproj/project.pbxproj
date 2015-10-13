@@ -12,6 +12,7 @@
 		C38B5EAF1BCD79CC007451AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C38B5EAD1BCD79CC007451AC /* Main.storyboard */; };
 		C38B5EB11BCD79CC007451AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C38B5EB01BCD79CC007451AC /* Assets.xcassets */; };
 		C38B5EB41BCD79CC007451AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C38B5EB21BCD79CC007451AC /* LaunchScreen.storyboard */; };
+		C39C9CA51BCD9E3A00391465 /* LottoNumbers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39C9CA41BCD9E3A00391465 /* LottoNumbers.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		C38B5EB01BCD79CC007451AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C38B5EB31BCD79CC007451AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C38B5EB51BCD79CC007451AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C39C9CA41BCD9E3A00391465 /* LottoNumbers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LottoNumbers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 				C38B5EA91BCD79CB007451AC /* AppDelegate.swift */,
 				C35CA5071BCD8596006B12B9 /* QuickPickTableViewController.swift */,
 				C38B5EAD1BCD79CC007451AC /* Main.storyboard */,
+				C39C9CA41BCD9E3A00391465 /* LottoNumbers.swift */,
 				C38B5EB01BCD79CC007451AC /* Assets.xcassets */,
 				C38B5EB21BCD79CC007451AC /* LaunchScreen.storyboard */,
 				C38B5EB51BCD79CC007451AC /* Info.plist */,
@@ -134,6 +137,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C39C9CA51BCD9E3A00391465 /* LottoNumbers.swift in Sources */,
 				C35CA5081BCD8596006B12B9 /* QuickPickTableViewController.swift in Sources */,
 				C38B5EAA1BCD79CB007451AC /* AppDelegate.swift in Sources */,
 			);
