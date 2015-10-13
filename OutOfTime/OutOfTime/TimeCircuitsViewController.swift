@@ -40,7 +40,7 @@ class TimeCircuitsViewController: UIViewController, DatePickerDelegate
     //presentTimeLabel.text = STRING(formatTheDate()
         presentTimeLabel.text = formatTheDate(NSDate())
         speedLabel.text = "\(currentSpeed)"
-        lastTimeDepartedLabel.text = formatTheDate(NSDate())  //Come back to this and possibly re-write.
+        lastTimeDepartedLabel.text = formatTheDate(NSDate())  
     }
 
     override func didReceiveMemoryWarning()
@@ -53,7 +53,7 @@ class TimeCircuitsViewController: UIViewController, DatePickerDelegate
     {
         if segue.identifier == "ShowDatePickerSegue"
         {
-          let datePickerVC = segue.destinationViewController as! DatePickerViewController
+          let datePickerVC = segue.destinationViewController as! DatePickerViewController //find out what is on the other side of the segue---"
             datePickerVC.delegate = self
         }
     }
@@ -93,7 +93,7 @@ class TimeCircuitsViewController: UIViewController, DatePickerDelegate
         if currentSpeed != 88
         {
             currentSpeed += 1
-            speedLabel.text = String(currentSpeed)
+            speedLabel.text = String(currentSpeed) 
         }
         
         else
@@ -103,6 +103,7 @@ class TimeCircuitsViewController: UIViewController, DatePickerDelegate
             lastTimeDepartedLabel.text = presentTimeLabel.text
             presentTimeLabel.text = destinationTimeLabel.text
             currentSpeed = 0
+            speedLabel.text = String(currentSpeed)
         }
     }
     

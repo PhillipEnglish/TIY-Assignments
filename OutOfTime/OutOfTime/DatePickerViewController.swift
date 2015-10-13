@@ -12,7 +12,7 @@ class DatePickerViewController: UIViewController
 {
     
     @IBOutlet weak var picker: UIDatePicker!
-    var delegate: DatePickerDelegate?
+    var delegate: DatePickerDelegate?  // optional because it doesn't have to have a value
   
     
  
