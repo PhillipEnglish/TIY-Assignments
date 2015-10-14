@@ -64,7 +64,10 @@ class QuickPickTableViewController: UITableViewController
     
     @IBAction func addButton(sender: UIBarButtonItem)
     {
-   // listening to Keron    let newPath = NSIndexPath(forRow: quickPickTableArray.count, inSection: 0)
+   
+        loadNumbers()
+        
+        // listening to Keron    let newPath = NSIndexPath(forRow: quickPickTableArray.count, inSection: 0)
         
         
         //Create Ticket
