@@ -77,7 +77,7 @@ class QuickPickTableViewController: UITableViewController
     private func loadNumbers()
     {
         let aNumber = LottoNumbers()
-        quickPickTableArray.append("Quickpick \(ticketNumber): \(aNumber.toString())")
+        quickPickTableArray.append("\(ticketNumber): \(aNumber.toString())")
         ticketNumber++
         tableView.reloadData()
     }
