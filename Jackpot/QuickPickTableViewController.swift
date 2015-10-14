@@ -8,7 +8,13 @@
 
 import UIKit
 
-class QuickPickTableViewController: UITableViewController {
+class QuickPickTableViewController: UITableViewController
+{
+    
+    var quickPickTableArray = Array<String>()
+    var ticketNumber = 1
+    
+    
     
     
     override func viewDidLoad() {
