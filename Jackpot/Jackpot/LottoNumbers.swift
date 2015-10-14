@@ -8,6 +8,37 @@
 
 import Foundation
 
-class lottoNumbers {
-    <#properties and methods#>
+class LottoNumbers {
+    var arrayOfNum: Array<Int> = []
+    
+    init()
+    {
+        var i = 0
+        
+        while i <= 6
+        {
+            let num = generateNumber()
+            if arrayOfNum.contains(num)
+            {
+                generateNumber()
+            }
+            else
+            {
+                arrayOfNum.append(num)
+                i++
+            }
+        }
+    }
+    
+    func toString() -> String
+    {
+        return "\(arrayOfNum)"
+    }
+    
+    func generateNumber() -> Int
+    {
+        return Int(arc4random() % 53)
+    }
+    
+    
 }

@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="5sL-eU-h7W">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
     </dependencies>
     <scenes>
         <!--Quick Pick Table View Controller-->
@@ -28,7 +29,14 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="KSv-nv-sUn">
-                        <barButtonItem key="leftBarButtonItem" title="Add" id="fwS-Cx-SIn"/>
+                        <leftBarButtonItems>
+                            <barButtonItem systemItem="add" id="NZD-n2-YKF">
+                                <connections>
+                                    <action selector="addButton:" destination="5sL-eU-h7W" id="WCl-FV-qBJ"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem id="INx-db-Luo"/>
+                        </leftBarButtonItems>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IDd-n1-GhK" userLabel="First Responder" sceneMemberID="firstResponder"/>
