@@ -20,7 +20,7 @@ class QuickPickTableViewController: UITableViewController
     override func viewDidLoad() {
         super.viewDidLoad()
 
-     
+     loadTickets()
        
      
         
@@ -38,25 +38,28 @@ class QuickPickTableViewController: UITableViewController
 
     // MARK: - Table view data source
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+    override func numberOfSectionsInTableView(tableView: UITableView) -> Int
+    {
+        
+        return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return quickPickTableArray.count
     }
 
-    /*
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("quickPickCell", forIndexPath: indexPath)
 
         // Configure the cell...
+        let aQuickPick = quickPickTableArray[indexPath.row]
+        cell.textLabel?.text = String(aQuickPick)
 
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.
