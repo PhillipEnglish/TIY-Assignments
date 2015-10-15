@@ -81,6 +81,7 @@
                                 <rect key="frame" x="5" y="192" width="590" height="216"/>
                                 <connections>
                                     <outlet property="dataSource" destination="HTK-db-2Gq" id="Mn7-Um-Aej"/>
+                                    <outlet property="delegate" destination="HTK-db-2Gq" id="BhT-aQ-W1r"/>
                                 </connections>
                             </pickerView>
                         </subviews>

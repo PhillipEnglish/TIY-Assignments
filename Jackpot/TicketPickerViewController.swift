@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TicketPickerViewController: UIViewController, UIPickerViewDataSource
+class TicketPickerViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
 
 {
     @IBOutlet var picker: UIPickerView!
@@ -40,7 +40,7 @@ class TicketPickerViewController: UIViewController, UIPickerViewDataSource
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? //must return String
     {
         
-        return "\(row)"
+        return "\(row + 1)"
     }
     /*
     // MARK: - Navigation
