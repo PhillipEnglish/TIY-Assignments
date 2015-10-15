@@ -12,6 +12,11 @@ class CalculatorViewController: UIViewController {
     
     @IBOutlet weak var calcLabel: UILabel!
 
+    
+    @IBAction func updateNumber(sender: UIButton) {
+        let number = sender.currentTitle!
+        calcLabel.text = number
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
