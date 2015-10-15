@@ -8,8 +8,13 @@
 
 import UIKit
 
-class TicketPickerViewController: UIViewController {
+class TicketPickerViewController: UIViewController, UIPickerViewDataSource
 
+{
+    @IBOutlet var picker: UIPickerView!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,7 +26,16 @@ class TicketPickerViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int
+    {
+        return 6
+    }
+    
+    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return [53] [1]
+    }
+    
+    
     /*
     // MARK: - Navigation
 
