@@ -170,7 +170,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iek-uM-1Ur">
-                                <rect key="frame" x="0.0" y="505" width="277" height="90"/>
+                                <rect key="frame" x="0.0" y="505" width="277" height="95"/>
                                 <color key="backgroundColor" red="0.87030854068621244" green="0.87030854068621244" blue="0.87030854068621244" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <inset key="contentEdgeInsets" minX="48" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -199,6 +199,7 @@
                             <constraint firstItem="kJ1-7c-fh8" firstAttribute="top" secondItem="iNR-5U-F4p" secondAttribute="bottom" id="5OV-09-hwj"/>
                             <constraint firstItem="MGc-i8-Nxl" firstAttribute="top" secondItem="1KZ-GE-NJC" secondAttribute="bottom" constant="1" id="5wW-j8-Epe"/>
                             <constraint firstItem="dKP-pW-KaA" firstAttribute="height" secondItem="kJ1-7c-fh8" secondAttribute="height" id="79E-tO-zWI"/>
+                            <constraint firstItem="1NI-cN-q7l" firstAttribute="height" secondItem="Iek-uM-1Ur" secondAttribute="height" id="9fx-3e-rGG"/>
                             <constraint firstItem="iNR-5U-F4p" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="9jC-0Y-Cad"/>
                             <constraint firstItem="Ukn-wA-4hT" firstAttribute="width" secondItem="dKP-pW-KaA" secondAttribute="width" id="BC0-ZZ-eqZ"/>
                             <constraint firstItem="Iek-uM-1Ur" firstAttribute="top" secondItem="B9M-IO-6jx" secondAttribute="bottom" constant="1" id="BYb-FN-bFp"/>
@@ -245,6 +246,7 @@
                             <constraint firstItem="RpE-bb-5vf" firstAttribute="leading" secondItem="B9M-IO-6jx" secondAttribute="trailing" constant="1" id="aMr-Et-Ry7"/>
                             <constraint firstItem="B9M-IO-6jx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="aTU-bI-oiv"/>
                             <constraint firstItem="gJL-Kl-boc" firstAttribute="height" secondItem="kJ1-7c-fh8" secondAttribute="height" id="bAA-ev-Hqg"/>
+                            <constraint firstItem="ufl-Ff-VYy" firstAttribute="height" secondItem="1NI-cN-q7l" secondAttribute="height" id="bVC-V1-BuR"/>
                             <constraint firstItem="MGc-i8-Nxl" firstAttribute="height" secondItem="1KZ-GE-NJC" secondAttribute="height" id="ch3-0T-E4S"/>
                             <constraint firstItem="Ukn-wA-4hT" firstAttribute="height" secondItem="dKP-pW-KaA" secondAttribute="height" id="dgH-gh-8BV"/>
                             <constraint firstItem="iNR-5U-F4p" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="e7B-lH-wTn"/>
@@ -275,6 +277,7 @@
                             <constraint firstItem="KST-XG-dxB" firstAttribute="top" secondItem="QTh-aM-SN6" secondAttribute="bottom" constant="1" id="uwg-6l-aCI"/>
                             <constraint firstItem="kJ1-7c-fh8" firstAttribute="height" secondItem="iNR-5U-F4p" secondAttribute="height" multiplier="0.75" id="vHa-tg-8Zd"/>
                             <constraint firstItem="lBd-Pk-qgt" firstAttribute="leading" secondItem="RpE-bb-5vf" secondAttribute="trailing" constant="1" id="wbG-J7-esy"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Iek-uM-1Ur" secondAttribute="bottom" id="yUX-qb-z1m"/>
                             <constraint firstItem="B9M-IO-6jx" firstAttribute="width" secondItem="gJL-Kl-boc" secondAttribute="width" id="ykP-dH-3j5"/>
                         </constraints>
                         <variation key="default">
@@ -289,11 +292,17 @@
                                 <exclude reference="FEx-pS-dP6"/>
                                 <exclude reference="3cI-Fc-9Dm"/>
                                 <exclude reference="fca-aq-7Be"/>
+                                <exclude reference="sQX-Up-LO1"/>
                                 <exclude reference="twZ-wq-6z2"/>
+                                <exclude reference="C3Z-R3-6it"/>
                                 <exclude reference="PT2-Dd-NE4"/>
+                                <exclude reference="Kld-op-R2g"/>
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="calcLabel" destination="iNR-5U-F4p" id="xYH-s3-HQX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
