@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="VOl-Mb-UDu">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
     </dependencies>
     <scenes>
@@ -51,13 +52,47 @@
                                     <action selector="addButton:" destination="5sL-eU-h7W" id="WCl-FV-qBJ"/>
                                 </connections>
                             </barButtonItem>
+                            <barButtonItem title="Pick a Winner" id="AOB-Kz-R1p">
+                                <connections>
+                                    <segue destination="HTK-db-2Gq" kind="show" identifier="showTicketPicker" id="ASo-bk-GTh"/>
+                                </connections>
+                            </barButtonItem>
                             <barButtonItem id="INx-db-Luo"/>
                         </leftBarButtonItems>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IDd-n1-GhK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1156" y="266"/>
+            <point key="canvasLocation" x="1012" y="295"/>
+        </scene>
+        <!--Ticket Picker View Controller-->
+        <scene sceneID="ShB-RD-CY1">
+            <objects>
+                <viewController id="HTK-db-2Gq" customClass="TicketPickerViewController" customModule="Jackpot" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0k1-vw-C65"/>
+                        <viewControllerLayoutGuide type="bottom" id="vvv-EM-cjs"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8Qw-uN-0Pd">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WzQ-Jf-Sh4">
+                                <rect key="frame" x="5" y="192" width="590" height="216"/>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="WzQ-Jf-Sh4" firstAttribute="centerY" secondItem="8Qw-uN-0Pd" secondAttribute="centerY" id="SWX-AF-mfP"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="WzQ-Jf-Sh4" secondAttribute="trailing" constant="-15" id="i1q-lr-n9r"/>
+                            <constraint firstItem="WzQ-Jf-Sh4" firstAttribute="centerX" secondItem="8Qw-uN-0Pd" secondAttribute="centerX" id="tkF-3N-lKZ"/>
+                            <constraint firstItem="WzQ-Jf-Sh4" firstAttribute="leading" secondItem="8Qw-uN-0Pd" secondAttribute="leadingMargin" constant="-15" id="vqa-Wy-d58"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nbX-Jx-0p8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1687" y="295"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="K62-P5-cnp">
