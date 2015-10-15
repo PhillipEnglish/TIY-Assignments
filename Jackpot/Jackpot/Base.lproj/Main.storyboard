@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="VOl-Mb-UDu">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
+    </dependencies>
+    <scenes>
+        <!--Quick Pick Table View Controller-->
+        <scene sceneID="uZc-rx-zx5">
+            <objects>
+                <tableViewController id="5sL-eU-h7W" customClass="QuickPickTableViewController" customModule="Jackpot" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="VeN-m8-uDL">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="quickPickCell" textLabel="Oyg-lz-qjv" detailTextLabel="YaC-Me-ODn" style="IBUITableViewCellStyleValue1" id="AZ9-g0-Cnm">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="AZ9-g0-Cnm" id="zpc-7v-bnV">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Oyg-lz-qjv">
+                                            <rect key="frame" x="15" y="12" width="32" height="20"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="YaC-Me-ODn">
+                                            <rect key="frame" x="543" y="12" width="42" height="20"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="5sL-eU-h7W" id="KlW-0J-qrx"/>
+                            <outlet property="delegate" destination="5sL-eU-h7W" id="Js8-xI-C8f"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="KSv-nv-sUn">
+                        <leftBarButtonItems>
+                            <barButtonItem systemItem="add" id="NZD-n2-YKF">
+                                <connections>
+                                    <action selector="addButton:" destination="5sL-eU-h7W" id="WCl-FV-qBJ"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Pick a Winner" id="AOB-Kz-R1p">
+                                <connections>
+                                    <segue destination="HTK-db-2Gq" kind="show" identifier="showTicketPicker" id="ASo-bk-GTh"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem id="INx-db-Luo"/>
+                        </leftBarButtonItems>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IDd-n1-GhK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1012" y="295"/>
+        </scene>
+        <!--Ticket Picker View Controller-->
+        <scene sceneID="ShB-RD-CY1">
+            <objects>
+                <viewController id="HTK-db-2Gq" customClass="TicketPickerViewController" customModule="Jackpot" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0k1-vw-C65"/>
+                        <viewControllerLayoutGuide type="bottom" id="vvv-EM-cjs"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8Qw-uN-0Pd">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WzQ-Jf-Sh4">
+                                <rect key="frame" x="5" y="192" width="590" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="HTK-db-2Gq" id="Mn7-Um-Aej"/>
+                                    <outlet property="delegate" destination="HTK-db-2Gq" id="BhT-aQ-W1r"/>
+                                </connections>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="WzQ-Jf-Sh4" firstAttribute="centerY" secondItem="8Qw-uN-0Pd" secondAttribute="centerY" id="SWX-AF-mfP"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="WzQ-Jf-Sh4" secondAttribute="trailing" constant="-15" id="i1q-lr-n9r"/>
+                            <constraint firstItem="WzQ-Jf-Sh4" firstAttribute="centerX" secondItem="8Qw-uN-0Pd" secondAttribute="centerX" id="tkF-3N-lKZ"/>
+                            <constraint firstItem="WzQ-Jf-Sh4" firstAttribute="leading" secondItem="8Qw-uN-0Pd" secondAttribute="leadingMargin" constant="-15" id="vqa-Wy-d58"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="picker" destination="WzQ-Jf-Sh4" id="rZ5-sf-uiu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nbX-Jx-0p8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1687" y="295"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="K62-P5-cnp">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="VOl-Mb-UDu" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fVf-dl-bcT">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="5sL-eU-h7W" kind="relationship" relationship="rootViewController" id="Ess-Fr-BX7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XhR-ek-KKi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="319" y="295"/>
+        </scene>
+    </scenes>
+</document>
