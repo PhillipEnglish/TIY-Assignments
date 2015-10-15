@@ -79,6 +79,9 @@
                         <subviews>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WzQ-Jf-Sh4">
                                 <rect key="frame" x="5" y="192" width="590" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="HTK-db-2Gq" id="Mn7-Um-Aej"/>
+                                </connections>
                             </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -89,6 +92,9 @@
                             <constraint firstItem="WzQ-Jf-Sh4" firstAttribute="leading" secondItem="8Qw-uN-0Pd" secondAttribute="leadingMargin" constant="-15" id="vqa-Wy-d58"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="picker" destination="WzQ-Jf-Sh4" id="rZ5-sf-uiu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nbX-Jx-0p8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

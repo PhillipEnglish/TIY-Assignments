@@ -31,11 +31,17 @@ class TicketPickerViewController: UIViewController, UIPickerViewDataSource
         return 6
     }
     
-    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return [53] [1]
+    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int
+    {
+        return 53
     }
     
     
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? //must return String
+    {
+        
+        return "\(row)"
+    }
     /*
     // MARK: - Navigation
 
