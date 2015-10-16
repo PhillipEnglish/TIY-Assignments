@@ -15,7 +15,14 @@ class CalculatorViewController: UIViewController {
     
     @IBAction func updateNumber(sender: UIButton) {
         let number = sender.currentTitle!
-        calcLabel.text = number
+        if calcLabel.text == "0" {
+            calcLabel.text = " "
+        }
+        calcLabel.text = calcLabel.text! + number
+    }
+    
+    @IBAction func clearLabel(sender: UIButton) {
+        calcLabel.text = "0"
     }
     override func viewDidLoad() {
         super.viewDidLoad()
