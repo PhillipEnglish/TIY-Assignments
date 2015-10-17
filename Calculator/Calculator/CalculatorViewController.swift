@@ -8,31 +8,68 @@
 
 import UIKit
 
-class CalculatorViewController: UIViewController {
+class CalculatorViewController: UIViewController
+{
+    
+    var brain = calcBrain()
+    var isTyping: Bool = false
+    
     
     @IBOutlet weak var calcLabel: UILabel!
-
     
-    @IBAction func updateNumber(sender: UIButton) {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+
+
+    //MARK: Action Handlers
+    
+    @IBAction func updateNumber(sender: UIButton)
+    {
         let number = sender.currentTitle!
-        if calcLabel.text == "0" {
+        brain.addDigit(number)
+    
+        if calcLabel.text == "0"{
             calcLabel.text = " "
         }
         calcLabel.text = calcLabel.text! + number
     }
     
-    @IBAction func clearLabel(sender: UIButton) {
+    @IBAction func clearLabel(sender: UIButton)
+    {
         calcLabel.text = "0"
+        clearEverything()
+        
     }
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    
+    @IBAction func equalsSign(sender: UIButton)
+    {
+        let result = brain.calculate()
+        calcLabel.text = "\(result)"
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    @IBAction func operatorClicked(sender: UIButton)
+    {
+        let symbol = sender.currentTitle
+        brain.pressedSymbol(symbol!)
+        calcLabel.text = sender.currentTitle
     }
+    
+    
+    
+    func clearEverything ()
+    {
+        brain.operandOne = ""
+        brain.operandTwo = ""
+        brain.symbol = ""
+    }
+    
 
 
 }
