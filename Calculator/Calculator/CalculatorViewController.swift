@@ -33,9 +33,11 @@ class CalculatorViewController: UIViewController
     @IBAction func updateNumber(sender: UIButton)
     {
         let number = sender.currentTitle!
+        let bSymbol = brain.symbol
         brain.addDigit(number)
     
-        if calcLabel.text == "0"{
+        if calcLabel.text == "0" ||  calcLabel.text == String(bSymbol)
+        {
             calcLabel.text = " "
         }
         calcLabel.text = calcLabel.text! + number
