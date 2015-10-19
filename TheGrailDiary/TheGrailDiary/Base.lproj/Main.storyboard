@@ -54,7 +54,7 @@
         <scene sceneID="6Hg-Kt-dYc">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iFP-nM-pej" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="Wx0-dd-c9t" customClass="TempleDetailViewController" customModule="TheGrailDiary" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TempleDetailViewController" id="Wx0-dd-c9t" customClass="TempleDetailViewController" customModule="TheGrailDiary" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="GcV-FH-ABx"/>
                         <viewControllerLayoutGuide type="bottom" id="Dgo-E2-yre"/>

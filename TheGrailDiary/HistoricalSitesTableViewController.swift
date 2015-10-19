@@ -108,9 +108,11 @@ class HistoricalSitesTableViewController: UITableViewController {
             let filePath = NSBundle.mainBundle().pathForResource("temples", ofType: "json")
             let dataFromFile = NSData(contentsOfFile: filePath!)
             let templeData: NSArray! = try NSJSONSerialization.JSONObjectWithData(dataFromFile!, options: []) as! NSArray
+            
             for templeDictionary in templeData
             {
                 let aTemple = Temple(dictionary: templeDictionary as! NSDictionary)
+                
                 temples.append(aTemple)
             }
             temples.sortInPlace({ $0.name < $1.name})

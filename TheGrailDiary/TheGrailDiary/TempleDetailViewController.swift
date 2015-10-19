@@ -22,10 +22,10 @@ class TempleDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        nameLabel.text = temple?.name
-        deityLabel.text = temple?.deity
-        builderLabel.text = temple?.builder
-        locationLabel.text = temple?.location
+        nameLabel.text = temple!.name
+        deityLabel.text = temple!.deity
+        builderLabel.text = temple!.builder
+        locationLabel.text = temple!.location
     }
 
     override func didReceiveMemoryWarning() {
