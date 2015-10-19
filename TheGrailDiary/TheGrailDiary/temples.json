@@ -1,73 +1,62 @@
-[
-{
-	"name": "Temple of Kom Ombo"
-	"builder": "Ptolemy VI Philometor"
-	"deity": "Sobek"
-	"location": "Kom Ombo"
-}
-
-{
-	"name": "Temple of Philae"
-	"builder": "Nectanebo I"
-	"deity": "Isis"
-	"location": "Philae Island"
-}
-
-{
-	"name": "Temple of Bastet"
-	"builder": "Queen Berenice"
-	"deity": "Bast"
-	"location": "Alexandria"
-}
-
-{
-	"name": "Temple of Tentyra"
-	"builder": "Queen Cleopatra II"
-	"deity": "Hathor"
-	"location": "Dendera"
-}
-
-{
-	"name": "Temple of Edfu"
-	"builder": "Ptolemy III"
-	"deity": "Horus"
-	"location": "Edfu"
-}
-
-{
-	"name": "Medinet Habu"
-	"builder": "Hatshepsut"
-	"deity": "Amun"
-	"location": "West Bank of Nile"
-}
-
-{
-	"name": "Temple of Seti I"
-	"builder": "Seti I, Ramessess II"
-	"deity": "Osiris"
-	"location": "Abydos"
-}
-
-{
-	"name": "Temple of Hatshepsut"
-	"builder": "Senemut"
-	"deity": "Amun"
-	"location": "Deir el Bahari"
-}
-
-{
-	"name": "Luxor Temple"
-	"builder": "Amenhotep III"
-	"deity": "Amun, Mut, Chons"
-	"location": "East Bank, Thebes"
-}
-
-{
-	"name": "Abu Simbel"
-	"builder": "Ramesses II"
-	"deity": "Ra Horakty"
-	"location": "Abu Simbel, Nubia"
-}
-
-
-]
+ [
+  {
+  "name": "Temple of Kom Ombo",
+  "builder": "Ptolemy VI Philometor",
+  "deity": "Sobek",
+  "location": "Kom Ombo"
+  },
+  {
+  "name": "Temple of Philae",
+  "builder": "Nectanebo I",
+  "deity": "Isis",
+  "location": "Philae Island"
+  },
+  {
+  "name": "Temple of Bastet",
+  "builder": "Queen Berenice",
+  "deity": "Bast",
+  "location": "Alexandria"
+  },
+  {
+  "name": "Temple of Tentyra",
+  "builder": "Queen Cleopatra II",
+  "deity": "Hathor",
+  "location": "Dendera"
+  },
+  {
+  "name": "Temple of Edfu",
+  "builder": "Ptolemy III",
+  "deity": "Horus",
+  "location": "Edfu"
+  },
+  {
+  "name": "Medinet Habu",
+  "builder": "Hatshepsut",
+  "deity": "Amun",
+  "location": "West Bank of Nile"
+  },
+  {
+  "name": "Temple of Seti I",
+  "builder": "Seti I, Ramessess II",
+  "deity": "Osiris",
+  "location": "Abydos"
+  },
+  {
+  "name": "Temple of Hatshepsut",
+  "builder": "Senemut",
+  "deity": "Amun",
+  "location": "Deir el Bahari"
+  },
+  {
+  "name": "Luxor Temple",
+  "builder": "Amenhotep III",
+  "deity": "Amun, Mut, Chons",
+  "location": "East Bank, Thebes"
+  },
+  {
+  "name": "Abu Simbel",
+  "builder": "Ramesses II",
+  "deity": "Ra Horakty",
+  "location": "Abu Simbel, Nubia"
+  }
+  ]

@@ -14,7 +14,9 @@ class HistoricalSitesTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        title = "Temples of Ancient Egypt"
+        loadTemples()
+       
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -29,25 +31,30 @@ class HistoricalSitesTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSectionsInTableView(tableView: UITableView) -> Int
+    {
         // #warning Incomplete implementation, return the number of sections
+        return 1
+    }
+
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    {
+        // #warning Incomplete implementation, return the number of rows
         return temples.count
     }
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 10
-    }
-
-    /*
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("TempleCell", forIndexPath: indexPath)
 
         // Configure the cell...
-
+        let aTemple = temples[indexPath.row]
+        cell.textLabel?.text = aTemple.name
+        cell.detailTextLabel?.text = aTemple.deity
+        
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.
@@ -93,5 +100,26 @@ class HistoricalSitesTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+     func loadTemples()
+    {
+        do
+        {
+            let filePath = NSBundle.mainBundle().pathForResource("temples", ofType: "json")
+            let dataFromFile = NSData(contentsOfFile: filePath!)
+            let templeData: NSArray! = try NSJSONSerialization.JSONObjectWithData(dataFromFile!, options: []) as! NSArray
+            for templeDictionary in templeData
+            {
+                let aTemple = Temple(dictionary: templeDictionary as! NSDictionary)
+                temples.append(aTemple)
+            }
+            temples.sortInPlace({ $0.name < $1.name})
+            
+        }
+        catch let error as NSError
+        {
+            print(error)
+        }
+    }
 
 }
