@@ -12,6 +12,8 @@
 		C37359A01BD55CD800464456 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C373599F1BD55CD800464456 /* Assets.xcassets */; };
 		C37359A31BD55CD800464456 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C37359A11BD55CD800464456 /* LaunchScreen.storyboard */; };
 		C37359AB1BD55DCA00464456 /* HistoricalSitesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37359AA1BD55DCA00464456 /* HistoricalSitesTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		C3B9ACF81BD5661300CE340E /* Temple.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B9ACF71BD5661300CE340E /* Temple.swift */; settings = {ASSET_TAGS = (); }; };
+		C3B9ACFA1BD574CD00CE340E /* temples.json in Resources */ = {isa = PBXBuildFile; fileRef = C3B9ACF91BD574CD00CE340E /* temples.json */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,7 +23,9 @@
 		C373599F1BD55CD800464456 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C37359A21BD55CD800464456 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C37359A41BD55CD800464456 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C37359AA1BD55DCA00464456 /* HistoricalSitesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoricalSitesTableViewController.swift; sourceTree = "<group>"; };
+		C37359AA1BD55DCA00464456 /* HistoricalSitesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HistoricalSitesTableViewController.swift; path = ../HistoricalSitesTableViewController.swift; sourceTree = "<group>"; };
+		C3B9ACF71BD5661300CE340E /* Temple.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Temple.swift; sourceTree = "<group>"; };
+		C3B9ACF91BD574CD00CE340E /* temples.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = temples.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,7 +42,6 @@
 		C373598C1BD55CD800464456 = {
 			isa = PBXGroup;
 			children = (
-				C37359AA1BD55DCA00464456 /* HistoricalSitesTableViewController.swift */,
 				C37359971BD55CD800464456 /* TheGrailDiary */,
 				C37359961BD55CD800464456 /* Products */,
 			);
@@ -55,6 +58,9 @@
 		C37359971BD55CD800464456 /* TheGrailDiary */ = {
 			isa = PBXGroup;
 			children = (
+				C3B9ACF71BD5661300CE340E /* Temple.swift */,
+				C3B9ACF91BD574CD00CE340E /* temples.json */,
+				C37359AA1BD55DCA00464456 /* HistoricalSitesTableViewController.swift */,
 				C37359981BD55CD800464456 /* AppDelegate.swift */,
 				C373599C1BD55CD800464456 /* Main.storyboard */,
 				C373599F1BD55CD800464456 /* Assets.xcassets */,
@@ -123,6 +129,7 @@
 			files = (
 				C37359A31BD55CD800464456 /* LaunchScreen.storyboard in Resources */,
 				C37359A01BD55CD800464456 /* Assets.xcassets in Resources */,
+				C3B9ACFA1BD574CD00CE340E /* temples.json in Resources */,
 				C373599E1BD55CD800464456 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -134,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3B9ACF81BD5661300CE340E /* Temple.swift in Sources */,
 				C37359AB1BD55DCA00464456 /* HistoricalSitesTableViewController.swift in Sources */,
 				C37359991BD55CD800464456 /* AppDelegate.swift in Sources */,
 			);
@@ -283,6 +291,7 @@
 				C37359A91BD55CD800464456 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
