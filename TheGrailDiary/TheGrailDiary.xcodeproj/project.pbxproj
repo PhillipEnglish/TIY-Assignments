@@ -13,6 +13,7 @@
 		C37359A31BD55CD800464456 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C37359A11BD55CD800464456 /* LaunchScreen.storyboard */; };
 		C37359AB1BD55DCA00464456 /* HistoricalSitesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37359AA1BD55DCA00464456 /* HistoricalSitesTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		C38254881BD58742000DA9B3 /* temples.json in Resources */ = {isa = PBXBuildFile; fileRef = C38254871BD58742000DA9B3 /* temples.json */; settings = {ASSET_TAGS = (); }; };
+		C382548A1BD58CDA000DA9B3 /* TempleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38254891BD58CDA000DA9B3 /* TempleDetailViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		C3B9ACF81BD5661300CE340E /* Temple.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B9ACF71BD5661300CE340E /* Temple.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
@@ -25,6 +26,7 @@
 		C37359A41BD55CD800464456 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C37359AA1BD55DCA00464456 /* HistoricalSitesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HistoricalSitesTableViewController.swift; path = ../HistoricalSitesTableViewController.swift; sourceTree = "<group>"; };
 		C38254871BD58742000DA9B3 /* temples.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = temples.json; sourceTree = "<group>"; };
+		C38254891BD58CDA000DA9B3 /* TempleDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TempleDetailViewController.swift; sourceTree = "<group>"; };
 		C3B9ACF71BD5661300CE340E /* Temple.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Temple.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -63,6 +65,7 @@
 				C37359AA1BD55DCA00464456 /* HistoricalSitesTableViewController.swift */,
 				C37359981BD55CD800464456 /* AppDelegate.swift */,
 				C373599C1BD55CD800464456 /* Main.storyboard */,
+				C38254891BD58CDA000DA9B3 /* TempleDetailViewController.swift */,
 				C373599F1BD55CD800464456 /* Assets.xcassets */,
 				C37359A11BD55CD800464456 /* LaunchScreen.storyboard */,
 				C37359A41BD55CD800464456 /* Info.plist */,
@@ -141,6 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C382548A1BD58CDA000DA9B3 /* TempleDetailViewController.swift in Sources */,
 				C3B9ACF81BD5661300CE340E /* Temple.swift in Sources */,
 				C37359AB1BD55DCA00464456 /* HistoricalSitesTableViewController.swift in Sources */,
 				C37359991BD55CD800464456 /* AppDelegate.swift in Sources */,

@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="X9W-S1-Xww">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Historical Sites Table View Controller-->
@@ -48,6 +49,103 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aR9-Ke-n5n" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1327" y="145"/>
+        </scene>
+        <!--Temple Detail View Controller-->
+        <scene sceneID="6Hg-Kt-dYc">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iFP-nM-pej" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="Wx0-dd-c9t" customClass="TempleDetailViewController" customModule="TheGrailDiary" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GcV-FH-ABx"/>
+                        <viewControllerLayoutGuide type="bottom" id="Dgo-E2-yre"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="GYR-62-rxP">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CeU-sW-6Hd">
+                                <rect key="frame" x="20" y="72" width="56" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="42" id="4VE-wf-0P8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="4VE-wf-0P8"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Deity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="InR-Al-bBE">
+                                <rect key="frame" x="20" y="128" width="49" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="42" id="JJl-UK-N0y"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="JJl-UK-N0y"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Builder" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uth-Si-804">
+                                <rect key="frame" x="20" y="184" width="66" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="42" id="86Y-Hh-uan"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="86Y-Hh-uan"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="78Y-uf-Pv0">
+                                <rect key="frame" x="20" y="240" width="81" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="42" id="tMl-XP-l36"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="tMl-XP-l36"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="InR-Al-bBE" firstAttribute="leading" secondItem="GYR-62-rxP" secondAttribute="leading" constant="20" id="5aj-2y-PXX"/>
+                            <constraint firstItem="uth-Si-804" firstAttribute="leading" secondItem="GYR-62-rxP" secondAttribute="leading" constant="20" id="FVz-54-GP5"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="CeU-sW-6Hd" secondAttribute="leading" id="Joi-XF-Jsz"/>
+                            <constraint firstItem="CeU-sW-6Hd" firstAttribute="top" secondItem="GcV-FH-ABx" secondAttribute="bottom" constant="8" id="Myf-72-r4x"/>
+                            <constraint firstItem="CeU-sW-6Hd" firstAttribute="leading" secondItem="GYR-62-rxP" secondAttribute="leading" constant="20" id="g9H-7X-7Jt"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="uth-Si-804" secondAttribute="leading" id="gn1-1n-L0s"/>
+                            <constraint firstItem="CeU-sW-6Hd" firstAttribute="top" secondItem="GYR-62-rxP" secondAttribute="top" constant="8" id="hEP-te-L03"/>
+                            <constraint firstItem="InR-Al-bBE" firstAttribute="top" secondItem="CeU-sW-6Hd" secondAttribute="bottom" constant="30" id="hdP-tE-qCf"/>
+                            <constraint firstItem="78Y-uf-Pv0" firstAttribute="leading" secondItem="GYR-62-rxP" secondAttribute="leading" constant="20" id="rTZ-OT-w8v"/>
+                            <constraint firstItem="uth-Si-804" firstAttribute="top" secondItem="InR-Al-bBE" secondAttribute="bottom" constant="30" id="tC9-QZ-fUw"/>
+                            <constraint firstItem="78Y-uf-Pv0" firstAttribute="top" secondItem="uth-Si-804" secondAttribute="bottom" constant="30" id="yx3-bE-1yg"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Joi-XF-Jsz"/>
+                                <exclude reference="hEP-te-L03"/>
+                                <exclude reference="gn1-1n-L0s"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1991" y="135"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="hwu-0y-BGE">
