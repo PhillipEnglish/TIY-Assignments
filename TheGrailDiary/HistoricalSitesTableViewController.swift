@@ -120,6 +120,15 @@ class HistoricalSitesTableViewController: UITableViewController {
         {
             print(error)
         }
-    }
+    } 
 
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
+    {
+        let aTemple = temples[indexPath.row]
+        let NVCfromTemplate = storyboard?.instantiateViewControllerWithIdentifier("TempleDetailViewController") as! TempleDetailViewController
+        NVCfromTemplate.temple = aTemple
+        presentViewController(NVCfromTemplate, animated: true, completion: nil)
+    }
+    
+    
 }

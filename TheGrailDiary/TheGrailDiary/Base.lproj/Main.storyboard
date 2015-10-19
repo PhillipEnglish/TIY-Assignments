@@ -59,7 +59,7 @@
                         <viewControllerLayoutGuide type="top" id="GcV-FH-ABx"/>
                         <viewControllerLayoutGuide type="bottom" id="Dgo-E2-yre"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="GYR-62-rxP">
+                    <view key="view" contentMode="scaleToFill" id="GYR-62-rxP" userLabel="TempleDetailViewController">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -145,7 +145,7 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="1991" y="135"/>
+            <point key="canvasLocation" x="2022" y="77"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="hwu-0y-BGE">
