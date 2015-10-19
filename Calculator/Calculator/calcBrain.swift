@@ -22,7 +22,7 @@ class calcBrain
     var symbol: String = ""
     var operandOne: String = ""
     var operandTwo: String = ""
-    var result = 0
+    var result = 0.0
     
     
     
@@ -65,18 +65,37 @@ class calcBrain
     }
     
     
-    func calculate () -> Int
+  /*  func calculate () -> Int
     {
         switch symbol
         {
             case "+": result = Int(operandOne)! + Int(operandTwo)!
             case "-": result = Int(operandOne)! - Int(operandTwo)!
             case "÷": result = Int(operandOne)! / Int(operandTwo)!
-            case "x": result = Int (operandOne)! * Int(operandTwo)!
+            case "x": result = Int(operandOne)! * Int(operandTwo)!
+          
+            
         default: result = Int(operandOne)!
         }
         return result
         
+    } */
+    
+    func calculate () -> Double
+    {
+        switch symbol
+        {
+            case "+": result = Double(operandOne)! + Double(operandTwo)!
+            case "-": result = Double(operandOne)! - Double(operandTwo)!
+            case "÷": result = Double(operandOne)! / Double(operandTwo)!
+            case "x": result = Double(operandOne)! * Double(operandTwo)!
+            //case "%": result = Double(operandTwo)! * 0.01
+            //case "+/-": result = Double (operandTwo)! * -1
+            
+                default: result = Double(operandOne)!
+        }
+        
+        return result
     }
     
    
