@@ -111,6 +111,26 @@ class ToDoTableViewController: UITableViewController, UITextFieldDelegate
     }
     */
     
+    //MARK: - UITextfield Delegate
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool
+    {
+        var rc = false
+        
+        if textField.text != ""
+        {
+            rc = true
+            let contentView = textField.superview
+            let cell = contentView?.superview as! ToDoCell
+            let indexPath = tableView.indexPathForCell(cell)
+            let aTodo = toDos[indexPath!.row]
+            aTodo.toDoDescription = textField.text
+            textField.resignFirstResponder()
+            saveContext()
+        }
+        return rc
+    }
+    
     //MARK: - Action Handlers
     
     @IBAction func AddTablePushed(sender: UIBarButtonItem)
@@ -121,5 +141,18 @@ class ToDoTableViewController: UITableViewController, UITextFieldDelegate
         tableView.reloadData()
     }
     
+    
+    //MARK: - Private
+    func saveContext()
+    {
+        do {
+            try managedObjectContext.save()
+        }
+        catch {
+            let nserror = error as NSError
+            NSLog("Unresolved error \(nserror), \(nserror.userInfo)")
+            abort()
+        }
+    }
 
 }
