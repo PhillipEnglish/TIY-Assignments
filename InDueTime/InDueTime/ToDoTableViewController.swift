@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import CoreData
 
-class ToDoTableViewController: UITableViewController, UITextFieldDelegate {
+
+class ToDoTableViewController: UITableViewController, UITextFieldDelegate
+{
 
     let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
     var toDos = Array<ToDo>()
@@ -39,7 +42,7 @@ class ToDoTableViewController: UITableViewController, UITextFieldDelegate {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return toDos.count
+        return toDos.countz
     }
 
     
@@ -107,5 +110,16 @@ class ToDoTableViewController: UITableViewController, UITextFieldDelegate {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    //MARK: - Action Handlers
+    
+    @IBAction func AddTablePushed(sender: UIBarButtonItem)
+    {
+        let newTodo = NSEntityDescription.insertNewObjectForEntityForName("ToDo", inManagedObjectContext: managedObjectContext) as! ToDo
+        
+        toDos.append(newTodo)
+        tableView.reloadData()
+    }
+    
 
 }
