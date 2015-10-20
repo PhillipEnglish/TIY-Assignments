@@ -27,8 +27,8 @@
                                                 <action selector="isCompleteChanged:" destination="Fz2-h4-cdx" eventType="valueChanged" id="y3C-2s-Jwg"/>
                                             </connections>
                                         </switch>
-                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="azH-jP-0qf">
-                                            <rect key="frame" x="8" y="8" width="509" height="30"/>
+                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="azH-jP-0qf">
+                                            <rect key="frame" x="8" y="8" width="507" height="17"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits"/>
                                             <connections>
@@ -39,7 +39,7 @@
                                     <constraints>
                                         <constraint firstItem="azH-jP-0qf" firstAttribute="top" secondItem="LzN-Ti-P4Q" secondAttribute="top" constant="8" id="BsJ-gR-oEe"/>
                                         <constraint firstItem="FdM-yt-VGJ" firstAttribute="top" secondItem="LzN-Ti-P4Q" secondAttribute="top" constant="8" id="C1K-Tt-1FC"/>
-                                        <constraint firstItem="FdM-yt-VGJ" firstAttribute="leading" secondItem="azH-jP-0qf" secondAttribute="trailing" constant="18" id="PSB-ye-yal"/>
+                                        <constraint firstItem="FdM-yt-VGJ" firstAttribute="leading" secondItem="azH-jP-0qf" secondAttribute="trailing" constant="20" id="PSB-ye-yal"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="FdM-yt-VGJ" secondAttribute="trailing" constant="8" id="XbL-aP-fDg"/>
                                         <constraint firstItem="azH-jP-0qf" firstAttribute="leading" secondItem="LzN-Ti-P4Q" secondAttribute="leading" constant="8" id="zZW-4R-yS4"/>
                                     </constraints>

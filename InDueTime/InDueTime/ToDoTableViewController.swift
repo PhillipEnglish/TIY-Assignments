@@ -95,10 +95,14 @@ class ToDoTableViewController: UITableViewController, UITextFieldDelegate
         if editingStyle == .Delete
         {
             let aTodo = toDos[indexPath.row]
-            toDos.removeAtIndex(indexPath.row)
-            managedObjectContext.deleteObject(aTodo)
-            saveContext()
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+            if aTodo.isComplete == true
+            {
+                toDos.removeAtIndex(indexPath.row)
+                managedObjectContext.deleteObject(aTodo)
+                saveContext()
+                tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+
+            }
         }
         
     }
@@ -169,10 +173,11 @@ class ToDoTableViewController: UITableViewController, UITextFieldDelegate
         
         if Bool(sender.enabled) == false
         {
-            aToDo.isComplete == false
+                        aToDo.isComplete == false
         }
         else
         {
+            
             aToDo.isComplete == true
         }
         saveContext()
