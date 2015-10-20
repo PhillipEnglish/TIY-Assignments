@@ -21,16 +21,21 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="azH-jP-0qf">
-                                            <rect key="frame" x="8" y="0.0" width="509" height="30"/>
+                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="FdM-yt-VGJ">
+                                            <rect key="frame" x="535" y="8" width="51" height="31"/>
+                                        </switch>
+                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="azH-jP-0qf">
+                                            <rect key="frame" x="8" y="8" width="509" height="30"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits"/>
+                                            <connections>
+                                                <outlet property="delegate" destination="Fz2-h4-cdx" id="gbV-Tm-8wt"/>
+                                            </connections>
                                         </textField>
-                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FdM-yt-VGJ">
-                                            <rect key="frame" x="535" y="0.0" width="51" height="31"/>
-                                        </switch>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstItem="azH-jP-0qf" firstAttribute="top" secondItem="LzN-Ti-P4Q" secondAttribute="top" constant="8" id="BsJ-gR-oEe"/>
+                                        <constraint firstItem="FdM-yt-VGJ" firstAttribute="top" secondItem="LzN-Ti-P4Q" secondAttribute="top" constant="8" id="C1K-Tt-1FC"/>
                                         <constraint firstItem="FdM-yt-VGJ" firstAttribute="leading" secondItem="azH-jP-0qf" secondAttribute="trailing" constant="18" id="PSB-ye-yal"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="FdM-yt-VGJ" secondAttribute="trailing" constant="8" id="XbL-aP-fDg"/>
                                         <constraint firstItem="azH-jP-0qf" firstAttribute="leading" secondItem="LzN-Ti-P4Q" secondAttribute="leading" constant="8" id="zZW-4R-yS4"/>

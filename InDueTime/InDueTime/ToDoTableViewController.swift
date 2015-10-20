@@ -20,6 +20,20 @@ class ToDoTableViewController: UITableViewController, UITextFieldDelegate
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        title = "To Do List"
+        
+        let fetchRequest = NSFetchRequest(entityName: "ToDo")
+        
+        do {
+            let fetchResults = try managedObjectContext.executeFetchRequest(fetchRequest) as? [ToDo]
+            toDos = fetchResults!
+        }
+        catch {
+            let nserror = error as NSError
+            NSLog("Unresolved error \(nserror), \(nserror.userInfo)")
+            abort()
+        }
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -74,17 +88,21 @@ class ToDoTableViewController: UITableViewController, UITextFieldDelegate
     }
     */
 
-    /*
+    
     // Override to support editing the table view.
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
-            // Delete the row from the data source
+    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath)
+    {
+        if editingStyle == .Delete
+        {
+            let aTodo = toDos[indexPath.row]
+            toDos.removeAtIndex(indexPath.row)
+            managedObjectContext.deleteObject(aTodo)
+            saveContext()
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+        }
+        
     }
-    */
+    
 
     /*
     // Override to support rearranging the table view.
