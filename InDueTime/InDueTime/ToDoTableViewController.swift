@@ -39,14 +39,25 @@ class ToDoTableViewController: UITableViewController, UITextFieldDelegate {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 1
+        return toDos.count
     }
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("ToDoCell", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("ToDoCell", forIndexPath: indexPath) as! ToDoCell
 
         // Configure the cell...
+        
+        let aToDo = toDos[indexPath.row]
+        
+        if aToDo.toDoDescription == nil
+        {
+            cell.descriptionTextField.becomeFirstResponder()
+        }
+        else
+        {
+            cell.descriptionTextField.text = aToDo.toDoDescription
+        }
 
         return cell
     }
