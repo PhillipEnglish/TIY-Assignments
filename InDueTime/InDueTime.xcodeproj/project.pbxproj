@@ -20,8 +20,8 @@
 
 /* Begin PBXFileReference section */
 		C305B9E31BD6BAA2004C2535 /* ToDoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoTableViewController.swift; sourceTree = "<group>"; };
-		C305B9E51BD6BCE8004C2535 /* ToDo+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ToDo+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		C305B9E61BD6BCE8004C2535 /* ToDo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDo.swift; sourceTree = "<group>"; };
+		C305B9E51BD6BCE8004C2535 /* ToDo+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "ToDo+CoreDataProperties.swift"; path = "../ToDo+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		C305B9E61BD6BCE8004C2535 /* ToDo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ToDo.swift; path = ../ToDo.swift; sourceTree = "<group>"; };
 		C3AE2B5C1BD6ABB000819B9A /* InDueTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InDueTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3AE2B5F1BD6ABB000819B9A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C3AE2B641BD6ABB000819B9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -46,8 +46,6 @@
 		C3AE2B531BD6ABAF00819B9A = {
 			isa = PBXGroup;
 			children = (
-				C305B9E51BD6BCE8004C2535 /* ToDo+CoreDataProperties.swift */,
-				C305B9E61BD6BCE8004C2535 /* ToDo.swift */,
 				C3AE2B5E1BD6ABB000819B9A /* InDueTime */,
 				C3AE2B5D1BD6ABB000819B9A /* Products */,
 			);
@@ -64,6 +62,8 @@
 		C3AE2B5E1BD6ABB000819B9A /* InDueTime */ = {
 			isa = PBXGroup;
 			children = (
+				C305B9E51BD6BCE8004C2535 /* ToDo+CoreDataProperties.swift */,
+				C305B9E61BD6BCE8004C2535 /* ToDo.swift */,
 				C3AE2B5F1BD6ABB000819B9A /* AppDelegate.swift */,
 				C3AE2B631BD6ABB000819B9A /* Main.storyboard */,
 				C3AE2B691BD6ABB000819B9A /* Assets.xcassets */,

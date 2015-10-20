@@ -10,6 +10,11 @@ import UIKit
 
 class ToDoTableViewController: UITableViewController, UITextFieldDelegate {
 
+    let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
+    var toDos = Array<ToDo>()
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
