@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C305B9E41BD6BAA2004C2535 /* ToDoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C305B9E31BD6BAA2004C2535 /* ToDoTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		C305B9E71BD6BCE8004C2535 /* ToDo+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C305B9E51BD6BCE8004C2535 /* ToDo+CoreDataProperties.swift */; settings = {ASSET_TAGS = (); }; };
+		C305B9E81BD6BCE8004C2535 /* ToDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C305B9E61BD6BCE8004C2535 /* ToDo.swift */; settings = {ASSET_TAGS = (); }; };
 		C3AE2B601BD6ABB000819B9A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AE2B5F1BD6ABB000819B9A /* AppDelegate.swift */; };
-		C3AE2B621BD6ABB000819B9A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AE2B611BD6ABB000819B9A /* ViewController.swift */; };
 		C3AE2B651BD6ABB000819B9A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3AE2B631BD6ABB000819B9A /* Main.storyboard */; };
 		C3AE2B681BD6ABB000819B9A /* InDueTime.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C3AE2B661BD6ABB000819B9A /* InDueTime.xcdatamodeld */; };
 		C3AE2B6A1BD6ABB000819B9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3AE2B691BD6ABB000819B9A /* Assets.xcassets */; };
@@ -16,9 +18,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C305B9E31BD6BAA2004C2535 /* ToDoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoTableViewController.swift; sourceTree = "<group>"; };
+		C305B9E51BD6BCE8004C2535 /* ToDo+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ToDo+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		C305B9E61BD6BCE8004C2535 /* ToDo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDo.swift; sourceTree = "<group>"; };
 		C3AE2B5C1BD6ABB000819B9A /* InDueTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InDueTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3AE2B5F1BD6ABB000819B9A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C3AE2B611BD6ABB000819B9A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C3AE2B641BD6ABB000819B9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C3AE2B671BD6ABB000819B9A /* InDueTime.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = InDueTime.xcdatamodel; sourceTree = "<group>"; };
 		C3AE2B691BD6ABB000819B9A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -40,6 +44,8 @@
 		C3AE2B531BD6ABAF00819B9A = {
 			isa = PBXGroup;
 			children = (
+				C305B9E51BD6BCE8004C2535 /* ToDo+CoreDataProperties.swift */,
+				C305B9E61BD6BCE8004C2535 /* ToDo.swift */,
 				C3AE2B5E1BD6ABB000819B9A /* InDueTime */,
 				C3AE2B5D1BD6ABB000819B9A /* Products */,
 			);
@@ -57,12 +63,12 @@
 			isa = PBXGroup;
 			children = (
 				C3AE2B5F1BD6ABB000819B9A /* AppDelegate.swift */,
-				C3AE2B611BD6ABB000819B9A /* ViewController.swift */,
 				C3AE2B631BD6ABB000819B9A /* Main.storyboard */,
 				C3AE2B691BD6ABB000819B9A /* Assets.xcassets */,
 				C3AE2B6B1BD6ABB000819B9A /* LaunchScreen.storyboard */,
 				C3AE2B6E1BD6ABB000819B9A /* Info.plist */,
 				C3AE2B661BD6ABB000819B9A /* InDueTime.xcdatamodeld */,
+				C305B9E31BD6BAA2004C2535 /* ToDoTableViewController.swift */,
 			);
 			path = InDueTime;
 			sourceTree = "<group>";
@@ -138,7 +144,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3AE2B681BD6ABB000819B9A /* InDueTime.xcdatamodeld in Sources */,
-				C3AE2B621BD6ABB000819B9A /* ViewController.swift in Sources */,
+				C305B9E81BD6BCE8004C2535 /* ToDo.swift in Sources */,
+				C305B9E71BD6BCE8004C2535 /* ToDo+CoreDataProperties.swift in Sources */,
+				C305B9E41BD6BAA2004C2535 /* ToDoTableViewController.swift in Sources */,
 				C3AE2B601BD6ABB000819B9A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -287,6 +295,7 @@
 				C3AE2B731BD6ABB000819B9A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
