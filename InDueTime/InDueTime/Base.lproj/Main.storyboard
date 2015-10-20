@@ -44,7 +44,7 @@
                         </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="Fz2-h4-cdx" id="bnm-A0-M4m"/>
-                            <outlet property="delegate" destination="Fz2-h4-cdx" id="hxb-04-hta"/>
+                            <outlet property="delegate" destination="Fz2-h4-cdx" id="AQM-W2-bYo"/>
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="JT8-Bt-lns"/>
