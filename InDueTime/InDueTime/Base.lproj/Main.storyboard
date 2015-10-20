@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="K0o-06-egz">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--To Do Table View Controller-->
@@ -13,13 +14,32 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="ToDoCell" selectionStyle="default" indentationWidth="10" id="dBH-SO-uxM">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="ToDoCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="ToDoCell" id="dBH-SO-uxM" customClass="ToDoCell" customModule="InDueTime" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dBH-SO-uxM" id="LzN-Ti-P4Q">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="azH-jP-0qf">
+                                            <rect key="frame" x="8" y="0.0" width="509" height="30"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </textField>
+                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FdM-yt-VGJ">
+                                            <rect key="frame" x="535" y="0.0" width="51" height="31"/>
+                                        </switch>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="FdM-yt-VGJ" firstAttribute="leading" secondItem="azH-jP-0qf" secondAttribute="trailing" constant="18" id="PSB-ye-yal"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="FdM-yt-VGJ" secondAttribute="trailing" constant="8" id="XbL-aP-fDg"/>
+                                        <constraint firstItem="azH-jP-0qf" firstAttribute="leading" secondItem="LzN-Ti-P4Q" secondAttribute="leading" constant="8" id="zZW-4R-yS4"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="descriptionTextField" destination="azH-jP-0qf" id="pLr-nR-zHq"/>
+                                    <outlet property="isDoneSwitch" destination="FdM-yt-VGJ" id="MuE-0Q-ieE"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

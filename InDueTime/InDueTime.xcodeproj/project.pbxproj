@@ -15,6 +15,7 @@
 		C3AE2B681BD6ABB000819B9A /* InDueTime.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C3AE2B661BD6ABB000819B9A /* InDueTime.xcdatamodeld */; };
 		C3AE2B6A1BD6ABB000819B9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3AE2B691BD6ABB000819B9A /* Assets.xcassets */; };
 		C3AE2B6D1BD6ABB000819B9A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3AE2B6B1BD6ABB000819B9A /* LaunchScreen.storyboard */; };
+		C3D7B4DC1BD6D92E002EB0DF /* ToDoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D7B4DB1BD6D92E002EB0DF /* ToDoCell.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		C3AE2B691BD6ABB000819B9A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C3AE2B6C1BD6ABB000819B9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C3AE2B6E1BD6ABB000819B9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C3D7B4DB1BD6D92E002EB0DF /* ToDoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				C3AE2B6E1BD6ABB000819B9A /* Info.plist */,
 				C3AE2B661BD6ABB000819B9A /* InDueTime.xcdatamodeld */,
 				C305B9E31BD6BAA2004C2535 /* ToDoTableViewController.swift */,
+				C3D7B4DB1BD6D92E002EB0DF /* ToDoCell.swift */,
 			);
 			path = InDueTime;
 			sourceTree = "<group>";
@@ -144,6 +147,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3AE2B681BD6ABB000819B9A /* InDueTime.xcdatamodeld in Sources */,
+				C3D7B4DC1BD6D92E002EB0DF /* ToDoCell.swift in Sources */,
 				C305B9E81BD6BCE8004C2535 /* ToDo.swift in Sources */,
 				C305B9E71BD6BCE8004C2535 /* ToDo+CoreDataProperties.swift in Sources */,
 				C305B9E41BD6BAA2004C2535 /* ToDoTableViewController.swift in Sources */,
