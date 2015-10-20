@@ -23,6 +23,9 @@
                                     <subviews>
                                         <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="FdM-yt-VGJ">
                                             <rect key="frame" x="535" y="8" width="51" height="31"/>
+                                            <connections>
+                                                <action selector="isCompleteChanged:" destination="Fz2-h4-cdx" eventType="valueChanged" id="y3C-2s-Jwg"/>
+                                            </connections>
                                         </switch>
                                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="azH-jP-0qf">
                                             <rect key="frame" x="8" y="8" width="509" height="30"/>

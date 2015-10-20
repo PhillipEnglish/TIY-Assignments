@@ -160,6 +160,25 @@ class ToDoTableViewController: UITableViewController, UITextFieldDelegate
     }
     
     
+    @IBAction func isCompleteChanged(sender: UISwitch)
+    {
+        let contentView = sender.superview
+        let cell = contentView?.superview as! ToDoCell
+        let indexPath = tableView.indexPathForCell(cell)
+        let aToDo = toDos[indexPath!.row]
+        
+        if Bool(sender.enabled) == false
+        {
+            aToDo.isComplete == false
+        }
+        else
+        {
+            aToDo.isComplete == true
+        }
+        saveContext()
+        tableView.reloadData()  
+    }
+    
     //MARK: - Private
     func saveContext()
     {
