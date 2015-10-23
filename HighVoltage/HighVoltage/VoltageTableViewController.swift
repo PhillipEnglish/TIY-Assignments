@@ -8,8 +8,23 @@
 
 import UIKit
 
-class VoltageTableViewController: UITableViewController {
+protocol TypesListTableViewControllerDelegate
+{
+    func typeWasChosen(chosenType: String)
+}
 
+class VoltageTableViewController: UITableViewController, UIPopoverPresentationControllerDelegate, TypesListTableViewControllerDelegate
+
+{
+
+   var visibleTypes = [String]()
+    
+    
+    
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
