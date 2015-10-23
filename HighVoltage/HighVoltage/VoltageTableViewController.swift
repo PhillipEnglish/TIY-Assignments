@@ -19,7 +19,7 @@ class VoltageTableViewController: UITableViewController, UIPopoverPresentationCo
 
    var visibleTypes = [String]()
     
-    
+    var remainingTypes = ["watts", "volts", "amps", "ohms"]
     
     
     
@@ -28,11 +28,7 @@ class VoltageTableViewController: UITableViewController, UIPopoverPresentationCo
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        title = "Danger! High VOLTAGE!"
     }
 
     override func didReceiveMemoryWarning() {
@@ -49,7 +45,7 @@ class VoltageTableViewController: UITableViewController, UIPopoverPresentationCo
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 1
+        return visibleTypes.count   
     }
 
     
@@ -97,14 +93,40 @@ class VoltageTableViewController: UITableViewController, UIPopoverPresentationCo
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
+    {
+        if segue.identifier == "ShowTypesListPopoverSegue"
+        {
+            let destVC = segue.destinationViewController as! TypesListTableViewController
+            destVC.types = remainingTypes
+            destVC.popoverPresentationController?.delegate = self
+            let contentHeight = 44.0 * CGFloat(remainingTypes.count)
+            destVC.delegate = self
+            destVC.preferredContentSize = CGSizeMake(200, contentHeight)
+        }
+    
     }
-    */
+
+    //MARK:  UIPopoverPresentationController Delegate
+    func adaptivePresentationStyleForPresentationController(controller: UIPresentationController) -> UIModalPresentationStyle
+    {
+        return .None
+    }
+    
+    
+    //MARK: - TypesListTableViewController Delegate
+    func typeWasChosen(chosenType: String)
+    {
+        navigationController?.dismissViewControllerAnimated(true, completion: nil)
+        visibleTypes.append(chosenType)
+        let rowToRemove = (remainingTypes as NSArray).indexOfObject(chosenType)
+        remainingTypes.removeAtIndex(rowToRemove)
+        
+        tableView?.reloadData() 
+    }
 
 }

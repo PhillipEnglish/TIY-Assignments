@@ -8,18 +8,18 @@
 
 import UIKit
 
-class TypesListTableViewController: UITableViewController {
+class TypesListTableViewController: UITableViewController
+
+{
     
     var types: [String]?
+    
+    var delegate: TypesListTableViewControllerDelegate?
 
-    override func viewDidLoad() {
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
 
     override func didReceiveMemoryWarning() {
@@ -41,12 +41,18 @@ class TypesListTableViewController: UITableViewController {
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("TypesCell", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("TypeCell", forIndexPath: indexPath)
 
         let aType = types?[indexPath.row]
         cell.textLabel?.text = aType
         
         return cell
+    }
+    
+    override func   tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath)
+    {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        delegate?.typeWasChosen((types?[indexPath.row])!)
     }
     
 
