@@ -20,8 +20,8 @@ class ViewController: UIViewController
     var stalemateScore = 0
     
     let gameStatusLabel = UILabel(frame: CGRect(x: 0, y: 80, width: 200, height: 50))
-    let player1Label = UILabel(frame: CGRect(x: 0, y: 450, width: 150, height: 25))
-    let player2Label = UILabel(frame: CGRect(x: 0, y: 450, width: 175, height: 25))
+    let player1Label = UILabel(frame: CGRect(x: 0, y: 550, width: 150, height: 25))
+    let player2Label = UILabel(frame: CGRect(x: 0, y: 600, width: 175, height: 25))
     let stalemateLabel = UILabel(frame: CGRect(x: 0, y: 500, width: 175, height: 25))
     let resetButton = UIButton(frame: CGRect(x: 0, y: 45, width: 150, height: 15))
     let resetScoreButton = UIButton(frame: CGRect(x: 0, y: 65, width: 150, height: 15))
@@ -42,6 +42,26 @@ class ViewController: UIViewController
         gameStatusLabel.center.x = view.center.x
         
         view.addSubview(gameStatusLabel)
+        
+        player1Label.text = "Player 1 Score: 0"
+        player1Label.textAlignment = .Center
+        player1Label.center.x = view.center.x
+        view.addSubview(player1Label)
+        
+        player2Label.text = "Player 2 Score: 0"
+        player2Label.textAlignment = .Center
+        player2Label.center.x = view.center.x
+        view.addSubview(player2Label)
+        
+        stalemateLabel.text = "Stalemates: 0"
+        stalemateLabel.textAlignment = .Center
+        stalemateLabel.center.x = view.center.x
+        view.addSubview(stalemateLabel)
+        
+        resetScoreButton.setTitle("Reset ScoreBoard", forState: .Normal)
+        resetScoreButton.setTitleColor(UIColor.blackColor(), forState: .Normal)
+        resetScoreButton.center.x = view.center.x
+        view.addSubview(resetScoreButton)
         
         let screenHeight = Int(UIScreen.mainScreen().bounds.height)
         let screenWidth = Int(UIScreen.mainScreen().bounds.width)
