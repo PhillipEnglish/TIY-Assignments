@@ -20,6 +20,16 @@ class ViewController: UIViewController
     var stalemateScore = 0
     
     let gameStatusLabel = UILabel(frame: CGRect(x: 0, y: 80, width: 200, height: 50))
+    let player1Label = UILabel(frame: CGRect(x: 0, y: 450, width: 150, height: 25))
+    let player2Label = UILabel(frame: CGRect(x: 0, y: 450, width: 175, height: 25))
+    let stalemateLabel = UILabel(frame: CGRect(x: 0, y: 500, width: 175, height: 25))
+    let resetButton = UIButton(frame: CGRect(x: 0, y: 45, width: 150, height: 15))
+    let resetScoreButton = UIButton(frame: CGRect(x: 0, y: 65, width: 150, height: 15))
+    
+    
+    
+    
+    
     
     override func viewDidLoad()
     {
@@ -75,20 +85,30 @@ class ViewController: UIViewController
     {
         if button.player == 0
         {
-                        if isPlayer1Turn
-                        {
-                            button.player = 1
-                        }
-                        else
-                        {
-                            button.player = 2
-                      }
+            //            if isPlayer1Turn
+            //            {
+            //                button.player = 1
+            //            }
+            //            else
+            //            {
+            //                button.player = 2
+            //            }
             button.player = isPlayer1Turn ? 1 : 2
             
             grid[button.row][button.col] = isPlayer1Turn ? 1 : 2
             
             isPlayer1Turn = !isPlayer1Turn
             
+            if isPlayer1Turn //== true
+                    {
+                        gameStatusLabel.text == "Player 1 turn"
+                    }
+                else
+                    {
+                        gameStatusLabel.text == "Player 2 turn"
+                  
+                    }
+           
             checkForWinner()
         }
     }
@@ -150,4 +170,5 @@ class TTTButton: UIButton
         }
     }
 }
+
 
