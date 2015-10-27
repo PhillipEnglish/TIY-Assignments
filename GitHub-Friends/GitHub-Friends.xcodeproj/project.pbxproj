@@ -8,8 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C304CCFB1BDFF02500B3FCDA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C304CCFA1BDFF02500B3FCDA /* AppDelegate.swift */; };
-		C304CCFD1BDFF02500B3FCDA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C304CCFC1BDFF02500B3FCDA /* ViewController.swift */; };
-		C304CD001BDFF02500B3FCDA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C304CCFE1BDFF02500B3FCDA /* Main.storyboard */; };
+		C304CCFD1BDFF02500B3FCDA /* FriendInfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C304CCFC1BDFF02500B3FCDA /* FriendInfoTableViewController.swift */; };
 		C304CD021BDFF02500B3FCDA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C304CD011BDFF02500B3FCDA /* Assets.xcassets */; };
 		C304CD051BDFF02500B3FCDA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C304CD031BDFF02500B3FCDA /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -17,8 +16,7 @@
 /* Begin PBXFileReference section */
 		C304CCF71BDFF02400B3FCDA /* GitHub-Friends.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GitHub-Friends.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C304CCFA1BDFF02500B3FCDA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C304CCFC1BDFF02500B3FCDA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		C304CCFF1BDFF02500B3FCDA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C304CCFC1BDFF02500B3FCDA /* FriendInfoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendInfoTableViewController.swift; sourceTree = "<group>"; };
 		C304CD011BDFF02500B3FCDA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C304CD041BDFF02500B3FCDA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C304CD061BDFF02500B3FCDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -55,8 +53,7 @@
 			isa = PBXGroup;
 			children = (
 				C304CCFA1BDFF02500B3FCDA /* AppDelegate.swift */,
-				C304CCFC1BDFF02500B3FCDA /* ViewController.swift */,
-				C304CCFE1BDFF02500B3FCDA /* Main.storyboard */,
+				C304CCFC1BDFF02500B3FCDA /* FriendInfoTableViewController.swift */,
 				C304CD011BDFF02500B3FCDA /* Assets.xcassets */,
 				C304CD031BDFF02500B3FCDA /* LaunchScreen.storyboard */,
 				C304CD061BDFF02500B3FCDA /* Info.plist */,
@@ -124,7 +121,6 @@
 			files = (
 				C304CD051BDFF02500B3FCDA /* LaunchScreen.storyboard in Resources */,
 				C304CD021BDFF02500B3FCDA /* Assets.xcassets in Resources */,
-				C304CD001BDFF02500B3FCDA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,7 +131,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C304CCFD1BDFF02500B3FCDA /* ViewController.swift in Sources */,
+				C304CCFD1BDFF02500B3FCDA /* FriendInfoTableViewController.swift in Sources */,
 				C304CCFB1BDFF02500B3FCDA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -143,14 +139,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		C304CCFE1BDFF02500B3FCDA /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C304CCFF1BDFF02500B3FCDA /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		C304CD031BDFF02500B3FCDA /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -284,6 +272,7 @@
 				C304CD0B1BDFF02500B3FCDA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
