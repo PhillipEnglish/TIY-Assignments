@@ -161,6 +161,17 @@ class ViewController: UIViewController
                 if value1 != 0
                 {
                     print("Player \(value1) wins!")
+                    if gameStatusLabel.text == "Player 1 wins !"
+                    {
+                        player1Score++
+                        player1Label.text = "Player 1 Score: \(player1Score)"
+                        
+                    }
+                    else if gameStatusLabel.text = "Player 2 wins !"
+                    {
+                        player2Score++
+                        player2Label.text = "Player 2 Score: \(player1Score)"
+                    }
                 }
                 else
                 {
