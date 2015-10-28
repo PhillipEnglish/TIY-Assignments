@@ -30,16 +30,12 @@ struct Friend
         
         if results.count > 0
         {
-           // for result in results
-           // {
-                let name = result.valueForKey("name") as? String
+            let name = results.valueForKey("name") as? String ?? ""
+            let login = results.valueForKey("login") as? String ?? ""
+            let blog = results.valueForKey("blog") as? String ?? ""
+            let location = results.valueForKey("location") as? String ?? ""
             
-                let login = result.valueForKey("login") as? String
-                let blog = result.valueForKey("blog") as? String
-                let location = result.valueForKey("location") as? String
-                friendInfo.append(Friend(name: name!, login: login!, blog: blog!, location: location!))
-
-           // }
+            friendInfo.append(Friend(name: name, login: login, blog: blog, location: location))
             
         }
         
