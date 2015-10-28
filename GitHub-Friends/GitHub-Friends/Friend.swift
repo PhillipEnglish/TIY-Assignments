@@ -24,21 +24,22 @@ struct Friend
     }
     
     
-    static func friendInfoWithJSON(results: NSArray) -> [Friend]
+    static func friendInfoWithJSON(results: NSDictionary) -> [Friend]
     {
         var friendInfo = [Friend]()
         
         if results.count > 0
         {
-            for result in results
-            {
-                let name = result["name"] as? String
-                let login = result["login"] as? String
-                let blog = result["blog"] as? String
-                let location = result["location"] as? String
+           // for result in results
+           // {
+                let name = result.valueForKey("name") as? String
+            
+                let login = result.valueForKey("login") as? String
+                let blog = result.valueForKey("blog") as? String
+                let location = result.valueForKey("location") as? String
                 friendInfo.append(Friend(name: name!, login: login!, blog: blog!, location: location!))
 
-            }
+           // }
             
         }
         

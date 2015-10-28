@@ -10,7 +10,7 @@ import UIKit
 
 protocol APIControllerProtocol
 {
-    func didReceiveAPIResults(results: NSArray)
+    func didReceiveAPIResults(results: NSDictionary)
 }
 
 class FriendInfoTableViewController: UITableViewController, APIControllerProtocol
@@ -59,9 +59,10 @@ class FriendInfoTableViewController: UITableViewController, APIControllerProtoco
     
     // MARK: - API Controller Protocol
     
-    func didReceiveAPIResults(results: NSArray)
+    func didReceiveAPIResults(results: NSDictionary)
     {
         dispatch_async(dispatch_get_main_queue(), {
+            
             self.friendInfo = Friend.friendInfoWithJSON(results)
             self.tableView.reloadData()
             UIApplication.sharedApplication().networkActivityIndicatorVisible = false

@@ -21,7 +21,7 @@ class APIController
     
     func searchGitHubFor(searchTerm: String)
     {
-        let gitHubSearchTerm = searchTerm
+        let gitHubSearchTerm = searchTerm.stringByReplacingOccurrencesOfString(" ", withString: "%20", options: NSStringCompareOptions.CaseInsensitiveSearch, range: nil)
         if let userSearchTerm = gitHubSearchTerm.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.alphanumericCharacterSet())
         {
             let urlPath = "https://api.github.com/users/\(userSearchTerm)"
@@ -37,11 +37,9 @@ class APIController
                 {
                     if let dictionary = self.parseJSON(data!)
                     {
-                        if let results: NSArray =
-                            dictionary ["results"] as? NSArray
-                        {
-                            self.delegate.didReceiveAPIResults (results)
-                        }
+                        
+                        self.delegate.didReceiveAPIResults (dictionary)
+                        
                     }
                 }
                 
@@ -56,6 +54,7 @@ class APIController
         do
         {
             let dictionary: NSDictionary! = try NSJSONSerialization.JSONObjectWithData(data, options: []) as! NSDictionary
+            print("parseJSON")
             return dictionary
         }
         catch let error as NSError
