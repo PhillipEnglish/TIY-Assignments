@@ -11,6 +11,8 @@
 		C304CCFD1BDFF02500B3FCDA /* FriendInfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C304CCFC1BDFF02500B3FCDA /* FriendInfoTableViewController.swift */; };
 		C304CD021BDFF02500B3FCDA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C304CD011BDFF02500B3FCDA /* Assets.xcassets */; };
 		C304CD051BDFF02500B3FCDA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C304CD031BDFF02500B3FCDA /* LaunchScreen.storyboard */; };
+		C3F872011BE00F6500FE196F /* APIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F872001BE00F6500FE196F /* APIController.swift */; settings = {ASSET_TAGS = (); }; };
+		C3F872031BE014F500FE196F /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F872021BE014F500FE196F /* Friend.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,8 @@
 		C304CD011BDFF02500B3FCDA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C304CD041BDFF02500B3FCDA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C304CD061BDFF02500B3FCDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C3F872001BE00F6500FE196F /* APIController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIController.swift; sourceTree = "<group>"; };
+		C3F872021BE014F500FE196F /* Friend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +61,8 @@
 				C304CD011BDFF02500B3FCDA /* Assets.xcassets */,
 				C304CD031BDFF02500B3FCDA /* LaunchScreen.storyboard */,
 				C304CD061BDFF02500B3FCDA /* Info.plist */,
+				C3F872001BE00F6500FE196F /* APIController.swift */,
+				C3F872021BE014F500FE196F /* Friend.swift */,
 			);
 			path = "GitHub-Friends";
 			sourceTree = "<group>";
@@ -133,6 +139,8 @@
 			files = (
 				C304CCFD1BDFF02500B3FCDA /* FriendInfoTableViewController.swift in Sources */,
 				C304CCFB1BDFF02500B3FCDA /* AppDelegate.swift in Sources */,
+				C3F872011BE00F6500FE196F /* APIController.swift in Sources */,
+				C3F872031BE014F500FE196F /* Friend.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
