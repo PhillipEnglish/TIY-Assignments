@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Biv-hf-06t">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
     </dependencies>
     <scenes>
-        <!--City Table View Controller-->
+        <!--Cities-->
         <scene sceneID="ZfH-Wg-RFS">
             <objects>
                 <tableViewController id="JqM-vB-cbu" customClass="CityTableViewController" customModule="Forecaster" customModuleProvider="target" sceneMemberID="viewController">
@@ -48,17 +49,50 @@
                             <outlet property="delegate" destination="JqM-vB-cbu" id="coU-ef-zEY"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="naB-TX-qQw"/>
+                    <navigationItem key="navigationItem" title="Cities" id="naB-TX-qQw">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="mrI-M7-gm5">
+                            <connections>
+                                <segue destination="xEo-g9-rug" kind="presentation" identifier="PresentModalZipCodeVCModally" id="zcW-ev-Skd"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2aD-4m-Ugc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1209" y="206"/>
+        </scene>
+        <!--Please Enter a Zipcode-->
+        <scene sceneID="ptp-ai-jOS">
+            <objects>
+                <viewController id="Lyg-80-Kh5" customClass="ModalZipCodeViewController" customModule="Forecaster" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VLd-TX-nKM"/>
+                        <viewControllerLayoutGuide type="bottom" id="j4V-Ng-0rq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1as-Ta-LA2">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Please Enter a Zipcode" id="IIK-D4-20Z">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="5DV-EO-vjC">
+                            <connections>
+                                <segue destination="JqM-vB-cbu" kind="show" identifier="CancelAndShowInitialVC" id="vOI-3I-bZ3"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WfN-UC-cxJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2895" y="102"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="MXi-uG-7k6">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Biv-hf-06t" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="RVC-S0-TMd">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -73,5 +107,27 @@
             </objects>
             <point key="canvasLocation" x="397" y="206"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Df7-af-sWw">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xEo-g9-rug" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="kh8-Sv-DV6">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Lyg-80-Kh5" kind="relationship" relationship="rootViewController" id="bfl-xb-bcR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EBX-1H-Ks9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1961" y="206"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="vOI-3I-bZ3"/>
+    </inferredMetricsTieBreakers>
 </document>
