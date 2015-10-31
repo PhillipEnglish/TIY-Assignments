@@ -13,8 +13,11 @@ class CityTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationController?.navigationBar.barTintColor = UIColor.grayColor()
-
+        //Coloring
+        navigationController?.navigationBar.barTintColor = UIColor.purpleColor()
+        //self.tableView.backgroundColor = UIColor.lightGrayColor()
+       
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -28,6 +31,11 @@ class CityTableViewController: UITableViewController {
     }
 
     // MARK: - Table view data source
+    
+    //TableCell Coloring
+    override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+        cell.backgroundColor = UIColor.clearColor()
+    }
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
@@ -50,6 +58,7 @@ class CityTableViewController: UITableViewController {
 
         return cell
     }
+    
     
 
     /*

@@ -1,5 +1,5 @@
 //
-//  ModalZipCodeViewController.swift
+//  CityDetailViewController.swift
 //  Forecaster
 //
 //  Created by Phillip English on 10/30/15.
@@ -8,14 +8,11 @@
 
 import UIKit
 
-class ModalZipCodeViewController: UIViewController {
+class CityDetailViewController: UIViewController {
 
-    @IBOutlet weak var zipCodeTextfield: UITextField!
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.navigationBar.barTintColor = UIColor.purpleColor()
+
         // Do any additional setup after loading the view.
     }
 
