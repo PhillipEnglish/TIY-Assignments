@@ -38,9 +38,23 @@ class CityAPIController
             })
             task.resume()  //"closure is a set of instructions that are run at some future time"
         }
+    
+    func parseJSON(data: NSData) -> NSDictionary?
+    {
+        do
+        {
+            let dictionary: NSDictionary = try NSJSONSerialization.JSONObjectWithData(data, options: []) as! NSDictionary
+            return dictionary
+        }
+        catch let error as NSError
+        {
+            print(error)
+            return nil
+        }
+    }
+    
     }
     
     
     
     
-}
