@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C310ECB21BE52EF300F0CAFF /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = C310ECB11BE52EF300F0CAFF /* City.swift */; };
 		C3302AFF1BE3FC9000CF6C7E /* CityDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3302AFE1BE3FC9000CF6C7E /* CityDetailViewController.swift */; };
 		C3A29D021BE3F2BD001B70D7 /* ModalZipCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A29D011BE3F2BD001B70D7 /* ModalZipCodeViewController.swift */; };
+		C3A3C5DE1BE6842B00490DC6 /* CityAPIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A3C5DD1BE6842B00490DC6 /* CityAPIController.swift */; };
 		C3B9E9431BE2741300502E6F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B9E9421BE2741300502E6F /* AppDelegate.swift */; };
 		C3B9E9481BE2741300502E6F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3B9E9461BE2741300502E6F /* Main.storyboard */; };
 		C3B9E94A1BE2741300502E6F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3B9E9491BE2741300502E6F /* Assets.xcassets */; };
@@ -17,8 +19,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C310ECB11BE52EF300F0CAFF /* City.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
 		C3302AFE1BE3FC9000CF6C7E /* CityDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityDetailViewController.swift; sourceTree = "<group>"; };
 		C3A29D011BE3F2BD001B70D7 /* ModalZipCodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalZipCodeViewController.swift; sourceTree = "<group>"; };
+		C3A3C5DD1BE6842B00490DC6 /* CityAPIController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityAPIController.swift; sourceTree = "<group>"; };
 		C3B9E93F1BE2741300502E6F /* Forecaster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Forecaster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3B9E9421BE2741300502E6F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C3B9E9471BE2741300502E6F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -66,6 +70,8 @@
 				C3B9E94B1BE2741300502E6F /* LaunchScreen.storyboard */,
 				C3B9E94E1BE2741400502E6F /* Info.plist */,
 				C3302AFE1BE3FC9000CF6C7E /* CityDetailViewController.swift */,
+				C310ECB11BE52EF300F0CAFF /* City.swift */,
+				C3A3C5DD1BE6842B00490DC6 /* CityAPIController.swift */,
 			);
 			path = Forecaster;
 			sourceTree = "<group>";
@@ -142,7 +148,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3302AFF1BE3FC9000CF6C7E /* CityDetailViewController.swift in Sources */,
+				C310ECB21BE52EF300F0CAFF /* City.swift in Sources */,
 				C3D3243E1BE2781F000B43C5 /* CityTableViewController.swift in Sources */,
+				C3A3C5DE1BE6842B00490DC6 /* CityAPIController.swift in Sources */,
 				C3B9E9431BE2741300502E6F /* AppDelegate.swift in Sources */,
 				C3A29D021BE3F2BD001B70D7 /* ModalZipCodeViewController.swift in Sources */,
 			);
