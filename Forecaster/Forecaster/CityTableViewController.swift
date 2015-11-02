@@ -8,6 +8,11 @@
 
 import UIKit
 
+protocol CityAPIControllerProtocol
+{
+    func didReceiveMapsAPIResults(results: NSDictionary)
+}
+
 class CityTableViewController: UITableViewController {
 
     override func viewDidLoad() {

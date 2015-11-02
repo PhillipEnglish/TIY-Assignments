@@ -15,25 +15,15 @@ struct City
     let lat: String
     let long: String
     let state: String
+    let location: NSDictionary
     
-    init(city: String, state: String, lat: String, long: String)
+    init(city: String, location: NSDictionary, state: String, lat: String, long: String)
     {
         self.city = city
         self.state = state
         self.lat = lat
         self.long = long
+        self.location = location
     }
-    
-    static func citiesWithJSON(results: NSDictionary) -> [City]
-    {
-        var cities = [City]()
-        
-        if results.count > 0
-        {
-            for result in results
-            {
-                var name = result["]
-            }
-        }
-    }
+      
 }
