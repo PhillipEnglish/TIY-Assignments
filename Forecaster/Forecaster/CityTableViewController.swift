@@ -8,15 +8,28 @@
 
 import UIKit
 
-protocol CityAPIControllerProtocol
+protocol modalZipCodeViewControllerDelegate
 {
-    func didReceiveMapsAPIResults(results: NSArray)
+    func zipCodeWasChosen(zipCode: String)
 }
 
-class CityTableViewController: UITableViewController {
+protocol CityAPIControllerProtocol
+{
+    func didReceiveMapsAPIResults(results: NSDictionary)
+}
 
+class CityTableViewController: UITableViewController, modalZipCodeViewControllerDelegate, CityAPIControllerProtocol
+{
+    var cities = [City]()
+
+    var cityAPI: CityAPIController!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        title = "Forecaster"
+        
+        zipCodeWasChosen("32801")
         
         //Coloring
         navigationController?.navigationBar.barTintColor = UIColor.purpleColor()
@@ -49,22 +62,54 @@ class CityTableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 10
+        return cities.count
     }
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("CityCell", forIndexPath: indexPath)
-
+        let cell = tableView.dequeueReusableCellWithIdentifier("CityCell", forIndexPath: indexPath) as! CityWeatherTableViewCell
+        
+       let aCity = cities[indexPath.row]
+        
+        cell.cityLabel?.text = aCity.city
+        
+      
+        
         // Configure the cell...
-        cell.textLabel!.text = "Orlando"
-        cell.detailTextLabel?.text = "79 Degrees"
+        //cell.textLabel!.text = "Orlando"
+        //cell.detailTextLabel?.text = "79 Degrees"
         
 
         return cell
     }
     
+    // MARK: - API Controller Protocols
     
+    func didReceiveMapsAPIResults(results: NSDictionary)
+    {
+        dispatch_async(dispatch_get_main_queue(), {
+            let aCity = City.cityWithJSON(results)
+            self.cities.append(aCity)
+            
+            self.tableView.reloadData()
+        })
+    }
+    
+    
+    // MARK: - Loction Delegate
+    func zipCodeWasChosen(zipCode: String)
+    {
+        print(zipCode)
+        
+        
+        UIApplication.sharedApplication().networkActivityIndicatorVisible = true
+        
+        self.cityAPI = CityAPIController(cityDelegate: self)
+        
+        cityAPI.searchGoogleForCity(zipCode)
+        tableView.reloadData()
+        navigationController?.dismissViewControllerAnimated(true, completion: nil)
+    }
 
     /*
     // Override to support conditional editing of the table view.
@@ -111,4 +156,5 @@ class CityTableViewController: UITableViewController {
     }
     */
 
+   
 }
