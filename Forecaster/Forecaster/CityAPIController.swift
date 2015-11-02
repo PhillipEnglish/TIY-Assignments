@@ -10,33 +10,39 @@ import Foundation
 
 class CityAPIController
 {
+    
+    var delegate: CityAPIControllerProtocol?
+    
+    var task: NSURLSessionDataTask!
+    
+    init(cityDelegate: CityAPIControllerProtocol)
+    {
+        self.delegate = cityDelegate
+    }
     func searchGoogleForCity(searchTerm: String)
     {
-        let googleSearchTerm = searchTerm
-            let urlPath = "http://maps.googleapis.com/maps/api/geocode/json?&components=postal_code:\(googleSearchTerm)&sensor=false"
-            let url = NSURL(string: urlPath)
+       // let googleSearchTerm = searchTerm
+            //let urlPath = "http://maps.googleapis.com/maps/api/geocode/json?&components=postal_code:\(googleSearchTerm)&sensor=false"
+            let url =  NSURL(string: "https://maps.googleapis.com/maps/api/geocode/json?address=santa+cruz&components=postal_code:\(searchTerm)&sensor=false") //NSURL(string: urlPath)
             let session = NSURLSession.sharedSession()
-            let task = session.dataTaskWithURL(url!, completionHandler: {data, response, error -> Void in
-                print("Task completed")  //"in" means "The instructions you want to run when this completes"
-                if error != nil
+        task = session.dataTaskWithURL(url!, completionHandler: {data, response, error -> Void in
+            print("Task completed")
+            if error != nil
+            {
+                print(error!.localizedDescription)
+            }
+            else
+            {
+                if let results = self.parseJSON(data!)
                 {
-                    print(error!.localizedDescription)
-                }
-                else
-                {
-                    if let dictionary = self.parseJSON(data!)
+                    if let results: NSArray = results["results"] as? NSArray
                     {
-                        if let results: NSArray =
-                            dictionary ["results"] as? NSArray
-                        {
-                            self.delegate.didReceiveAPIResults (results)  //delegate lets us return results to view controller
-                        }
-                    }
+                        self.delegate?.didReceiveMapsAPIResults(results)
+                                            }
                 }
-                
-                
-            })
-            task.resume()  //"closure is a set of instructions that are run at some future time"
+            }
+        })
+        task.resume()
         }
     
     func parseJSON(data: NSData) -> NSDictionary?

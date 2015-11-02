@@ -10,7 +10,7 @@ import UIKit
 
 protocol CityAPIControllerProtocol
 {
-    func didReceiveMapsAPIResults(results: NSDictionary)
+    func didReceiveMapsAPIResults(results: NSArray)
 }
 
 class CityTableViewController: UITableViewController {
