@@ -8,6 +8,8 @@
 
 import UIKit
 
+let kCitiesKey = "cities"
+
 protocol modalZipCodeViewControllerDelegate
 {
     func zipCodeWasChosen(zipCode: String)
@@ -29,7 +31,7 @@ class CityTableViewController: UITableViewController, modalZipCodeViewController
         
         title = "Forecaster"
         
-        zipCodeWasChosen("32801")
+        //zipCodeWasChosen("32801")
         
         //Coloring
         navigationController?.navigationBar.barTintColor = UIColor.purpleColor()
@@ -108,13 +110,17 @@ class CityTableViewController: UITableViewController, modalZipCodeViewController
         
         cityAPI.searchGoogleForCity(zipCode)
         //tableView.reloadData()
-        navigationController?.dismissViewControllerAnimated(true, completion: nil)
+        //navigationController?.dismissViewControllerAnimated(true, completion: nil)
         
         let zipCodeArray = [zipCode]
         for zipCode in zipCodeArray
         {
             cityAPI.searchGoogleForCity(zipCode)
+            
         }
+        
+        self.tableView.reloadData()
+        print (zipCodeArray)
     }
 
     /*
@@ -161,6 +167,26 @@ class CityTableViewController: UITableViewController, modalZipCodeViewController
         // Pass the selected object to the new view controller.
     }
     */
+    
+    // MARK: -MISC
+    
+    func loadCityData()
+    {
+        if let data = NSUserDefaults.standardUserDefaults().objectForKey(kCitiesKey) as? NSData
+        {
+            if let savedCities = NSKeyedUnarchiver.unarchiveObjectWithData(data) as? [City]
+            {
+                cities = savedCities
+                tableView.reloadData()  
+            }
+        }
+    }
+    
+    func saveCityData() //this is how we persist data to the disk
+    {
+        let cityData = NSKeyedArchiver.archivedDataWithRootObject(cities!) // you can only archive data like this if every object in the array has nscoding enabled in it. This is why we implemented nscoding in our city class
+        NSUserDefaults.standardUserDefaults().setObject(cityData, forKey: kCitiesKey)
+    }
 
    
 }

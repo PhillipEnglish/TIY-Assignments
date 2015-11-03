@@ -7,11 +7,16 @@
 //
 
 import UIKit
+import CoreLocation
 
-class ModalZipCodeViewController: UIViewController, UITextFieldDelegate
+class ModalZipCodeViewController: UIViewController, UITextFieldDelegate, CLLocationManagerDelegate
 {
 
     @IBOutlet weak var zipCodeTextfield: UITextField!
+    
+    
+    let locationManager = CLLocationManager()
+    let geocoder = CLGeocoder()
     
     var delegate: modalZipCodeViewControllerDelegate?
     var location: String = ""
@@ -63,11 +68,67 @@ class ModalZipCodeViewController: UIViewController, UITextFieldDelegate
         delegate?.zipCodeWasChosen(zip)
     }
     
+    func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus)
+    {
+       // currentLocationButton.enabled = true
+    }
+    
+    func locationManager(manager: CLLocationManager, didFailWithError error: NSError)
+    {
+        print(error.localizedDescription)
+    }
+    
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) //location array orders locations as they are updated
+    {
+        let location = locations.last
+        geocoder.reverseGeocodeLocation(location!, completionHandler: {(placemark: [CLPlacemark]?, error: NSError?) -> Void in
+            
+            if error != nil
+            {
+                print(error?.localizedDescription)
+            }
+            else
+            {
+                self.locationManager.stopUpdatingLocation()
+                let cityName = placemark?[0].locality
+                let zipCode = placemark?[0].postalCode
+                //self.locationTextField.text = zipCode!
+                let lat = location?.coordinate.latitude
+                let lng = location?.coordinate.longitude
+                //let aCity = City(cityName: cityName!, lat: lat!, long: lng!)
+                //self.delegate?.cityWasFound(aCity)  // here the delegate is in the main tableview controller
+            }
+    }
+    
     //MARK: - Action Handlers
 
     @IBAction func addCity(sender: UIButton)
     {
         search(zipCodeTextfield.text!)
         self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    @IBAction func useLocationTapped(sender: UIButton)
+    {
+        locationManager.startUpdatingLocation()  //asks gps chip where the user is and updates the location
+    }
+    
+    // MARK: - CLLocation related methods
+    
+    func configureLocationManager()
+    {
+        if CLLocationManager.authorizationStatus() != CLAuthorizationStatus.Denied && CLLocationManager.authorizationStatus() != CLAuthorizationStatus.Restricted
+        {
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
+            if CLLocationManager.authorizationStatus() == CLAuthorizationStatus.NotDetermined
+            {
+                locationManager.requestWhenInUseAuthorization()
+            }
+            else
+            {
+                //currentLocationButton.enabled = true
+            }
+        }
     }
 }
