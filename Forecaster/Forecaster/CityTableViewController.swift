@@ -15,7 +15,7 @@ protocol modalZipCodeViewControllerDelegate
 
 protocol CityAPIControllerProtocol
 {
-    func didReceiveMapsAPIResults(results: NSDictionary)
+    func didReceiveMapsAPIResults(results: NSArray)
 }
 
 class CityTableViewController: UITableViewController, modalZipCodeViewControllerDelegate, CityAPIControllerProtocol
@@ -71,7 +71,7 @@ class CityTableViewController: UITableViewController, modalZipCodeViewController
         
        let aCity = cities[indexPath.row]
         
-        cell.cityLabel?.text = aCity.city
+        cell.cityLabel?.text = aCity.cityName
         
       
         
@@ -85,7 +85,7 @@ class CityTableViewController: UITableViewController, modalZipCodeViewController
     
     // MARK: - API Controller Protocols
     
-    func didReceiveMapsAPIResults(results: NSDictionary)
+    func didReceiveMapsAPIResults(results: NSArray)
     {
         dispatch_async(dispatch_get_main_queue(), {
             let aCity = City.cityWithJSON(results)
@@ -107,8 +107,14 @@ class CityTableViewController: UITableViewController, modalZipCodeViewController
         self.cityAPI = CityAPIController(cityDelegate: self)
         
         cityAPI.searchGoogleForCity(zipCode)
-        tableView.reloadData()
+        //tableView.reloadData()
         navigationController?.dismissViewControllerAnimated(true, completion: nil)
+        
+        let zipCodeArray = [zipCode]
+        for zipCode in zipCodeArray
+        {
+            cityAPI.searchGoogleForCity(zipCode)
+        }
     }
 
     /*

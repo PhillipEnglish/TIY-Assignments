@@ -11,36 +11,66 @@ import Foundation
 struct City
 
 {
-    let city: String
-    //let lat: String
-   // let long: String
+    let cityName: String
+    let lat: String
+    let long: String
    // let state: String
-    let location: NSDictionary
+    //let location: NSDictionary
     
-    init(city: String, location: NSDictionary) //state: String, lat: String, long: String)
+    init(cityName: String, lat: String, long: String) //state: String, lat: String, long: String)
     {
-        self.city = city
-        //self.state = state
-        //self.lat = lat
-        //self.long = long
-        self.location = location
+        self.cityName = cityName
+        self.lat = lat
+        self.long = long
     }
     
-    static func cityWithJSON(results: NSDictionary) -> City
+    
+    
+
+    
+    static func cityWithJSON(results: NSArray) -> City
     {
-        var aCity: City!
+        var city: City
+        var cityName = ""
+        var latStr = ""
+        var lngStr = ""
+        
         
         if results.count > 0
         {
-            let formattedAddress = results.valueForKey("formatted_address") as? String
-            let addressComponents = formattedAddress!.characters.split(",").map { String($0) }
-            let name = addressComponents[0]
-            let geometry = results.valueForKey("geometry") as? NSDictionary
+            for result in results
+            {
+                let formattedAddress = result["formatted_address"] as? String
+                if formattedAddress != nil
+                {
+                    let addressComponentsForCity = formattedAddress!.componentsSeparatedByString(",")
+                    cityName = String(addressComponentsForCity[0])
+                }
+                
+                let geometry = result["geometry"] as? NSDictionary
+                if geometry != nil
+                {
+                    let latLong = geometry?["location"] as? NSDictionary
+                    if latLong != nil
+                    {
+                        let lat = latLong?["lat"] as! Double
+                        let lng = latLong?["lng"] as! Double
+                        
+                        latStr = String(lat)
+                        lngStr = String(lng)
+                    }
+                }
+            }
             
-            let location = geometry!.valueForKey("location") as? NSDictionary
-            
-            aCity = (City(city: name, location: location!))
+
         }
-        return aCity
+        
+        // print(cityName) ; print(latStr) ; print(lngStr)
+        city = City(cityName: cityName, lat: latStr, long: lngStr)
+        return city
+    
     }
+    
+    
+
 }

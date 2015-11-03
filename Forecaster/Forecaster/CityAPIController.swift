@@ -37,7 +37,7 @@ class CityAPIController
             {
                 if let dictionary = self.parseJSON(data!)
                 {
-                    if let results: NSArray = dictionary["results"]
+                    if let results: NSArray = dictionary["results"] as? NSArray
                     {
                         self.delegate?.didReceiveMapsAPIResults(results)
                     }
