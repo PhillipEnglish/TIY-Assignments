@@ -13,6 +13,6 @@
 
 @property (nonatomic, weak) id <WinnerTicketDelegateProtocol> delegate;
 
-
+@property (nonatomic) NSMutableArray *arrayWinners;
 
 @end

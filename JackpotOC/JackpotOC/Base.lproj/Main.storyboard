@@ -58,7 +58,11 @@
                                     <segue destination="C5d-WY-OGm" kind="show" identifier="ShowSegueGenerateWinner" id="b3w-qK-iTd"/>
                                 </connections>
                             </barButtonItem>
-                            <barButtonItem systemItem="add" id="EUM-I8-5n4"/>
+                            <barButtonItem systemItem="add" id="EUM-I8-5n4">
+                                <connections>
+                                    <action selector="addTicket:" destination="1fT-QW-Q0O" id="AGE-st-UAP"/>
+                                </connections>
+                            </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
                 </tableViewController>

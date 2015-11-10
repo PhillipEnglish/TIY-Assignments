@@ -56,6 +56,12 @@
          cell.textLabel.text = [aTicket generateNumbersString];
     cell.detailTextLabel.text = [aTicket getDollarAmount];
     
+    cell.textLabel.textColor = [UIColor blackColor];
+    
+    if ([aTicket getWinningStatus] == YES)
+    {
+        cell.textLabel.textColor = [UIColor greenColor];
+    }
    
     
     return cell;
@@ -107,6 +113,7 @@
         UIViewController *newController = segue.destinationViewController;
         GenerateWinnersViewController *winningTicketVC = (GenerateWinnersViewController *) newController;
         winningTicketVC.delegate = self;
+        [winningTicketVC.arrayWinners copy: arrayTickets];
         
     }
 }
@@ -116,7 +123,18 @@
 
 -(void) numberWasSelected:(NSMutableArray *) ticketArray;
 {
+    //[arrayTickets copy:ticketArray];
     NSLog(@" this shit is working %@", ticketArray );
+}
+
+
+#pragma mark - Action Handlers
+- (IBAction)addTicket:(UIBarButtonItem *)sender
+{
+    NSIndexPath *newIndexPath = [NSIndexPath indexPathForRow:arrayTickets.count inSection:0];
+    [arrayTickets addObject: [Ticket alloc]];
+    [self.tableView insertRowsAtIndexPaths:@[newIndexPath] withRowAnimation:YES];
+    
 }
 
 @end

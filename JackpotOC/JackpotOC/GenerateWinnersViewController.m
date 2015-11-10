@@ -13,7 +13,7 @@
 <UIPickerViewDataSource,UIPickerViewDelegate>
 
 {
-    NSMutableArray *arrayWinners;
+    //NSMutableArray *arrayWinners;
     
 }
 
@@ -29,7 +29,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    arrayWinners = [[NSMutableArray alloc] init];
+    self.arrayWinners = [[NSMutableArray alloc] init];
     
 }
 
@@ -62,9 +62,11 @@
 
 -(void) viewWillDisappear:(BOOL)animated
 {
+    NSMutableArray * test = @[@"asd",@"asdasdasd",@"sdfsd"];
     [super viewWillDisappear:animated];
-    
-    
+    //[self.delegate numberWasSelected:self.arrayWinners];
+    [self.delegate numberWasSelected: test];
+
 }
 
 

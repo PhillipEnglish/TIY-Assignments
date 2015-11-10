@@ -20,5 +20,5 @@
     BOOL *isSelected;
     
 }
-
+//-(void) numberWasSelected:(NSMutableArray *) ticketArray;
 @end
