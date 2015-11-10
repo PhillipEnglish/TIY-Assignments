@@ -13,6 +13,8 @@
 		C3D9FBD31BF25FD200F11E0E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3D9FBD21BF25FD200F11E0E /* Assets.xcassets */; };
 		C3D9FBD61BF25FD200F11E0E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3D9FBD41BF25FD200F11E0E /* LaunchScreen.storyboard */; };
 		C3D9FBDF1BF2695800F11E0E /* TicketsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3D9FBDE1BF2695800F11E0E /* TicketsTableViewController.m */; };
+		C3D9FBE21BF26BB400F11E0E /* GenerateWinnersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3D9FBE11BF26BB400F11E0E /* GenerateWinnersViewController.m */; };
+		C3D9FBE51BF2714F00F11E0E /* Ticket.m in Sources */ = {isa = PBXBuildFile; fileRef = C3D9FBE41BF2714F00F11E0E /* Ticket.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,10 @@
 		C3D9FBD71BF25FD200F11E0E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C3D9FBDD1BF2695800F11E0E /* TicketsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TicketsTableViewController.h; sourceTree = "<group>"; };
 		C3D9FBDE1BF2695800F11E0E /* TicketsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TicketsTableViewController.m; sourceTree = "<group>"; };
+		C3D9FBE01BF26BB400F11E0E /* GenerateWinnersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GenerateWinnersViewController.h; sourceTree = "<group>"; };
+		C3D9FBE11BF26BB400F11E0E /* GenerateWinnersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GenerateWinnersViewController.m; sourceTree = "<group>"; };
+		C3D9FBE31BF2714F00F11E0E /* Ticket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ticket.h; sourceTree = "<group>"; };
+		C3D9FBE41BF2714F00F11E0E /* Ticket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ticket.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,10 +69,14 @@
 				C3D9FBC91BF25FD200F11E0E /* AppDelegate.h */,
 				C3D9FBCA1BF25FD200F11E0E /* AppDelegate.m */,
 				C3D9FBCF1BF25FD200F11E0E /* Main.storyboard */,
+				C3D9FBE01BF26BB400F11E0E /* GenerateWinnersViewController.h */,
+				C3D9FBE11BF26BB400F11E0E /* GenerateWinnersViewController.m */,
 				C3D9FBD21BF25FD200F11E0E /* Assets.xcassets */,
 				C3D9FBD41BF25FD200F11E0E /* LaunchScreen.storyboard */,
 				C3D9FBD71BF25FD200F11E0E /* Info.plist */,
 				C3D9FBC61BF25FD200F11E0E /* Supporting Files */,
+				C3D9FBE31BF2714F00F11E0E /* Ticket.h */,
+				C3D9FBE41BF2714F00F11E0E /* Ticket.m */,
 			);
 			path = JackpotOC;
 			sourceTree = "<group>";
@@ -150,8 +160,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3D9FBE51BF2714F00F11E0E /* Ticket.m in Sources */,
 				C3D9FBCB1BF25FD200F11E0E /* AppDelegate.m in Sources */,
 				C3D9FBC81BF25FD200F11E0E /* main.m in Sources */,
+				C3D9FBE21BF26BB400F11E0E /* GenerateWinnersViewController.m in Sources */,
 				C3D9FBDF1BF2695800F11E0E /* TicketsTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

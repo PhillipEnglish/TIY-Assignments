@@ -7,6 +7,13 @@
 //
 
 #import "TicketsTableViewController.h"
+#import "Ticket.h"
+#import "GenerateWinnersViewController.h"
+
+@protocol WinnerTicketDelegateProtocol <NSObject>
+-(void) numberWasSelected:(Ticket *) aTicket;
+
+@end
 
 @interface TicketsTableViewController ()
 
@@ -85,14 +92,27 @@
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"ShowSegueGenerateWinner"])
+    {
+        UIViewController *newController = segue.destinationViewController;
+        GenerateWinnersViewController *winningTicketVC = (GenerateWinnersViewController *) newController;
+        winningTicketVC.delegate = self;
+        
+    }
 }
-*/
+
+
+#pragma mark - Delegate Function Protocol
+
+-(void) numberWasSelected:(Ticket *) aTicket;
+{
+    NSLog(@" this shit is working %@", aTicket );
+}
 
 @end
