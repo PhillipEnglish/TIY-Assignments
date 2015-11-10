@@ -15,9 +15,10 @@
     self = [super init];
     if (self)
     {
-        winningStatus = NO;
-        arrayNumbers = [[NSMutableArray alloc]init];
-        dollarAmount = 0;
+        self.winningStatus = NO;
+        self.arrayNumbers = [[NSMutableArray alloc]init];
+        self.dollarAmount = 0;
+        [self generateNumbers];
         
     }
     return self;
@@ -27,16 +28,16 @@
 {
     
     
-    while (arrayNumbers.count <6)
+    while (self.arrayNumbers.count <6)
     {
         NSNumber *pick;
         do
         {
             pick = [NSNumber numberWithInt: arc4random_uniform(53)+1];
         }
-        while ([arrayNumbers containsObject: pick]);
+        while ([self.arrayNumbers containsObject: pick]);
         
-        [arrayNumbers addObject:pick];
+        [self.arrayNumbers addObject:pick];
         
     }
 }
@@ -44,7 +45,7 @@
 
 -(NSString *) generateNumbersString
 {
-    NSString *string = [arrayNumbers componentsJoinedByString:@", "];
+    NSString *string = [self.arrayNumbers componentsJoinedByString:@", "];
     
     return string;
 }
@@ -52,8 +53,29 @@
 
 -(void) setWinningStatus
 {
-    winningStatus = !winningStatus;
+    self.winningStatus = !self.winningStatus;
     
+}
+
+-(BOOL) getWinningStatus
+{
+    return self.winningStatus;
+}
+
+-(NSMutableArray *) getArrayNumbers
+{
+    return self.arrayNumbers;
+}
+
+-(void) setDollarAmount:(int)dollarAmount
+{
+    self.dollarAmount = dollarAmount;
+}
+
+-(NSString *) getDollarAmount
+{
+    
+    return [NSString stringWithFormat: @"%d", self.dollarAmount];
 }
 
 @end

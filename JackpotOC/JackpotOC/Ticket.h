@@ -10,11 +10,32 @@
 
 @interface Ticket : NSObject
 
-{
-    NSMutableArray *arrayNumbers;
-    BOOL winningStatus;
-    int dollarAmount;
+
+
     
-}
+
+@property(nonatomic) NSMutableArray *arrayNumbers;
+@property(nonatomic) BOOL winningStatus;
+@property(nonatomic) int dollarAmount;
+
+
+-(NSString *) generateNumbersString;
+
+-(void) generateNumbers;
+
+-(void) setWinningStatus;
+
+-(NSString *) getDollarAmount;
+
+-(void) setDollarAmount:(int)dollarAmount;
+
+-(NSMutableArray *) getArrayNumbers;
+
+-(BOOL) getWinningStatus;
+
+
+
+
+
 
 @end

@@ -7,13 +7,10 @@
 //
 
 #import "TicketsTableViewController.h"
-#import "Ticket.h"
 #import "GenerateWinnersViewController.h"
+#import "Ticket.h"
 
-@protocol WinnerTicketDelegateProtocol <NSObject>
--(void) numberWasSelected:(Ticket *) aTicket;
 
-@end
 
 @interface TicketsTableViewController ()
 
@@ -23,6 +20,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    arrayTickets = [[NSMutableArray alloc] init];
+    isSelected = NO;
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -39,24 +39,28 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+    return arrayTickets.count;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellNumber" forIndexPath:indexPath];
     
     // Configure the cell...
     
+       Ticket *aTicket = (Ticket *)arrayTickets[indexPath.row];
+         cell.textLabel.text = [aTicket generateNumbersString];
+    cell.detailTextLabel.text = [aTicket getDollarAmount];
+    
+   
+    
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.
@@ -110,9 +114,9 @@
 
 #pragma mark - Delegate Function Protocol
 
--(void) numberWasSelected:(Ticket *) aTicket;
+-(void) numberWasSelected:(NSMutableArray *) ticketArray;
 {
-    NSLog(@" this shit is working %@", aTicket );
+    NSLog(@" this shit is working %@", ticketArray );
 }
 
 @end

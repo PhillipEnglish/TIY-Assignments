@@ -7,9 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TicketsTableViewController.h"
 
 @interface GenerateWinnersViewController : UIViewController
 
 @property (nonatomic, weak) id <WinnerTicketDelegateProtocol> delegate;
+
+
 
 @end
