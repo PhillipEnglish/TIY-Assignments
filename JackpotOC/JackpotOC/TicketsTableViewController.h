@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  TicketsTableViewController.h
 //  JackpotOC
 //
 //  Created by Phillip English on 11/10/15.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface TicketsTableViewController : UITableViewController
 
 @end
-

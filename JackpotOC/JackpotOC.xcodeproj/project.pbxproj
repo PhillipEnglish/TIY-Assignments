@@ -9,10 +9,10 @@
 /* Begin PBXBuildFile section */
 		C3D9FBC81BF25FD200F11E0E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C3D9FBC71BF25FD200F11E0E /* main.m */; };
 		C3D9FBCB1BF25FD200F11E0E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C3D9FBCA1BF25FD200F11E0E /* AppDelegate.m */; };
-		C3D9FBCE1BF25FD200F11E0E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3D9FBCD1BF25FD200F11E0E /* ViewController.m */; };
 		C3D9FBD11BF25FD200F11E0E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3D9FBCF1BF25FD200F11E0E /* Main.storyboard */; };
 		C3D9FBD31BF25FD200F11E0E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3D9FBD21BF25FD200F11E0E /* Assets.xcassets */; };
 		C3D9FBD61BF25FD200F11E0E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3D9FBD41BF25FD200F11E0E /* LaunchScreen.storyboard */; };
+		C3D9FBDF1BF2695800F11E0E /* TicketsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3D9FBDE1BF2695800F11E0E /* TicketsTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,12 +20,12 @@
 		C3D9FBC71BF25FD200F11E0E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C3D9FBC91BF25FD200F11E0E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C3D9FBCA1BF25FD200F11E0E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		C3D9FBCC1BF25FD200F11E0E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		C3D9FBCD1BF25FD200F11E0E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		C3D9FBD01BF25FD200F11E0E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C3D9FBD21BF25FD200F11E0E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C3D9FBD51BF25FD200F11E0E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C3D9FBD71BF25FD200F11E0E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C3D9FBDD1BF2695800F11E0E /* TicketsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TicketsTableViewController.h; sourceTree = "<group>"; };
+		C3D9FBDE1BF2695800F11E0E /* TicketsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TicketsTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,10 +58,10 @@
 		C3D9FBC51BF25FD200F11E0E /* JackpotOC */ = {
 			isa = PBXGroup;
 			children = (
+				C3D9FBDD1BF2695800F11E0E /* TicketsTableViewController.h */,
+				C3D9FBDE1BF2695800F11E0E /* TicketsTableViewController.m */,
 				C3D9FBC91BF25FD200F11E0E /* AppDelegate.h */,
 				C3D9FBCA1BF25FD200F11E0E /* AppDelegate.m */,
-				C3D9FBCC1BF25FD200F11E0E /* ViewController.h */,
-				C3D9FBCD1BF25FD200F11E0E /* ViewController.m */,
 				C3D9FBCF1BF25FD200F11E0E /* Main.storyboard */,
 				C3D9FBD21BF25FD200F11E0E /* Assets.xcassets */,
 				C3D9FBD41BF25FD200F11E0E /* LaunchScreen.storyboard */,
@@ -150,9 +150,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C3D9FBCE1BF25FD200F11E0E /* ViewController.m in Sources */,
 				C3D9FBCB1BF25FD200F11E0E /* AppDelegate.m in Sources */,
 				C3D9FBC81BF25FD200F11E0E /* main.m in Sources */,
+				C3D9FBDF1BF2695800F11E0E /* TicketsTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,6 +299,7 @@
 				C3D9FBDC1BF25FD200F11E0E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
