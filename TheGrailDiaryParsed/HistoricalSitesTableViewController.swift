@@ -11,7 +11,7 @@ import UIKit
 class HistoricalSitesTableViewController: UITableViewController
 
 {
-    
+    //This is an arbitrary comment so I can make a second commit 
     var temples = Array<Temple>()
     var isNotToggled = false
     var liked = [PFObject]() //PFObject(className: "Liked")
