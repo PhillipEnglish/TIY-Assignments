@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C32315D71BF5698000FF44E7 /* TitleModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C32315D61BF5698000FF44E7 /* TitleModalViewController.m */; };
+		C381BE3D1BF63CAF00EAF7CB /* TitleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C381BE3C1BF63CAF00EAF7CB /* TitleCell.m */; };
 		C3D980DF1BF5205100D9380D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C3D980DE1BF5205100D9380D /* main.m */; };
 		C3D980E21BF5205100D9380D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C3D980E11BF5205100D9380D /* AppDelegate.m */; };
 		C3D980E81BF5205100D9380D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3D980E61BF5205100D9380D /* Main.storyboard */; };
@@ -19,6 +20,8 @@
 /* Begin PBXFileReference section */
 		C32315D51BF5698000FF44E7 /* TitleModalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TitleModalViewController.h; sourceTree = "<group>"; };
 		C32315D61BF5698000FF44E7 /* TitleModalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TitleModalViewController.m; sourceTree = "<group>"; };
+		C381BE3B1BF63CAF00EAF7CB /* TitleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TitleCell.h; sourceTree = "<group>"; };
+		C381BE3C1BF63CAF00EAF7CB /* TitleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TitleCell.m; sourceTree = "<group>"; };
 		C3D980DA1BF5205000D9380D /* MovieMania.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieMania.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3D980DE1BF5205100D9380D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C3D980E01BF5205100D9380D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -65,6 +68,8 @@
 				C3D980E11BF5205100D9380D /* AppDelegate.m */,
 				C3D980F71BF539F700D9380D /* MoviesCollectionViewController.h */,
 				C3D980F81BF539F700D9380D /* MoviesCollectionViewController.m */,
+				C381BE3B1BF63CAF00EAF7CB /* TitleCell.h */,
+				C381BE3C1BF63CAF00EAF7CB /* TitleCell.m */,
 				C3D980E61BF5205100D9380D /* Main.storyboard */,
 				C3D980E91BF5205100D9380D /* Assets.xcassets */,
 				C3D980EB1BF5205100D9380D /* LaunchScreen.storyboard */,
@@ -156,6 +161,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3D980F91BF539F700D9380D /* MoviesCollectionViewController.m in Sources */,
+				C381BE3D1BF63CAF00EAF7CB /* TitleCell.m in Sources */,
 				C32315D71BF5698000FF44E7 /* TitleModalViewController.m in Sources */,
 				C3D980E21BF5205100D9380D /* AppDelegate.m in Sources */,
 				C3D980DF1BF5205100D9380D /* main.m in Sources */,
