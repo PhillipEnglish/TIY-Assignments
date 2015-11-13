@@ -9,9 +9,10 @@
 #import "TitleViewController.h"
 
 @interface TitleViewController () <NSURLSessionDataDelegate, UITextFieldDelegate>
-
-@property (weak, nonatomic) IBOutlet UITextField *titleTextField;
-
+{
+    UITextField *titleTextField;
+//@property (weak, nonatomic) IBOutlet UITextField *titleTextField;
+}
 - (IBAction)cancelButton:(UIBarButtonItem *)sender;
 
 -(IBAction)searchTitleButton:(UIButton *)sender;
@@ -40,7 +41,8 @@
 
 -(IBAction)searchTitleButton:(UIButton *)sender
 {
-    
+    NSString *title = titleTextField.text;
+     NSString *formattedTitle = [title stringByReplacingOccurrencesOfString:@" " withString:@"+"];
 }
 
 /*
