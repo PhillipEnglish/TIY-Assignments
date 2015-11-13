@@ -22,7 +22,7 @@ static NSString * const reuseIdentifier = @"Cell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    titles = [[NSMutableArray alloc] init];
     // Uncomment the following line to preserve selection between presentations
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -69,6 +69,13 @@ static NSString * const reuseIdentifier = @"Cell";
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     
     // Configure the cell
+    
+    NSDictionary *aTitle =  titles[indexPath.row];
+    NSURL *posterURL = [NSURL URLWithString:aTitle[@"Poster"]];
+    NSData *imageData = [NSData dataWithContentsOfURL:posterURL];
+    UIImage *image = [UIImage imageWithData:imageData];
+    //cell.
+    
     
     return cell;
 }
