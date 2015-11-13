@@ -7,25 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C32315D71BF5698000FF44E7 /* TitleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C32315D61BF5698000FF44E7 /* TitleViewController.m */; };
 		C3D980DF1BF5205100D9380D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C3D980DE1BF5205100D9380D /* main.m */; };
 		C3D980E21BF5205100D9380D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C3D980E11BF5205100D9380D /* AppDelegate.m */; };
-		C3D980E51BF5205100D9380D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3D980E41BF5205100D9380D /* ViewController.m */; };
 		C3D980E81BF5205100D9380D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3D980E61BF5205100D9380D /* Main.storyboard */; };
 		C3D980EA1BF5205100D9380D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3D980E91BF5205100D9380D /* Assets.xcassets */; };
 		C3D980ED1BF5205100D9380D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3D980EB1BF5205100D9380D /* LaunchScreen.storyboard */; };
+		C3D980F91BF539F700D9380D /* MoviesCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3D980F81BF539F700D9380D /* MoviesCollectionViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C32315D51BF5698000FF44E7 /* TitleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TitleViewController.h; sourceTree = "<group>"; };
+		C32315D61BF5698000FF44E7 /* TitleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TitleViewController.m; sourceTree = "<group>"; };
 		C3D980DA1BF5205000D9380D /* MovieMania.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieMania.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3D980DE1BF5205100D9380D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C3D980E01BF5205100D9380D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C3D980E11BF5205100D9380D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		C3D980E31BF5205100D9380D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		C3D980E41BF5205100D9380D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		C3D980E71BF5205100D9380D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C3D980E91BF5205100D9380D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C3D980EC1BF5205100D9380D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C3D980EE1BF5205100D9380D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C3D980F71BF539F700D9380D /* MoviesCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoviesCollectionViewController.h; sourceTree = "<group>"; };
+		C3D980F81BF539F700D9380D /* MoviesCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoviesCollectionViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,12 +63,14 @@
 			children = (
 				C3D980E01BF5205100D9380D /* AppDelegate.h */,
 				C3D980E11BF5205100D9380D /* AppDelegate.m */,
-				C3D980E31BF5205100D9380D /* ViewController.h */,
-				C3D980E41BF5205100D9380D /* ViewController.m */,
+				C3D980F71BF539F700D9380D /* MoviesCollectionViewController.h */,
+				C3D980F81BF539F700D9380D /* MoviesCollectionViewController.m */,
 				C3D980E61BF5205100D9380D /* Main.storyboard */,
 				C3D980E91BF5205100D9380D /* Assets.xcassets */,
 				C3D980EB1BF5205100D9380D /* LaunchScreen.storyboard */,
 				C3D980EE1BF5205100D9380D /* Info.plist */,
+				C32315D51BF5698000FF44E7 /* TitleViewController.h */,
+				C32315D61BF5698000FF44E7 /* TitleViewController.m */,
 				C3D980DD1BF5205100D9380D /* Supporting Files */,
 			);
 			path = MovieMania;
@@ -150,7 +155,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C3D980E51BF5205100D9380D /* ViewController.m in Sources */,
+				C3D980F91BF539F700D9380D /* MoviesCollectionViewController.m in Sources */,
+				C32315D71BF5698000FF44E7 /* TitleViewController.m in Sources */,
 				C3D980E21BF5205100D9380D /* AppDelegate.m in Sources */,
 				C3D980DF1BF5205100D9380D /* main.m in Sources */,
 			);
@@ -299,6 +305,7 @@
 				C3D980F31BF5205100D9380D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
