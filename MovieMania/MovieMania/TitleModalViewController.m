@@ -6,9 +6,9 @@
 //  Copyright © 2015 The Iron Yard. All rights reserved.
 //
 
-#import "TitleViewController.h"
+#import "TitleModalViewController.h"
 
-@interface TitleViewController () <NSURLSessionDataDelegate, UITextFieldDelegate>
+@interface TitleModalViewController () <NSURLSessionDataDelegate, UITextFieldDelegate>
 {
     UITextField *titleTextField;
 //@property (weak, nonatomic) IBOutlet UITextField *titleTextField;
@@ -19,7 +19,7 @@
 
 @end
 
-@implementation TitleViewController
+@implementation TitleModalViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
