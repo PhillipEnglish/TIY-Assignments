@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Collection View Controller-->
@@ -37,7 +38,13 @@
                             <outlet property="delegate" destination="SrX-yY-V5H" id="fdJ-ja-JjN"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="vMN-6a-llE"/>
+                    <navigationItem key="navigationItem" id="vMN-6a-llE">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="kU4-qt-Skw">
+                            <connections>
+                                <segue destination="r9g-iz-nB6" kind="presentation" identifier="PresentModalTitleVCSegue" id="ykD-zh-b4e"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K0E-AQ-Lzo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -54,10 +61,42 @@
                     <view key="view" contentMode="scaleToFill" id="ol0-S7-gy0">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter a movie title" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GI9-tv-dhS">
+                                <rect key="frame" x="0.0" y="101" width="600" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ldE-Ke-9Lu">
+                                <rect key="frame" x="276" y="167" width="48" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Search"/>
+                                <connections>
+                                    <action selector="searchTitleButton:" destination="FSI-AD-3ZE" eventType="touchUpInside" id="qrD-er-ZYX"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="GI9-tv-dhS" firstAttribute="width" secondItem="ol0-S7-gy0" secondAttribute="width" id="9dF-Dx-oQt"/>
+                            <constraint firstItem="ldE-Ke-9Lu" firstAttribute="top" secondItem="GI9-tv-dhS" secondAttribute="bottom" constant="36" id="Gzp-8J-UQU"/>
+                            <constraint firstItem="ldE-Ke-9Lu" firstAttribute="centerX" secondItem="ol0-S7-gy0" secondAttribute="centerX" id="drS-rX-jdE"/>
+                            <constraint firstItem="GI9-tv-dhS" firstAttribute="top" secondItem="ol0-S7-gy0" secondAttribute="topMargin" constant="101" id="tsZ-22-fJK"/>
+                            <constraint firstItem="GI9-tv-dhS" firstAttribute="leading" secondItem="ol0-S7-gy0" secondAttribute="leading" id="ugh-0P-548"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="jK4-T0-Pxm"/>
+                    <navigationItem key="navigationItem" id="jK4-T0-Pxm">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Rg5-4a-f02">
+                            <connections>
+                                <action selector="cancelButton:" destination="FSI-AD-3ZE" id="y5I-DC-TyY"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="titleTextField" destination="GI9-tv-dhS" id="J1E-cf-8iq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8ZR-82-euE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -99,7 +138,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xLQ-q7-PfP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2328" y="522"/>
+            <point key="canvasLocation" x="1967" y="344"/>
         </scene>
     </scenes>
 </document>

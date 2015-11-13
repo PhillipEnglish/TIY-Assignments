@@ -8,7 +8,13 @@
 
 #import "TitleViewController.h"
 
-@interface TitleViewController ()
+@interface TitleViewController () <NSURLSessionDataDelegate, UITextFieldDelegate>
+
+@property (weak, nonatomic) IBOutlet UITextField *titleTextField;
+
+- (IBAction)cancelButton:(UIBarButtonItem *)sender;
+
+-(IBAction)searchTitleButton:(UIButton *)sender;
 
 @end
 
@@ -22,6 +28,19 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - Action Handlers
+
+- (IBAction)cancelButton:(UIBarButtonItem *)sender
+{
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+-(IBAction)searchTitleButton:(UIButton *)sender
+{
+    
 }
 
 /*
