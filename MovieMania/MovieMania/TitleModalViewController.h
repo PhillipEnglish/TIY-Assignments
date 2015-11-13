@@ -10,4 +10,6 @@
 
 @interface TitleModalViewController : UIViewController
 
+@property (nonatomic) NSMutableArray *titles;
+
 @end

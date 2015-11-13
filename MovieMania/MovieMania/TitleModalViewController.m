@@ -11,6 +11,8 @@
 @interface TitleModalViewController () <NSURLSessionDataDelegate, UITextFieldDelegate>
 {
     UITextField *titleTextField;
+    NSMutableData *receivedData;
+    
 //@property (weak, nonatomic) IBOutlet UITextField *titleTextField;
 }
 - (IBAction)cancelButton:(UIBarButtonItem *)sender;
@@ -31,19 +33,62 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void) cancel
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 #pragma mark - Action Handlers
 
 - (IBAction)cancelButton:(UIBarButtonItem *)sender
 {
     
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self cancel];
+    //[self dismissViewControllerAnimated:YES completion:nil];
 }
 
 -(IBAction)searchTitleButton:(UIButton *)sender
 {
     NSString *title = titleTextField.text;
-     NSString *formattedTitle = [title stringByReplacingOccurrencesOfString:@" " withString:@"+"];
+    NSString *formattedTitle = [title stringByReplacingOccurrencesOfString:@" " withString:@"+"];
+    NSString *urlString = [NSString stringWithFormat:@"https://www.omdbapi.com/?s=%@&y=&plot=short&r=json", formattedTitle];
+    NSURL *url = [NSURL URLWithString:urlString];
+    NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
+    NSURLSession *session = [NSURLSession sessionWithConfiguration:configuration delegate:self delegateQueue:[NSOperationQueue mainQueue]];
+    
+    NSURLSessionDataTask *task = [session dataTaskWithURL:url];
+    [task resume];
+    
 }
+
+
+#pragma mark - NSURLSessionData delegate
+-(void) URLSession:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask didReceiveResponse:(NSURLResponse *)response completionHandler:(void (^)(NSURLSessionResponseDisposition))completionHandler
+{
+    completionHandler(NSURLSessionResponseAllow);
+}
+
+-(void) URLSession:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask didReceiveData:(NSData *)data
+{
+    if (!receivedData)
+    {
+        receivedData = [[NSMutableData alloc] init];
+    }
+    
+    [receivedData appendData:data];
+    
+}
+
+-(void) URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task didCompleteWithError:(NSError *)error
+{
+    if (!error)
+    {
+        NSLog(@"Download successful");
+        NSDictionary *movieInfo = [NSJSONSerialization JSONObjectWithData: receivedData options:0 error: nil];
+        [self.titles addObject:movieInfo];
+        [self cancel];
+    }
+}
+
 
 /*
 #pragma mark - Navigation
