@@ -8,6 +8,7 @@
 
 #import "MoviesCollectionViewController.h"
 #import "TitleModalViewController.h"
+#import "TitleCell.h"
 
 @interface MoviesCollectionViewController ()
 {
@@ -18,10 +19,13 @@
 
 @implementation MoviesCollectionViewController
 
-static NSString * const reuseIdentifier = @"Cell";
+static NSString * const reuseIdentifier = @"TitleCell";
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor blueColor];
+    
     titles = [[NSMutableArray alloc] init];
     // Uncomment the following line to preserve selection between presentations
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -43,15 +47,21 @@ static NSString * const reuseIdentifier = @"Cell";
     // Dispose of any resources that can be recreated.
 }
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+//{
+//    if ([segue.identifier isEqualToString:@"PresentModalTitleVCSegue"]) //PresentModalTitleVCSegue
+//    {
+//        TitleModalViewController *newTitleVC = (TitleModalViewController *)segue.destinationViewController;
+////        UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:newTitleVC];
+//        newTitleVC.delegate = self;
+//        newTitleVC.titles = titles;
+//    }
+//}
+
 
 #pragma mark <UICollectionViewDataSource>
 
@@ -66,14 +76,15 @@ static NSString * const reuseIdentifier = @"Cell";
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
+    TitleCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"TitleCell" forIndexPath:indexPath];
     
     // Configure the cell
     
-    NSDictionary *aTitle =  titles[indexPath.row];
-    NSURL *posterURL = [NSURL URLWithString:aTitle[@"Poster"]];
-    NSData *imageData = [NSData dataWithContentsOfURL:posterURL];
-    UIImage *image = [UIImage imageWithData:imageData];
+   NSDictionary *aTitle =  titles[indexPath.row];
+   NSURL *posterURL = [NSURL URLWithString:aTitle[@"Poster"]];
+   NSData *imageData = [NSData dataWithContentsOfURL:posterURL];
+   UIImage *image = [UIImage imageWithData:imageData];
+    cell.movieImage.image = image;
     //cell.
     
     
@@ -110,5 +121,12 @@ static NSString * const reuseIdentifier = @"Cell";
 	
 }
 */
+
+#pragma mark - delegate 
+-(void)movieWasSearched:(NSDictionary *)chosenMovie;
+{
+    NSLog(@"%@", chosenMovie);
+    NSLog((@"this is a string"));
+}
 
 @end

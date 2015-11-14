@@ -7,8 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MoviesCollectionViewController.h"
 
 @interface TitleModalViewController : UIViewController
+
+@property (nonatomic) id<SearchProtocol> delegate;
 
 @property (nonatomic) NSMutableArray *titles;
 

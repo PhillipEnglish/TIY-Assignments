@@ -12,12 +12,13 @@
 {
     UITextField *titleTextField;
     NSMutableData *receivedData;
+    //NSMutableArray *searchResults;
     
 //@property (weak, nonatomic) IBOutlet UITextField *titleTextField;
 }
 - (IBAction)cancelButton:(UIBarButtonItem *)sender;
 
--(IBAction)searchTitleButton:(UIButton *)sender;
+- (IBAction)searchTitleButton:(UIButton *)sender;
 
 @end
 
@@ -25,12 +26,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    //searchResults = [[NSMutableArray alloc] init];
 }
 
-- (void)didReceiveMemoryWarning {
+- (void)didReceiveMemoryWarning
+{
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+    
 }
 
 - (void) cancel
@@ -85,6 +88,7 @@
         NSLog(@"Download successful");
         NSDictionary *movieInfo = [NSJSONSerialization JSONObjectWithData: receivedData options:0 error: nil];
         [self.titles addObject:movieInfo];
+        [self.delegate movieWasSearched:movieInfo];
         [self cancel];
     }
 }
