@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		C32315D71BF5698000FF44E7 /* TitleModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C32315D61BF5698000FF44E7 /* TitleModalViewController.m */; };
 		C381BE3D1BF63CAF00EAF7CB /* TitleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C381BE3C1BF63CAF00EAF7CB /* TitleCell.m */; };
+		C3BC7AFF1BF7B8EE007AD5E0 /* TestCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3BC7AFE1BF7B8EE007AD5E0 /* TestCollectionViewController.m */; };
 		C3D980DF1BF5205100D9380D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C3D980DE1BF5205100D9380D /* main.m */; };
 		C3D980E21BF5205100D9380D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C3D980E11BF5205100D9380D /* AppDelegate.m */; };
 		C3D980E81BF5205100D9380D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3D980E61BF5205100D9380D /* Main.storyboard */; };
@@ -22,6 +23,8 @@
 		C32315D61BF5698000FF44E7 /* TitleModalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TitleModalViewController.m; sourceTree = "<group>"; };
 		C381BE3B1BF63CAF00EAF7CB /* TitleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TitleCell.h; sourceTree = "<group>"; };
 		C381BE3C1BF63CAF00EAF7CB /* TitleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TitleCell.m; sourceTree = "<group>"; };
+		C3BC7AFD1BF7B8EE007AD5E0 /* TestCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TestCollectionViewController.h; path = ../TestCollectionViewController.h; sourceTree = "<group>"; };
+		C3BC7AFE1BF7B8EE007AD5E0 /* TestCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TestCollectionViewController.m; path = ../TestCollectionViewController.m; sourceTree = "<group>"; };
 		C3D980DA1BF5205000D9380D /* MovieMania.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieMania.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3D980DE1BF5205100D9380D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C3D980E01BF5205100D9380D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -64,6 +67,8 @@
 		C3D980DC1BF5205100D9380D /* MovieMania */ = {
 			isa = PBXGroup;
 			children = (
+				C3BC7AFD1BF7B8EE007AD5E0 /* TestCollectionViewController.h */,
+				C3BC7AFE1BF7B8EE007AD5E0 /* TestCollectionViewController.m */,
 				C3D980E01BF5205100D9380D /* AppDelegate.h */,
 				C3D980E11BF5205100D9380D /* AppDelegate.m */,
 				C3D980F71BF539F700D9380D /* MoviesCollectionViewController.h */,
@@ -164,6 +169,7 @@
 				C381BE3D1BF63CAF00EAF7CB /* TitleCell.m in Sources */,
 				C32315D71BF5698000FF44E7 /* TitleModalViewController.m in Sources */,
 				C3D980E21BF5205100D9380D /* AppDelegate.m in Sources */,
+				C3BC7AFF1BF7B8EE007AD5E0 /* TestCollectionViewController.m in Sources */,
 				C3D980DF1BF5205100D9380D /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

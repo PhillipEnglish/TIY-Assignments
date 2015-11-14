@@ -1,50 +1,31 @@
 //
-//  MoviesCollectionViewController.m
+//  TestCollectionViewController.m
 //  MovieMania
 //
-//  Created by Phillip English on 11/12/15.
+//  Created by Phillip English on 11/14/15.
 //  Copyright © 2015 The Iron Yard. All rights reserved.
 //
 
-#import "MoviesCollectionViewController.h"
-#import "TitleModalViewController.h"
-#import "TitleCell.h"
+#import "TestCollectionViewController.h"
 
-@interface MoviesCollectionViewController ()
-{
-    NSMutableArray *titles;
-}
+@interface TestCollectionViewController ()
 
 @end
 
-@implementation MoviesCollectionViewController
+@implementation TestCollectionViewController
 
-static NSString * const reuseIdentifier = @"TitleCell";
+static NSString * const reuseIdentifier = @"Cell";
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor blueColor];
-    
-    titles = [[NSMutableArray alloc] init];
-    [titles addObject:@"testing"];
-    [titles addObject:@"one"];
-    [titles addObject:@"two"];
-    [titles addObject:@"three"];
-    NSLog(@"%@", titles);
     // Uncomment the following line to preserve selection between presentations
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Register cell classes
-    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"TitleCell"];
+    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
     
     // Do any additional setup after loading the view.
-}
-
-- (void) viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-    //[self.collectionView reloadData];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -52,48 +33,34 @@ static NSString * const reuseIdentifier = @"TitleCell";
     // Dispose of any resources that can be recreated.
 }
 
-
+/*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
-//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-//{
-//    if ([segue.identifier isEqualToString:@"PresentModalTitleVCSegue"]) //PresentModalTitleVCSegue
-//    {
-//        TitleModalViewController *newTitleVC = (TitleModalViewController *)segue.destinationViewController;
-////        UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:newTitleVC];
-//        newTitleVC.delegate = self;
-//        newTitleVC.titles = titles;
-//    }
-//}
-
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+}
+*/
 
 #pragma mark <UICollectionViewDataSource>
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-    return 1;
+#warning Incomplete implementation, return the number of sections
+    return 0;
 }
 
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-
-    return titles.count;
+#warning Incomplete implementation, return the number of items
+    return 0;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    TitleCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"TitleCell" forIndexPath:indexPath];
+    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     
     // Configure the cell
     
-//   NSDictionary *aTitle =  titles[indexPath.row];
-//   NSURL *posterURL = [NSURL URLWithString:aTitle[@"Poster"]];
-//   NSData *imageData = [NSData dataWithContentsOfURL:posterURL];
-//   UIImage *image = [UIImage imageWithData:imageData];
-//    cell.movieImage.image = image;
-    //cell.
-    
-    [cell.layer setBorderWidth:2.0f];
-    [cell.layer setBorderColor:[UIColor whiteColor].CGColor];
     return cell;
 }
 
@@ -127,13 +94,5 @@ static NSString * const reuseIdentifier = @"TitleCell";
 	
 }
 */
-
-#pragma mark - delegate
--(void)movieWasSearched:(NSDictionary *)chosenMovie;
-{
-    NSLog(@"%@", chosenMovie);
-    NSLog((@"this is a string"));
-    
-}
 
 @end

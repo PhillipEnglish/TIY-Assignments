@@ -14,7 +14,7 @@
 
 @end
 
-@interface MoviesCollectionViewController : UICollectionViewController <SearchProtocol>
+@interface MoviesCollectionViewController : UICollectionViewController <UICollectionViewDelegate, UICollectionViewDataSource, SearchProtocol>
 
 
 

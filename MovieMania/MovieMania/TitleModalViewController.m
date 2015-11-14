@@ -53,7 +53,7 @@
 {
     NSString *title = titleTextField.text;
     NSString *formattedTitle = [title stringByReplacingOccurrencesOfString:@" " withString:@"+"];
-    NSString *urlString = [NSString stringWithFormat:@"https://www.omdbapi.com/?s=%@&y=&plot=short&r=json", formattedTitle];
+    NSString *urlString = [NSString stringWithFormat:@"https://www.omdbapi.com/?t=%@&tomatoes=true&y=&plot=long&r=json", formattedTitle];
     NSURL *url = [NSURL URLWithString:urlString];
     NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
     NSURLSession *session = [NSURLSession sessionWithConfiguration:configuration delegate:self delegateQueue:[NSOperationQueue mainQueue]];
@@ -88,6 +88,7 @@
         NSLog(@"Download successful");
         NSDictionary *movieInfo = [NSJSONSerialization JSONObjectWithData: receivedData options:0 error: nil];
         [self.titles addObject:movieInfo];
+        NSLog(@"%@", movieInfo);
         [self.delegate movieWasSearched:movieInfo];
         [self cancel];
     }
