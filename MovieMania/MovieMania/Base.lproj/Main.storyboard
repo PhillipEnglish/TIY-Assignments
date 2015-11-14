@@ -6,10 +6,10 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Collection View Controller-->
+        <!--Movies Collection View Controller-->
         <scene sceneID="Hha-Yg-dWV">
             <objects>
-                <collectionViewController id="SrX-yY-V5H" sceneMemberID="viewController">
+                <collectionViewController id="SrX-yY-V5H" customClass="MoviesCollectionViewController" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="bF7-cr-aNT">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
