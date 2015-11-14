@@ -26,10 +26,10 @@ static NSString * const reuseIdentifier = @"TitleCell";
     [super viewDidLoad];
     self.collectionView.backgroundColor = [UIColor redColor];
     titles = [[NSMutableArray alloc] init];
-    [titles addObject:@"testing"];
-    [titles addObject:@"one"];
-    [titles addObject:@"two"];
-    [titles addObject:@"three"];
+//    [titles addObject:@"testing"];
+//    [titles addObject:@"one"];
+//    [titles addObject:@"two"];
+//    [titles addObject:@"three"];
     NSLog(@"%@", titles);
     // Uncomment the following line to preserve selection between presentations
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -43,7 +43,7 @@ static NSString * const reuseIdentifier = @"TitleCell";
 - (void) viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    //[self.collectionView reloadData];
+    [self.collectionView reloadData];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -84,12 +84,12 @@ static NSString * const reuseIdentifier = @"TitleCell";
     
     // Configure the cell
     
-//   NSDictionary *aTitle =  titles[indexPath.row];
-//   NSURL *posterURL = [NSURL URLWithString:aTitle[@"Poster"]];
-//   NSData *imageData = [NSData dataWithContentsOfURL:posterURL];
-//   UIImage *image = [UIImage imageWithData:imageData];
-//    cell.movieImage.image = image;
-    //cell.
+   NSDictionary *aTitle =  titles[indexPath.row];
+   NSURL *posterURL = [NSURL URLWithString:aTitle[@"Poster"]];
+   NSData *imageData = [NSData dataWithContentsOfURL:posterURL];
+   UIImage *image = [UIImage imageWithData:imageData];
+    cell.movieImage.image = image;
+    
     
     [cell.layer setBorderWidth:2.0f];
     [cell.layer setBorderColor:[UIColor whiteColor].CGColor];
@@ -130,7 +130,7 @@ static NSString * const reuseIdentifier = @"TitleCell";
 #pragma mark - delegate
 -(void)movieWasSearched:(NSDictionary *)chosenMovie;
 {
-    NSLog(@"%@", chosenMovie);
+   // NSLog(@"%@", chosenMovie);
     NSLog((@"this is a string"));
     
 }
