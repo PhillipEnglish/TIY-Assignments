@@ -24,8 +24,7 @@ static NSString * const reuseIdentifier = @"TitleCell";
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor blueColor];
-    
+    self.collectionView.backgroundColor = [UIColor redColor];
     titles = [[NSMutableArray alloc] init];
     [titles addObject:@"testing"];
     [titles addObject:@"one"];
