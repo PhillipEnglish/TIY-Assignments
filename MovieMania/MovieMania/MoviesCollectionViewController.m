@@ -43,7 +43,7 @@ static NSString * const reuseIdentifier = @"TitleCell";
 - (void) viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    [self.collectionView reloadData];
+   // [self.collectionView reloadData];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -131,7 +131,9 @@ static NSString * const reuseIdentifier = @"TitleCell";
 -(void)movieWasSearched:(NSDictionary *)chosenMovie;
 {
    // NSLog(@"%@", chosenMovie);
-    NSLog((@"this is a string"));
+    [titles addObject:chosenMovie];
+    NSLog(@"this is a string");
+    NSLog(@"Here's the dictionary: %@", chosenMovie);
     
 }
 

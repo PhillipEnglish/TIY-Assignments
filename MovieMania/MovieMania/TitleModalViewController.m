@@ -88,7 +88,7 @@
         NSLog(@"Download successful");
         NSDictionary *movieInfo = [NSJSONSerialization JSONObjectWithData: receivedData options:0 error: nil];
         [self.titles addObject:movieInfo];
-        NSLog(@"%@", movieInfo);
+       // NSLog(@"%@", movieInfo);
         [self.delegate movieWasSearched:movieInfo];
         [self cancel];
     }
