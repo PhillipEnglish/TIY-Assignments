@@ -25,6 +25,7 @@ static NSString * const reuseIdentifier = @"TitleCell";
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.title = @"Watch or Not?";
     self.collectionView.backgroundColor = [UIColor redColor];
     titles = [[NSMutableArray alloc] init];
 //    [titles addObject:@"testing"];
@@ -79,6 +80,11 @@ static NSString * const reuseIdentifier = @"TitleCell";
 
     return titles.count;
 }
+
+//- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionView *)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section
+//{
+//    return 1 ; // This is the minimum inter item spacing, can be more
+//}
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     TitleCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"TitleCell" forIndexPath:indexPath];
