@@ -14,31 +14,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="3" id="9FY-oP-O1E">
-                            <size key="itemSize" width="100" height="100"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="5" id="9FY-oP-O1E">
+                            <size key="itemSize" width="140" height="140"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="0.0"/>
+                            <inset key="sectionInset" minX="4" minY="10" maxX="4" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TitleCell" id="j9r-wL-CdH" customClass="TitleCell">
-                                <rect key="frame" x="10" y="74" width="100" height="100"/>
+                                <rect key="frame" x="4" y="74" width="140" height="140"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="140" height="140"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="782-bL-egI">
-                                            <rect key="frame" x="0.0" y="0.0" width="100" height="72"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="782-bL-egI">
+                                            <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                                             <animations/>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tRg-WZ-8uU">
-                                            <rect key="frame" x="0.0" y="79" width="100" height="21"/>
-                                            <animations/>
-                                            <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                     </subviews>
                                     <animations/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -46,11 +39,17 @@
                                 <animations/>
                                 <constraints>
                                     <constraint firstItem="782-bL-egI" firstAttribute="leading" secondItem="j9r-wL-CdH" secondAttribute="leading" id="6Np-x9-BRz"/>
+                                    <constraint firstItem="782-bL-egI" firstAttribute="top" secondItem="j9r-wL-CdH" secondAttribute="topMargin" id="AYS-rJ-Ppe"/>
+                                    <constraint firstItem="782-bL-egI" firstAttribute="top" secondItem="j9r-wL-CdH" secondAttribute="top" id="AfZ-lb-gzr"/>
+                                    <constraint firstItem="782-bL-egI" firstAttribute="width" secondItem="j9r-wL-CdH" secondAttribute="width" id="Co5-XB-KD7"/>
                                     <constraint firstItem="782-bL-egI" firstAttribute="top" secondItem="j9r-wL-CdH" secondAttribute="top" id="GQG-E2-LEL"/>
                                     <constraint firstAttribute="trailingMargin" secondItem="782-bL-egI" secondAttribute="trailing" constant="107" id="HGK-cP-a6V"/>
                                     <constraint firstItem="782-bL-egI" firstAttribute="leading" secondItem="j9r-wL-CdH" secondAttribute="leadingMargin" constant="-41" id="HmI-ZK-FIh"/>
+                                    <constraint firstItem="782-bL-egI" firstAttribute="height" secondItem="j9r-wL-CdH" secondAttribute="height" id="OsW-PG-KWk"/>
                                     <constraint firstItem="782-bL-egI" firstAttribute="leading" secondItem="j9r-wL-CdH" secondAttribute="leading" id="P9j-gj-5bh"/>
+                                    <constraint firstItem="782-bL-egI" firstAttribute="leading" secondItem="j9r-wL-CdH" secondAttribute="leadingMargin" id="Vc5-8Z-w6b"/>
                                     <constraint firstAttribute="bottomMargin" secondItem="782-bL-egI" secondAttribute="bottom" constant="30" id="YVa-wt-Txu"/>
+                                    <constraint firstItem="782-bL-egI" firstAttribute="leading" secondItem="j9r-wL-CdH" secondAttribute="leading" id="bfq-Fh-XOj"/>
                                     <constraint firstItem="782-bL-egI" firstAttribute="width" secondItem="j9r-wL-CdH" secondAttribute="width" id="gWP-03-nGB"/>
                                     <constraint firstAttribute="bottomMargin" secondItem="782-bL-egI" secondAttribute="bottom" constant="30" id="i0z-ro-UK4"/>
                                     <constraint firstItem="782-bL-egI" firstAttribute="top" secondItem="j9r-wL-CdH" secondAttribute="topMargin" id="jVl-yX-5p2"/>
@@ -62,20 +61,24 @@
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="6Np-x9-BRz"/>
+                                        <exclude reference="AYS-rJ-Ppe"/>
+                                        <exclude reference="GQG-E2-LEL"/>
                                         <exclude reference="HGK-cP-a6V"/>
                                         <exclude reference="HmI-ZK-FIh"/>
+                                        <exclude reference="P9j-gj-5bh"/>
+                                        <exclude reference="Vc5-8Z-w6b"/>
                                         <exclude reference="YVa-wt-Txu"/>
                                         <exclude reference="gWP-03-nGB"/>
                                         <exclude reference="i0z-ro-UK4"/>
                                         <exclude reference="jVl-yX-5p2"/>
                                         <exclude reference="mar-Uj-iof"/>
+                                        <exclude reference="oOc-Eq-aqP"/>
                                         <exclude reference="r9Y-4h-bp5"/>
                                         <exclude reference="ueS-16-CEZ"/>
                                     </mask>
                                 </variation>
                                 <connections>
                                     <outlet property="movieImage" destination="782-bL-egI" id="XfF-5a-dGV"/>
-                                    <outlet property="movieLabel" destination="tRg-WZ-8uU" id="1Fi-H9-IUg"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>

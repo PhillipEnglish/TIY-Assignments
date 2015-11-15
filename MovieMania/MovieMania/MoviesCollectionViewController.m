@@ -100,8 +100,8 @@ static NSString * const reuseIdentifier = @"TitleCell";
     UIImage *image = [UIImage imageWithData:imageData];
     cell.movieImage.image = image;
     
-    [cell.layer setBorderWidth:2.0f];
-    [cell.layer setBorderColor:[UIColor whiteColor].CGColor];
+    //[cell.layer setBorderWidth:2.0f];
+    //[cell.layer setBorderColor:[UIColor whiteColor].CGColor];
     
     return cell;
 }
