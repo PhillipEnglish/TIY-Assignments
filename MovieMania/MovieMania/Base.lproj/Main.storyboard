@@ -125,12 +125,22 @@
                                     <action selector="searchTitleButton:" destination="FSI-AD-3ZE" eventType="touchUpInside" id="qrD-er-ZYX"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZnA-mO-jNW">
+                                <rect key="frame" x="276" y="217" width="48" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="cancelButton:" destination="FSI-AD-3ZE" eventType="touchUpInside" id="bMu-qS-kzE"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="ZnA-mO-jNW" firstAttribute="top" secondItem="ldE-Ke-9Lu" secondAttribute="bottom" constant="20" id="55g-sR-2KZ"/>
                             <constraint firstItem="GI9-tv-dhS" firstAttribute="width" secondItem="ol0-S7-gy0" secondAttribute="width" id="9dF-Dx-oQt"/>
                             <constraint firstItem="ldE-Ke-9Lu" firstAttribute="top" secondItem="GI9-tv-dhS" secondAttribute="bottom" constant="36" id="Gzp-8J-UQU"/>
+                            <constraint firstItem="ZnA-mO-jNW" firstAttribute="centerX" secondItem="ol0-S7-gy0" secondAttribute="centerX" id="Xdc-tH-Eaj"/>
                             <constraint firstItem="ldE-Ke-9Lu" firstAttribute="centerX" secondItem="ol0-S7-gy0" secondAttribute="centerX" id="drS-rX-jdE"/>
                             <constraint firstItem="GI9-tv-dhS" firstAttribute="top" secondItem="ol0-S7-gy0" secondAttribute="topMargin" constant="101" id="tsZ-22-fJK"/>
                             <constraint firstItem="GI9-tv-dhS" firstAttribute="leading" secondItem="ol0-S7-gy0" secondAttribute="leading" id="ugh-0P-548"/>

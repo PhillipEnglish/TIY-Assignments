@@ -21,13 +21,14 @@
 //- (IBAction)cancelButton:(UIBarButtonItem *)sender;
 
 - (IBAction)searchTitleButton:(UIButton *)sender;
-
+- (IBAction)cancelButton:(UIButton *)sender;
 @end
 
 @implementation TitleModalViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor redColor];
     //searchResults = [[NSMutableArray alloc] init];
 }
 
@@ -51,6 +52,7 @@
 //    //[self dismissViewControllerAnimated:YES completion:nil];
 //}
 
+#pragma mark - Action Handlers
 -(IBAction)searchTitleButton:(UIButton *)sender
 {
     NSString *title = titleTextField.text;
@@ -64,7 +66,10 @@
     [task resume];
     
 }
-
+- (IBAction)cancelButton:(UIButton *)sender;
+{
+    [self cancel];
+}
 
 #pragma mark - NSURLSessionData delegate
 -(void) URLSession:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask didReceiveResponse:(NSURLResponse *)response completionHandler:(void (^)(NSURLSessionResponseDisposition))completionHandler
