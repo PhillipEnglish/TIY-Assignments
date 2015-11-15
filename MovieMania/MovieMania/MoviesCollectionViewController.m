@@ -9,6 +9,7 @@
 #import "MoviesCollectionViewController.h"
 #import "TitleModalViewController.h"
 #import "TitleCell.h"
+#import "Movie.h"
 
 @interface MoviesCollectionViewController ()
 {
@@ -55,16 +56,16 @@ static NSString * const reuseIdentifier = @"TitleCell";
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
-//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-//{
-//    if ([segue.identifier isEqualToString:@"PresentModalTitleVCSegue"]) //PresentModalTitleVCSegue
-//    {
-//        TitleModalViewController *newTitleVC = (TitleModalViewController *)segue.destinationViewController;
-////        UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:newTitleVC];
-//        newTitleVC.delegate = self;
-//        newTitleVC.titles = titles;
-//    }
-//}
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"PresentModalTitleVCSegue"]) //PresentModalTitleVCSegue
+    {
+        TitleModalViewController *newTitleVC = [segue destinationViewController];    //(TitleModalViewController *)segue.destinationViewController;
+      //UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:newTitleVC];
+        //newTitleVC.delegate = self;
+        newTitleVC.titles = titles;
+    }
+}
 
 
 #pragma mark <UICollectionViewDataSource>
@@ -84,15 +85,24 @@ static NSString * const reuseIdentifier = @"TitleCell";
     
     // Configure the cell
     
-   NSDictionary *aTitle =  titles[indexPath.row];
-   NSURL *posterURL = [NSURL URLWithString:aTitle[@"Poster"]];
-   NSData *imageData = [NSData dataWithContentsOfURL:posterURL];
-   UIImage *image = [UIImage imageWithData:imageData];
-    cell.movieImage.image = image;
+//   NSDictionary *aTitle =  titles[indexPath.row];
+//     NSURL *posterURL = [NSURL URLWithString:aTitle[@"Poster"]];
+//   NSData *imageData = [NSData dataWithContentsOfURL:posterURL];
+//   UIImage *image = [UIImage imageWithData:imageData];
+//    cell.movieImage.image = image;
     
+    Movie *aMovie = titles[indexPath.row];
+    
+    cell.movieLabel.text = aMovie.title;
+    
+    NSURL *posterURL = [NSURL URLWithString:aMovie.posterString];
+    NSData *imageData = [NSData dataWithContentsOfURL:posterURL];
+    UIImage *image = [UIImage imageWithData:imageData];
+    cell.movieImage.image = image;
     
     [cell.layer setBorderWidth:2.0f];
     [cell.layer setBorderColor:[UIColor whiteColor].CGColor];
+    
     return cell;
 }
 

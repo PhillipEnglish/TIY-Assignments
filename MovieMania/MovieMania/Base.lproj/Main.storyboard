@@ -28,15 +28,15 @@
                                     <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" tag="100" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Movie Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2oe-tl-vJv">
-                                            <rect key="frame" x="93" y="245" width="84" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="100" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2oe-tl-vJv">
+                                            <rect key="frame" x="8" y="78" width="84" height="21"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="782-bL-egI">
-                                            <rect key="frame" x="0.0" y="1" width="271" height="240"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="782-bL-egI">
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="72"/>
                                             <animations/>
                                         </imageView>
                                     </subviews>
@@ -45,25 +45,36 @@
                                 </view>
                                 <animations/>
                                 <constraints>
+                                    <constraint firstItem="2oe-tl-vJv" firstAttribute="top" secondItem="j9r-wL-CdH" secondAttribute="topMargin" constant="70" id="0ub-Ge-nvW"/>
                                     <constraint firstItem="782-bL-egI" firstAttribute="leading" secondItem="j9r-wL-CdH" secondAttribute="leading" id="6Np-x9-BRz"/>
+                                    <constraint firstItem="782-bL-egI" firstAttribute="top" secondItem="j9r-wL-CdH" secondAttribute="top" id="GQG-E2-LEL"/>
                                     <constraint firstAttribute="trailingMargin" secondItem="782-bL-egI" secondAttribute="trailing" constant="107" id="HGK-cP-a6V"/>
                                     <constraint firstItem="782-bL-egI" firstAttribute="leading" secondItem="j9r-wL-CdH" secondAttribute="leadingMargin" constant="-41" id="HmI-ZK-FIh"/>
+                                    <constraint firstItem="782-bL-egI" firstAttribute="leading" secondItem="j9r-wL-CdH" secondAttribute="leading" id="P9j-gj-5bh"/>
                                     <constraint firstAttribute="bottom" secondItem="2oe-tl-vJv" secondAttribute="bottom" constant="13" id="SnT-ct-AoC"/>
                                     <constraint firstAttribute="bottomMargin" secondItem="782-bL-egI" secondAttribute="bottom" constant="30" id="YVa-wt-Txu"/>
                                     <constraint firstItem="782-bL-egI" firstAttribute="width" secondItem="j9r-wL-CdH" secondAttribute="width" id="gWP-03-nGB"/>
                                     <constraint firstAttribute="bottomMargin" secondItem="782-bL-egI" secondAttribute="bottom" constant="30" id="i0z-ro-UK4"/>
+                                    <constraint firstItem="782-bL-egI" firstAttribute="top" secondItem="j9r-wL-CdH" secondAttribute="topMargin" id="jVl-yX-5p2"/>
                                     <constraint firstItem="782-bL-egI" firstAttribute="top" secondItem="j9r-wL-CdH" secondAttribute="top" constant="1" id="mar-Uj-iof"/>
+                                    <constraint firstItem="782-bL-egI" firstAttribute="width" secondItem="j9r-wL-CdH" secondAttribute="width" id="oOc-Eq-aqP"/>
                                     <constraint firstItem="2oe-tl-vJv" firstAttribute="centerX" secondItem="j9r-wL-CdH" secondAttribute="centerX" id="r4J-wo-J6C"/>
                                     <constraint firstAttribute="trailing" secondItem="782-bL-egI" secondAttribute="trailing" id="r9Y-4h-bp5"/>
                                     <constraint firstItem="782-bL-egI" firstAttribute="width" secondItem="j9r-wL-CdH" secondAttribute="width" id="ueS-16-CEZ"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
+                                        <exclude reference="6Np-x9-BRz"/>
                                         <exclude reference="HGK-cP-a6V"/>
                                         <exclude reference="HmI-ZK-FIh"/>
+                                        <exclude reference="YVa-wt-Txu"/>
                                         <exclude reference="gWP-03-nGB"/>
                                         <exclude reference="i0z-ro-UK4"/>
+                                        <exclude reference="jVl-yX-5p2"/>
+                                        <exclude reference="mar-Uj-iof"/>
+                                        <exclude reference="r9Y-4h-bp5"/>
                                         <exclude reference="ueS-16-CEZ"/>
+                                        <exclude reference="SnT-ct-AoC"/>
                                     </mask>
                                 </variation>
                                 <connections>

@@ -7,11 +7,13 @@
 //
 
 #import "TitleModalViewController.h"
+#import "Movie.h"
 
 @interface TitleModalViewController () <NSURLSessionDataDelegate, UITextFieldDelegate>
 {
     UITextField *titleTextField;
     NSMutableData *receivedData;
+
     //NSMutableArray *searchResults;
     
 //@property (weak, nonatomic) IBOutlet UITextField *titleTextField;
@@ -87,9 +89,11 @@
     {
         NSLog(@"Download successful");
         NSDictionary *movieInfo = [NSJSONSerialization JSONObjectWithData: receivedData options:0 error: nil];
-        [self.titles addObject:movieInfo];
+        //[self.titles addObject:movieInfo];
        // NSLog(@"%@", movieInfo);
-        [self.delegate movieWasSearched:movieInfo];
+        Movie *aMovie = [Movie movieWithDictionary:movieInfo];
+        [self.titles addObject:aMovie];
+        //[self.delegate movieWasSearched:movieInfo];
         [self cancel];
     }
 }
