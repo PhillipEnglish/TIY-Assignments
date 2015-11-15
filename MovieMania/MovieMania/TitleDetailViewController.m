@@ -11,6 +11,8 @@
 @interface TitleDetailViewController ()
 
 @property (weak, nonatomic) IBOutlet UIImageView *posterImage;
+@property (weak, nonatomic) IBOutlet UILabel *watchLabel;
+@property (weak, nonatomic) IBOutlet UILabel *plotLabel;
 
 @end
 
@@ -24,6 +26,7 @@
     UIImage *image = [UIImage imageWithData:imageData];
     self.posterImage.image = image;
     // Do any additional setup after loading the view.
+    self.plotLabel.text = self.aMovie.summary;
 }
 
 - (void)didReceiveMemoryWarning {
