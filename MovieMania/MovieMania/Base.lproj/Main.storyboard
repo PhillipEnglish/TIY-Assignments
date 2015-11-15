@@ -79,6 +79,7 @@
                                 </variation>
                                 <connections>
                                     <outlet property="movieImage" destination="782-bL-egI" id="XfF-5a-dGV"/>
+                                    <segue destination="oQr-TM-mBs" kind="show" identifier="showTitleDetailSegue" id="ID2-fZ-5n8"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -98,6 +99,43 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K0E-AQ-Lzo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1152" y="278"/>
+        </scene>
+        <!--Title Detail View Controller-->
+        <scene sceneID="26j-Zu-4r2">
+            <objects>
+                <viewController id="oQr-TM-mBs" customClass="TitleDetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="RhD-RE-ZQt"/>
+                        <viewControllerLayoutGuide type="bottom" id="HOf-oH-0dT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="GQ7-NW-Tuw">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="szg-Mz-sV6">
+                                <rect key="frame" x="420" y="323" width="160" height="160"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="160" id="0Ez-dK-fh1"/>
+                                    <constraint firstAttribute="width" constant="160" id="ITM-gY-zjU"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="160" id="bCZ-VO-Aa3"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="HOf-oH-0dT" firstAttribute="top" secondItem="szg-Mz-sV6" secondAttribute="bottom" constant="117" id="HAW-aJ-F6U"/>
+                            <constraint firstAttribute="trailing" secondItem="szg-Mz-sV6" secondAttribute="trailing" constant="20" id="tjK-T3-lay"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="posterImage" destination="szg-Mz-sV6" id="ydc-OO-OIE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T9Q-9u-k23" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1162" y="1143"/>
         </scene>
         <!--Title Modal View Controller-->
         <scene sceneID="hAR-8a-4Vt">

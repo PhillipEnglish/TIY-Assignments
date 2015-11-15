@@ -10,6 +10,7 @@
 #import "TitleModalViewController.h"
 #import "TitleCell.h"
 #import "Movie.h"
+#import "TitleDetailViewController.h"
 
 @interface MoviesCollectionViewController ()
 {
@@ -66,6 +67,22 @@ static NSString * const reuseIdentifier = @"TitleCell";
         //newTitleVC.delegate = self;
         newTitleVC.titles = titles;
     }
+    
+    if ([segue.identifier isEqualToString:@"showTitleDetailSegue"]) //PresentModalTitleVCSegue
+    {
+//        TitleDetailViewController *newDetailVC = [segue destinationViewController];    //(TitleModalViewController *)segue.destinationViewController;
+//        //UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:newTitleVC];
+//        //newTitleVC.delegate = self;
+//        Movie *selectedMovie = titles[indexPath.row];
+//        
+        NSLog(@"seguepressed");
+        TitleDetailViewController *destVC = segue.destinationViewController;
+        NSIndexPath *indexPath = [[self.collectionView indexPathsForSelectedItems] lastObject];
+        Movie *selectedMovie = titles[indexPath.row];
+        NSLog(@"%@", selectedMovie.title);
+        destVC.title = selectedMovie.title;
+        destVC.aMovie = selectedMovie;
+   }
 }
 
 
@@ -110,6 +127,18 @@ static NSString * const reuseIdentifier = @"TitleCell";
     //[cell.layer setBorderColor:[UIColor whiteColor].CGColor];
     
     return cell;
+}
+
+- (void)collectionView:(UICollectionView *)collectionView
+didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+//    TitleDetailViewController *titleDetailVC = (TitleDetailViewController *)[self.storyboard instantiateViewControllerWithIdentifier:@"TitleDetailViewController"];
+//    [self.navigationController pushViewController: titleDetailVC animated:YES];
+    
+//    TitleDetailViewController* viewController = [[TitleDetailViewController alloc] init];
+//    
+//    [self.navigationController pushViewController:viewController animated:YES];
+    NSLog(@"Item Selected");
 }
 
 #pragma mark <UICollectionViewDelegate>
