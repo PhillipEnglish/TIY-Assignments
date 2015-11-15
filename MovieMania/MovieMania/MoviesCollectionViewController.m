@@ -31,20 +31,20 @@ static NSString * const reuseIdentifier = @"TitleCell";
 //    [titles addObject:@"one"];
 //    [titles addObject:@"two"];
 //    [titles addObject:@"three"];
-    NSLog(@"%@", titles);
+    //NSLog(@"%@", titles);
     // Uncomment the following line to preserve selection between presentations
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Register cell classes
-    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"TitleCell"];
-    
+//    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"TitleCell"];
+//    
     // Do any additional setup after loading the view.
 }
 
 - (void) viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-   // [self.collectionView reloadData];
+    [self.collectionView reloadData];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -138,13 +138,13 @@ static NSString * const reuseIdentifier = @"TitleCell";
 */
 
 #pragma mark - delegate
--(void)movieWasSearched:(NSDictionary *)chosenMovie;
-{
-   // NSLog(@"%@", chosenMovie);
-    [titles addObject:chosenMovie];
-    NSLog(@"this is a string");
-    NSLog(@"Here's the dictionary: %@", chosenMovie);
-    
-}
+//-(void)movieWasSearched:(NSDictionary *)chosenMovie;
+//{
+//   // NSLog(@"%@", chosenMovie);
+//    [titles addObject:chosenMovie];
+//    NSLog(@"this is a string");
+//    NSLog(@"Here's the dictionary: %@", chosenMovie);
+//    
+//}
 
 @end

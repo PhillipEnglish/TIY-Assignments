@@ -8,13 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@protocol SearchProtocol
+//@protocol SearchProtocol
+//
+//-(void)movieWasSearched:(NSDictionary *)chosenMovie;
+//
+//@end
 
--(void)movieWasSearched:(NSDictionary *)chosenMovie;
-
-@end
-
-@interface MoviesCollectionViewController : UICollectionViewController <UICollectionViewDelegate, UICollectionViewDataSource, SearchProtocol>
+@interface MoviesCollectionViewController : UICollectionViewController //<UICollectionViewDelegate, UICollectionViewDataSource, SearchProtocol>
 
 
 

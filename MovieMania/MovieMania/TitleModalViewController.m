@@ -18,7 +18,7 @@
     
 //@property (weak, nonatomic) IBOutlet UITextField *titleTextField;
 }
-- (IBAction)cancelButton:(UIBarButtonItem *)sender;
+//- (IBAction)cancelButton:(UIBarButtonItem *)sender;
 
 - (IBAction)searchTitleButton:(UIButton *)sender;
 
@@ -44,12 +44,12 @@
 }
 #pragma mark - Action Handlers
 
-- (IBAction)cancelButton:(UIBarButtonItem *)sender
-{
-    
-    [self cancel];
-    //[self dismissViewControllerAnimated:YES completion:nil];
-}
+//- (IBAction)cancelButton:(UIBarButtonItem *)sender
+//{
+//    
+//    [self cancel];
+//    //[self dismissViewControllerAnimated:YES completion:nil];
+//}
 
 -(IBAction)searchTitleButton:(UIButton *)sender
 {

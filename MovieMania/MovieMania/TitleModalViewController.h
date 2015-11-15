@@ -11,7 +11,7 @@
 
 @interface TitleModalViewController : UIViewController
 
-@property (nonatomic) id<SearchProtocol> delegate;
+//@property (nonatomic) id<SearchProtocol> delegate;
 
 @property (nonatomic) NSMutableArray *titles;
 
