@@ -14,26 +14,110 @@
 @property (weak, nonatomic) IBOutlet UILabel *watchLabel;
 @property (weak, nonatomic) IBOutlet UILabel *plotLabel;
 
+
+
 @end
 
 @implementation TitleDetailViewController
+@synthesize segmentedControl;
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     
     NSURL *posterURL = [NSURL URLWithString:self.aMovie.posterString];
     NSData *imageData = [NSData dataWithContentsOfURL:posterURL];
     UIImage *image = [UIImage imageWithData:imageData];
+    [self ageLoad];
     self.posterImage.image = image;
     // Do any additional setup after loading the view.
     self.plotLabel.text = self.aMovie.summary;
+    NSLog(@"This film is rated %@", self.aMovie.rating);
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+- (IBAction)ageSegmentValue:(UISegmentedControl *)sender
+{
+    Movie *theMovie = self.aMovie;
+    if (segmentedControl.selectedSegmentIndex == 0)
+    {
+        if ([theMovie.rating  isEqual: @"G"] )
+        {
+            self.watchLabel.text = @"YES";
+        }
+        
+        else
+        {
+            self.watchLabel.text = @"NO";
+        }
+        
+    }
+    
+    else if (segmentedControl.selectedSegmentIndex == 1)
+    {
+        if ([theMovie.rating  isEqual: @"G"] )
+        {
+            self.watchLabel.text = @"YES";
+        }
+        
+        else if ([theMovie.rating isEqual: @"PG"])
+        {
+            self.watchLabel.text = @"YES";
+        }
+        
+        else
+        {
+            self.watchLabel.text = @"NO";
+        }
+    }
+    
+    else if (segmentedControl.selectedSegmentIndex == 2)
+    {
+        if ([theMovie.rating  isEqual: @"G"] )
+        {
+            self.watchLabel.text = @"YES";
+        }
+        
+        else if ([theMovie.rating isEqual: @"PG"])
+        {
+            self.watchLabel.text = @"YES";
+        }
+        
+        else if ([theMovie.rating isEqual: @"PG-13"])
+        {
+            self.watchLabel.text = @"YES";
+        }
+        
+        else
+        {
+            self.watchLabel.text = @"NO";
+        }
+    }
+    
+    else if (segmentedControl.selectedSegmentIndex == 3)
+    {
+        self.watchLabel.text = @"YES";
+    }
+}
 
+- (void) ageLoad
+{
+    Movie *theMovie = self.aMovie;
+    if ([theMovie.rating  isEqual: @"G"] )
+    {
+        self.watchLabel.text = @"YES";
+    }
+    
+    else
+    {
+        self.watchLabel.text = @"NO";
+    }
+    
+
+}
 /*
 #pragma mark - Navigation
 

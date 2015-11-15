@@ -13,5 +13,6 @@
 @interface TitleDetailViewController : UIViewController
 
 @property (nonatomic) Movie *aMovie;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *segmentedControl;
 
 @end
