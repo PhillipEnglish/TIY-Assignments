@@ -9,21 +9,58 @@
         <scene sceneID="3Ov-xx-CHG">
             <objects>
                 <tableViewController storyboardIdentifier="ClockTableViewController" id="4GV-uX-0Dp" customClass="ClockTableViewController" customModule="GlobalTime" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="4dn-Ew-RNb">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="149" sectionHeaderHeight="28" sectionFooterHeight="28" id="4dn-Ew-RNb">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="ClockCell" selectionStyle="default" indentationWidth="10" id="IDU-Rc-xoj" customClass="ClockCell" customModule="GlobalTime" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="ClockCell" selectionStyle="default" indentationWidth="10" rowHeight="149" id="IDU-Rc-xoj" customClass="ClockCell" customModule="GlobalTime" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="149"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IDU-Rc-xoj" id="jlW-zR-V7X">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="IDU-Rc-xoj" id="jlW-zR-V7X">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="148"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FzU-4K-6yC" customClass="ClockView" customModule="GlobalTime" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="140" height="140"/>
+                                            <animations/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="140" id="VL2-JO-xSf"/>
+                                                <constraint firstAttribute="width" constant="140" id="dE2-3G-G3A"/>
+                                            </constraints>
+                                        </view>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ten-B3-pTg">
+                                            <rect key="frame" x="279" y="63" width="42" height="21"/>
+                                            <animations/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                     <animations/>
+                                    <constraints>
+                                        <constraint firstItem="FzU-4K-6yC" firstAttribute="top" secondItem="jlW-zR-V7X" secondAttribute="top" id="7wc-w4-JNk"/>
+                                        <constraint firstItem="FzU-4K-6yC" firstAttribute="leading" secondItem="jlW-zR-V7X" secondAttribute="leading" id="F41-ZS-euA"/>
+                                        <constraint firstItem="ten-B3-pTg" firstAttribute="centerY" secondItem="jlW-zR-V7X" secondAttribute="centerY" id="IJS-W8-YH1"/>
+                                        <constraint firstItem="ten-B3-pTg" firstAttribute="centerY" secondItem="jlW-zR-V7X" secondAttribute="centerY" id="TtZ-Gr-8Mf"/>
+                                        <constraint firstItem="ten-B3-pTg" firstAttribute="centerX" secondItem="jlW-zR-V7X" secondAttribute="centerX" id="fLN-di-g2Z"/>
+                                        <constraint firstItem="ten-B3-pTg" firstAttribute="centerX" secondItem="jlW-zR-V7X" secondAttribute="centerX" id="grw-0c-WhU"/>
+                                        <constraint firstAttribute="bottom" secondItem="FzU-4K-6yC" secondAttribute="bottom" id="nLe-vJ-cNQ"/>
+                                    </constraints>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="IJS-W8-YH1"/>
+                                            <exclude reference="fLN-di-g2Z"/>
+                                        </mask>
+                                    </variation>
                                 </tableViewCellContentView>
                                 <animations/>
+                                <connections>
+                                    <outlet property="timezoneClock" destination="FzU-4K-6yC" id="oGl-ky-ga2"/>
+                                    <outlet property="timezoneLabel" destination="ten-B3-pTg" id="B1s-Q4-ZA0"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

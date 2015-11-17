@@ -8,8 +8,15 @@
 
 import UIKit
 
-class ClockCell: UITableViewCell {
+class ClockCell: UITableViewCell
+{
 
+    @IBOutlet weak var timezoneClock: ClockView!
+    
+    
+    @IBOutlet weak var timezoneLabel: UILabel!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
