@@ -12,6 +12,8 @@
 		C339B73F1BFB917E009B742A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C339B73E1BFB917E009B742A /* Assets.xcassets */; };
 		C339B7421BFB917E009B742A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C339B7401BFB917E009B742A /* LaunchScreen.storyboard */; };
 		C339B74A1BFB94B3009B742A /* clockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C339B7491BFB94B2009B742A /* clockView.swift */; };
+		C339B74C1BFBA0D3009B742A /* ClockTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C339B74B1BFBA0D3009B742A /* ClockTableViewController.swift */; };
+		C339B74E1BFBA11B009B742A /* ClockCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C339B74D1BFBA11B009B742A /* ClockCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		C339B7411BFB917E009B742A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C339B7431BFB917F009B742A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C339B7491BFB94B2009B742A /* clockView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = clockView.swift; sourceTree = "<group>"; };
+		C339B74B1BFBA0D3009B742A /* ClockTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClockTableViewController.swift; sourceTree = "<group>"; };
+		C339B74D1BFBA11B009B742A /* ClockCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClockCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,8 @@
 				C339B7401BFB917E009B742A /* LaunchScreen.storyboard */,
 				C339B7431BFB917F009B742A /* Info.plist */,
 				C339B7491BFB94B2009B742A /* clockView.swift */,
+				C339B74B1BFBA0D3009B742A /* ClockTableViewController.swift */,
+				C339B74D1BFBA11B009B742A /* ClockCell.swift */,
 			);
 			path = GlobalTime;
 			sourceTree = "<group>";
@@ -137,6 +143,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C339B74A1BFB94B3009B742A /* clockView.swift in Sources */,
+				C339B74C1BFBA0D3009B742A /* ClockTableViewController.swift in Sources */,
+				C339B74E1BFBA11B009B742A /* ClockCell.swift in Sources */,
 				C339B7381BFB917E009B742A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

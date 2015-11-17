@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Nt5-BR-vWi">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
+        <!--Clock Table View Controller-->
         <scene sceneID="3Ov-xx-CHG">
             <objects>
-                <tableViewController id="4GV-uX-0Dp" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="ClockTableViewController" id="4GV-uX-0Dp" customClass="ClockTableViewController" customModule="GlobalTime" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="4dn-Ew-RNb">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="IDU-Rc-xoj">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="ClockCell" selectionStyle="default" indentationWidth="10" id="IDU-Rc-xoj" customClass="ClockCell" customModule="GlobalTime" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IDU-Rc-xoj" id="jlW-zR-V7X">
@@ -32,7 +32,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="2BR-do-q7W">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="VG6-wz-bdy"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="VG6-wz-bdy"/>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KKE-we-jWP" userLabel="First Responder" sceneMemberID="firstResponder"/>
