@@ -15,7 +15,7 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="ClockCell" selectionStyle="default" indentationWidth="10" rowHeight="149" id="IDU-Rc-xoj" customClass="ClockCell" customModule="GlobalTime" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="ClockCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="ClockCell" rowHeight="149" id="IDU-Rc-xoj" customClass="ClockCell" customModule="GlobalTime" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="600" height="149"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="IDU-Rc-xoj" id="jlW-zR-V7X">
@@ -35,7 +35,7 @@
                                             <rect key="frame" x="279" y="63" width="42" height="21"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -69,12 +69,47 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="2BR-do-q7W">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="VG6-wz-bdy"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="VG6-wz-bdy">
+                            <connections>
+                                <segue destination="H5A-WG-45e" kind="presentation" identifier="ModalSegue" id="5TC-WY-8FB"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KKE-we-jWP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1365" y="-98"/>
+        </scene>
+        <!--Timezone Table View Controller-->
+        <scene sceneID="NPa-MO-mre">
+            <objects>
+                <tableViewController id="H5A-WG-45e" customClass="TimezoneTableViewController" customModule="GlobalTime" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="W8o-7i-mCZ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="TimezoneCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="TimezoneCell" id="gTk-Kj-1W9">
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gTk-Kj-1W9" id="ScK-IU-JQE">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <animations/>
+                                </tableViewCellContentView>
+                                <animations/>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="H5A-WG-45e" id="n3Y-gn-FTa"/>
+                            <outlet property="delegate" destination="H5A-WG-45e" id="x6N-Ae-g6D"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W0N-l8-UOd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2128" y="-87"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="PFa-8n-Dvg">

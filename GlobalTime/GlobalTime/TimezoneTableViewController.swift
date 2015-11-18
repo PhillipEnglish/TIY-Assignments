@@ -1,5 +1,5 @@
 //
-//  ClockTableViewController.swift
+//  TimezoneTableViewController.swift
 //  GlobalTime
 //
 //  Created by Phillip English on 11/17/15.
@@ -8,18 +8,14 @@
 
 import UIKit
 
-protocol TimeZoneTableViewControllerDelegate
+class TimezoneTableViewController: UITableViewController
 {
-    func timezoneWasChosen(chosenTimezone: String)
-}
+    
+    var timeZones = [String]()
+    var delegate: TimeZoneTableViewControllerDelegate?
 
-class ClockTableViewController: UITableViewController, TimeZoneTableViewControllerDelegate
-{
-    let knownTimezones = NSTimeZone.knownTimeZoneNames()
-    var shownTimezones = [String]()
-    
-    
-    override func viewDidLoad() {
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
 
         // Uncomment the following line to preserve selection between presentations
@@ -43,20 +39,26 @@ class ClockTableViewController: UITableViewController, TimeZoneTableViewControll
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return shownTimezones.count
+        return timeZones.count
     }
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("ClockCell", forIndexPath: indexPath) as! ClockCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("TimezoneCell", forIndexPath: indexPath)
 
-        let aTimeZone = shownTimezones[indexPath.row]
-        cell.timezoneLabel.text = aTimeZone
-        cell.timezoneClock.timezone = NSTimeZone(name: aTimeZone)
-        
+        // Configure the cell...
+        let aTimezone = timeZones[indexPath.row]
+        cell.textLabel?.text = aTimezone
         return cell
     }
 
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
+    {
+        let aTimezone = timeZones[indexPath.row]
+        delegate?.timezoneWasChosen(aTimezone)
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
 
     /*
     // Override to support conditional editing of the table view.
@@ -93,26 +95,14 @@ class ClockTableViewController: UITableViewController, TimeZoneTableViewControll
     }
     */
 
+    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
-    {
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-        if segue.identifier == "ModalSegue"
-        {
-            let vc = segue.destinationViewController as! TimezoneTableViewController
-            vc.timeZones = knownTimezones
-            vc.delegate = self
-            
-        }
     }
+    */
 
-    
-    func timezoneWasChosen(chosenTimezone: String)
-    {
-        shownTimezones.append(chosenTimezone)
-        tableView.reloadData()  
-    }
 }
