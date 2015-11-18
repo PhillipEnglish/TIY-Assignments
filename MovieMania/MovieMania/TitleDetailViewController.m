@@ -47,11 +47,13 @@
         if ([theMovie.rating  isEqual: @"G"] )
         {
             self.watchLabel.text = @"YES";
+            self.view.backgroundColor = [UIColor colorWithRed:0.12 green:0.51 blue:0.30 alpha:1.0];
         }
         
         else
         {
             self.watchLabel.text = @"NO";
+             self.view.backgroundColor = [UIColor colorWithRed:0.85 green:0.12 blue:0.09 alpha:1.0];
         }
         
     }
@@ -61,16 +63,19 @@
         if ([theMovie.rating  isEqual: @"G"] )
         {
             self.watchLabel.text = @"YES";
+            self.view.backgroundColor = [UIColor colorWithRed:0.12 green:0.51 blue:0.30 alpha:1.0];
         }
         
         else if ([theMovie.rating isEqual: @"PG"])
         {
             self.watchLabel.text = @"YES";
+            self.view.backgroundColor = [UIColor greenColor];
         }
         
         else
         {
             self.watchLabel.text = @"NO";
+             self.view.backgroundColor = [UIColor colorWithRed:0.85 green:0.12 blue:0.09 alpha:1.0];
         }
     }
     
@@ -79,27 +84,33 @@
         if ([theMovie.rating  isEqual: @"G"] )
         {
             self.watchLabel.text = @"YES";
+            self.view.backgroundColor = [UIColor colorWithRed:0.12 green:0.51 blue:0.30 alpha:1.0];
         }
         
         else if ([theMovie.rating isEqual: @"PG"])
         {
             self.watchLabel.text = @"YES";
+            self.view.backgroundColor = [UIColor colorWithRed:0.12 green:0.51 blue:0.30 alpha:1.0];
         }
         
         else if ([theMovie.rating isEqual: @"PG-13"])
         {
             self.watchLabel.text = @"YES";
+            self.view.backgroundColor = [UIColor colorWithRed:0.12 green:0.51 blue:0.30 alpha:1.0];
         }
         
         else
         {
             self.watchLabel.text = @"NO";
+            self.view.backgroundColor = [UIColor colorWithRed:0.85 green:0.12 blue:0.09 alpha:1.0];
         }
     }
     
     else if (segmentedControl.selectedSegmentIndex == 3)
     {
         self.watchLabel.text = @"YES";
+        self.view.backgroundColor = [UIColor colorWithRed:0.12 green:0.51 blue:0.30 alpha:1.0];
+        
     }
 }
 
@@ -109,11 +120,14 @@
     if ([theMovie.rating  isEqual: @"G"] )
     {
         self.watchLabel.text = @"YES";
+        self.view.backgroundColor = [UIColor colorWithRed:0.12 green:0.51 blue:0.30 alpha:1.0];
     }
     
     else
     {
         self.watchLabel.text = @"NO";
+        self.view.backgroundColor = [UIColor colorWithRed:0.85 green:0.12 blue:0.09 alpha:1.0];
+        
     }
     
 

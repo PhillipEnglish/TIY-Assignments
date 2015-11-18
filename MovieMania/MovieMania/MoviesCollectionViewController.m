@@ -27,7 +27,7 @@ static NSString * const reuseIdentifier = @"TitleCell";
 {
     [super viewDidLoad];
     self.title = @"Watch or Not?";
-    self.collectionView.backgroundColor = [UIColor redColor];
+    self.collectionView.backgroundColor = [UIColor colorWithRed:0.85 green:0.12 blue:0.09 alpha:1.0];
     titles = [[NSMutableArray alloc] init];
 //    [titles addObject:@"testing"];
 //    [titles addObject:@"one"];
@@ -41,6 +41,9 @@ static NSString * const reuseIdentifier = @"TitleCell";
 //    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"TitleCell"];
 //    
     // Do any additional setup after loading the view.
+    
+    
+    
 }
 
 - (void) viewWillAppear:(BOOL)animated
