@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C33CD8501BFFAD0600525F49 /* ContactsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33CD84F1BFFAD0600525F49 /* ContactsTableViewController.swift */; };
+		C33CD8521BFFBCBA00525F49 /* EntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33CD8511BFFBCBA00525F49 /* EntryViewController.swift */; };
 		C391F3E21BFF73B50042273E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C391F3E11BFF73B50042273E /* AppDelegate.swift */; };
-		C391F3E41BFF73B50042273E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C391F3E31BFF73B50042273E /* ViewController.swift */; };
 		C391F3E71BFF73B70042273E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C391F3E51BFF73B70042273E /* Main.storyboard */; };
 		C391F3E91BFF73B70042273E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C391F3E81BFF73B70042273E /* Assets.xcassets */; };
 		C391F3EC1BFF73B70042273E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C391F3EA1BFF73B70042273E /* LaunchScreen.storyboard */; };
@@ -18,9 +19,10 @@
 /* Begin PBXFileReference section */
 		1278F55E5198BDD5ABE3F9C3 /* Pods_FirstContact.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FirstContact.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFF28D9DB229CCCB979DF748 /* Pods-FirstContact.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirstContact.release.xcconfig"; path = "Pods/Target Support Files/Pods-FirstContact/Pods-FirstContact.release.xcconfig"; sourceTree = "<group>"; };
+		C33CD84F1BFFAD0600525F49 /* ContactsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsTableViewController.swift; sourceTree = "<group>"; };
+		C33CD8511BFFBCBA00525F49 /* EntryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryViewController.swift; sourceTree = "<group>"; };
 		C391F3DE1BFF73B30042273E /* FirstContact.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirstContact.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C391F3E11BFF73B50042273E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C391F3E31BFF73B50042273E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C391F3E61BFF73B70042273E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C391F3E81BFF73B70042273E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C391F3EB1BFF73B70042273E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -79,11 +81,12 @@
 			isa = PBXGroup;
 			children = (
 				C391F3E11BFF73B50042273E /* AppDelegate.swift */,
-				C391F3E31BFF73B50042273E /* ViewController.swift */,
 				C391F3E51BFF73B70042273E /* Main.storyboard */,
 				C391F3E81BFF73B70042273E /* Assets.xcassets */,
 				C391F3EA1BFF73B70042273E /* LaunchScreen.storyboard */,
 				C391F3ED1BFF73B70042273E /* Info.plist */,
+				C33CD84F1BFFAD0600525F49 /* ContactsTableViewController.swift */,
+				C33CD8511BFFBCBA00525F49 /* EntryViewController.swift */,
 			);
 			path = FirstContact;
 			sourceTree = "<group>";
@@ -211,8 +214,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C391F3E41BFF73B50042273E /* ViewController.swift in Sources */,
+				C33CD8501BFFAD0600525F49 /* ContactsTableViewController.swift in Sources */,
 				C391F3E21BFF73B50042273E /* AppDelegate.swift in Sources */,
+				C33CD8521BFFBCBA00525F49 /* EntryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
