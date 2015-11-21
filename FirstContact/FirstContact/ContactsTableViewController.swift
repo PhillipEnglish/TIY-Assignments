@@ -7,21 +7,27 @@
 //
 
 import UIKit
+import RealmSwift
 
 class ContactsTableViewController: UITableViewController
 {
-
+    let realm = try! Realm()
+    var contacts : Results<Contact>!
     
     
     
-    override func viewDidLoad() {
+    
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        contacts = realm.objects(Contact).sorted("name")
+        
+    }
+    
+    override func viewWillAppear(animated: Bool)
+    {
+        super.viewWillAppear(true)
+        tableView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -31,25 +37,27 @@ class ContactsTableViewController: UITableViewController
 
     // MARK: - Table view data source
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+    override func numberOfSectionsInTableView(tableView: UITableView) -> Int
+    {
+        return 1
     }
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    {
+       
+        return contacts.count
     }
 
-    /*
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("ContactCell", forIndexPath: indexPath)
 
-        // Configure the cell...
-
+        let aContact = contacts[indexPath.row]
+        cell.textLabel?.text = aContact.name
+        cell.detailTextLabel?.text = aContact.phoneNumber
         return cell
     }
-    */
+
 
     /*
     // Override to support conditional editing of the table view.
@@ -95,5 +103,32 @@ class ContactsTableViewController: UITableViewController
         // Pass the selected object to the new view controller.
     }
     */
+    
+    // MARK: - Row Deletion
+    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath)
+    {
+        if editingStyle == UITableViewCellEditingStyle.Delete
+        {
+            //let aContact = contacts[indexPath.row]
+            //contacts.removeObjectAtIndex[indexPath.row]
+            let aContact = contacts[indexPath.row]
+            try! realm.write{
+                self.realm.delete(aContact)
+            }
+             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
+        }
+    }
 
-}
+//    func deleteRowAtIndexPath(indexPath: NSIndexPath)
+//    {
+//        //let realm = try! Realm()
+//        //let objectToDelete = contacts[UInt(indexPath.row)] //as Contact
+//        let aContact = contacts[indexPath.row]
+//        try! realm.write{
+//            self.realm.delete(aContact)
+//        }
+    
+        
+    }
+    
+
