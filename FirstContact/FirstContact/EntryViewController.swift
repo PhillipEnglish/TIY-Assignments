@@ -8,11 +8,20 @@
 
 import UIKit
 
-class EntryViewController: UIViewController {
+class EntryViewController: UIViewController, UITextFieldDelegate
+{
 
-    override func viewDidLoad() {
+    @IBOutlet weak var nameField: UITextField!
+    @IBOutlet weak var phoneField: UITextField!
+    @IBOutlet weak var birthdayField: UITextField!
+    
+    
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
-
+        self.nameField.delegate = self
+        self.phoneField.delegate = self
+        self.birthdayField.delegate = self
         // Do any additional setup after loading the view.
     }
 
@@ -31,5 +40,11 @@ class EntryViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    // MARK: - Textfield Delegate
+    func textFieldShouldReturn(textField: UITextField) -> Bool {   //delegate method
+        textField.resignFirstResponder()
+        return true
+    }
 
 }
