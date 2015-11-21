@@ -12,6 +12,7 @@ class Contact: Object
 {
     dynamic var name = ""
     dynamic var phoneNumber = ""
+    dynamic var birthDay = ""
     
     let friends = List<Contact>()
     let family = List<Contact>()

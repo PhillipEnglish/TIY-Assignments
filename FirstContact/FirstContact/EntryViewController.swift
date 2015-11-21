@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class EntryViewController: UIViewController, UITextFieldDelegate
 {
@@ -25,12 +26,39 @@ class EntryViewController: UIViewController, UITextFieldDelegate
         // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
+    override func didReceiveMemoryWarning()
+    {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
+    // MARK: - Action Handlers
+    @IBAction func saveButtonPushed(sender: UIButton)
+    {
+        saveContact()
+        self.navigationController?.popToRootViewControllerAnimated(true)
+    }
+    
+    func saveContact()
+    {
+        let aContact = Contact()
+        aContact.name = nameField.text!
+        aContact.phoneNumber = phoneField.text!
+        aContact.birthDay = birthdayField.text!
+        
+        do
+        {
+            let realm = try Realm()
+            try realm.write({ () -> Void in
+                realm.add(aContact)
+                print("Contact Saved")
+            })
+        }
+        catch
+        {
+            
+        }
+    }
     /*
     // MARK: - Navigation
 
@@ -42,7 +70,8 @@ class EntryViewController: UIViewController, UITextFieldDelegate
     */
     
     // MARK: - Textfield Delegate
-    func textFieldShouldReturn(textField: UITextField) -> Bool {   //delegate method
+    func textFieldShouldReturn(textField: UITextField) -> Bool
+    {   //delegate method
         textField.resignFirstResponder()
         return true
     }

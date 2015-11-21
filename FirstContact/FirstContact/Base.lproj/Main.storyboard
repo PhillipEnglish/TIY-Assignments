@@ -116,6 +116,9 @@
                                 <rect key="frame" x="283" y="379" width="34" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="saveButtonPushed:" destination="T8a-qT-az4" eventType="touchUpInside" id="PEN-zb-Xl2"/>
+                                </connections>
                             </button>
                         </subviews>
                         <animations/>
