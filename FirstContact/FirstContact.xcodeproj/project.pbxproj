@@ -14,6 +14,7 @@
 		C391F3E71BFF73B70042273E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C391F3E51BFF73B70042273E /* Main.storyboard */; };
 		C391F3E91BFF73B70042273E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C391F3E81BFF73B70042273E /* Assets.xcassets */; };
 		C391F3EC1BFF73B70042273E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C391F3EA1BFF73B70042273E /* LaunchScreen.storyboard */; };
+		C3D4DE3F1C021A1B00770151 /* ContactDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D4DE3E1C021A1B00770151 /* ContactDetailViewController.swift */; };
 		C4A52262FFDE0BADB6090808 /* Pods_FirstContact.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1278F55E5198BDD5ABE3F9C3 /* Pods_FirstContact.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +30,7 @@
 		C391F3E81BFF73B70042273E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C391F3EB1BFF73B70042273E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C391F3ED1BFF73B70042273E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C3D4DE3E1C021A1B00770151 /* ContactDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactDetailViewController.swift; sourceTree = "<group>"; };
 		EF543EC1062C0622C2BA3BAD /* Pods-FirstContact.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirstContact.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FirstContact/Pods-FirstContact.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -90,6 +92,7 @@
 				C33CD84F1BFFAD0600525F49 /* ContactsTableViewController.swift */,
 				C33CD8511BFFBCBA00525F49 /* EntryViewController.swift */,
 				C33CD8571BFFD8A100525F49 /* Contact.swift */,
+				C3D4DE3E1C021A1B00770151 /* ContactDetailViewController.swift */,
 			);
 			path = FirstContact;
 			sourceTree = "<group>";
@@ -218,6 +221,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C33CD8581BFFD8A100525F49 /* Contact.swift in Sources */,
+				C3D4DE3F1C021A1B00770151 /* ContactDetailViewController.swift in Sources */,
 				C33CD8501BFFAD0600525F49 /* ContactsTableViewController.swift in Sources */,
 				C391F3E21BFF73B50042273E /* AppDelegate.swift in Sources */,
 				C33CD8521BFFBCBA00525F49 /* EntryViewController.swift in Sources */,

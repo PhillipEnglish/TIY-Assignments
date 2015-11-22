@@ -109,8 +109,6 @@ class ContactsTableViewController: UITableViewController
     {
         if editingStyle == UITableViewCellEditingStyle.Delete
         {
-            //let aContact = contacts[indexPath.row]
-            //contacts.removeObjectAtIndex[indexPath.row]
             let aContact = contacts[indexPath.row]
             try! realm.write{
                 self.realm.delete(aContact)
@@ -119,14 +117,7 @@ class ContactsTableViewController: UITableViewController
         }
     }
 
-//    func deleteRowAtIndexPath(indexPath: NSIndexPath)
-//    {
-//        //let realm = try! Realm()
-//        //let objectToDelete = contacts[UInt(indexPath.row)] //as Contact
-//        let aContact = contacts[indexPath.row]
-//        try! realm.write{
-//            self.realm.delete(aContact)
-//        }
+
     
         
     }
