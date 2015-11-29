@@ -8,13 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		C37265CB1C0B6A040074EF5E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37265CA1C0B6A040074EF5E /* AppDelegate.swift */; };
-		C37265CD1C0B6A040074EF5E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37265CC1C0B6A040074EF5E /* ViewController.swift */; };
 		C37265D01C0B6A040074EF5E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C37265CE1C0B6A040074EF5E /* Main.storyboard */; };
 		C37265D31C0B6A040074EF5E /* VenueMenu.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C37265D11C0B6A040074EF5E /* VenueMenu.xcdatamodeld */; };
 		C37265D51C0B6A040074EF5E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C37265D41C0B6A040074EF5E /* Assets.xcassets */; };
 		C37265D81C0B6A040074EF5E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C37265D61C0B6A040074EF5E /* LaunchScreen.storyboard */; };
 		C37265E31C0B6A040074EF5E /* VenueMenuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37265E21C0B6A040074EF5E /* VenueMenuTests.swift */; };
 		C37265EE1C0B6A040074EF5E /* VenueMenuUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37265ED1C0B6A040074EF5E /* VenueMenuUITests.swift */; };
+		C37265FC1C0B73060074EF5E /* VenuesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37265FB1C0B73050074EF5E /* VenuesTableViewController.swift */; };
+		C37265FE1C0B8A7A0074EF5E /* Venue.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37265FD1C0B8A7A0074EF5E /* Venue.swift */; };
+		C37266001C0B8ADB0074EF5E /* Venue+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37265FF1C0B8ADB0074EF5E /* Venue+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +39,6 @@
 /* Begin PBXFileReference section */
 		C37265C71C0B6A040074EF5E /* VenueMenu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VenueMenu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C37265CA1C0B6A040074EF5E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C37265CC1C0B6A040074EF5E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C37265CF1C0B6A040074EF5E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C37265D21C0B6A040074EF5E /* VenueMenu.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = VenueMenu.xcdatamodel; sourceTree = "<group>"; };
 		C37265D41C0B6A040074EF5E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +50,9 @@
 		C37265E91C0B6A040074EF5E /* VenueMenuUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VenueMenuUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C37265ED1C0B6A040074EF5E /* VenueMenuUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueMenuUITests.swift; sourceTree = "<group>"; };
 		C37265EF1C0B6A040074EF5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C37265FB1C0B73050074EF5E /* VenuesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VenuesTableViewController.swift; sourceTree = "<group>"; };
+		C37265FD1C0B8A7A0074EF5E /* Venue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Venue.swift; sourceTree = "<group>"; };
+		C37265FF1C0B8ADB0074EF5E /* Venue+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Venue+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,12 +104,14 @@
 			isa = PBXGroup;
 			children = (
 				C37265CA1C0B6A040074EF5E /* AppDelegate.swift */,
-				C37265CC1C0B6A040074EF5E /* ViewController.swift */,
 				C37265CE1C0B6A040074EF5E /* Main.storyboard */,
 				C37265D41C0B6A040074EF5E /* Assets.xcassets */,
 				C37265D61C0B6A040074EF5E /* LaunchScreen.storyboard */,
 				C37265D91C0B6A040074EF5E /* Info.plist */,
 				C37265D11C0B6A040074EF5E /* VenueMenu.xcdatamodeld */,
+				C37265FB1C0B73050074EF5E /* VenuesTableViewController.swift */,
+				C37265FD1C0B8A7A0074EF5E /* Venue.swift */,
+				C37265FF1C0B8ADB0074EF5E /* Venue+CoreDataProperties.swift */,
 			);
 			path = VenueMenu;
 			sourceTree = "<group>";
@@ -263,8 +269,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C37265D31C0B6A040074EF5E /* VenueMenu.xcdatamodeld in Sources */,
-				C37265CD1C0B6A040074EF5E /* ViewController.swift in Sources */,
+				C37266001C0B8ADB0074EF5E /* Venue+CoreDataProperties.swift in Sources */,
+				C37265FE1C0B8A7A0074EF5E /* Venue.swift in Sources */,
 				C37265CB1C0B6A040074EF5E /* AppDelegate.swift in Sources */,
+				C37265FC1C0B73060074EF5E /* VenuesTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -489,6 +497,7 @@
 				C37265F41C0B6A050074EF5E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C37265F51C0B6A050074EF5E /* Build configuration list for PBXNativeTarget "VenueMenuTests" */ = {
 			isa = XCConfigurationList;
@@ -497,6 +506,7 @@
 				C37265F71C0B6A050074EF5E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C37265F81C0B6A050074EF5E /* Build configuration list for PBXNativeTarget "VenueMenuUITests" */ = {
 			isa = XCConfigurationList;
@@ -505,6 +515,7 @@
 				C37265FA1C0B6A050074EF5E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
