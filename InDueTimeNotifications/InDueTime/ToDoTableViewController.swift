@@ -34,6 +34,8 @@ class ToDoTableViewController: UITableViewController, UITextFieldDelegate
             NSLog("Unresolved error \(nserror), \(nserror.userInfo)")
             abort()
         }
+        
+        
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -182,9 +184,12 @@ class ToDoTableViewController: UITableViewController, UITextFieldDelegate
             
             aToDo.isComplete = true
             cell.backgroundColor = UIColor.brownColor()
+            
         }
+        
         saveContext()
-        tableView.reloadData()  
+        tableView.reloadData()
+        
     }
     
     //MARK: - Private
