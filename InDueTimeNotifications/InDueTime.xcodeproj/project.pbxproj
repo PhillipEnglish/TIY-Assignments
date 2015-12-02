@@ -64,6 +64,8 @@
 		C3AE2B5E1BD6ABB000819B9A /* InDueTime */ = {
 			isa = PBXGroup;
 			children = (
+				C305B9E31BD6BAA2004C2535 /* ToDoTableViewController.swift */,
+				C3B4A4991C0E6EB200863D11 /* ToDoSchedulingViewController.swift */,
 				C305B9E51BD6BCE8004C2535 /* ToDo+CoreDataProperties.swift */,
 				C305B9E61BD6BCE8004C2535 /* ToDo.swift */,
 				C3AE2B5F1BD6ABB000819B9A /* AppDelegate.swift */,
@@ -72,9 +74,7 @@
 				C3AE2B6B1BD6ABB000819B9A /* LaunchScreen.storyboard */,
 				C3AE2B6E1BD6ABB000819B9A /* Info.plist */,
 				C3AE2B661BD6ABB000819B9A /* InDueTime.xcdatamodeld */,
-				C305B9E31BD6BAA2004C2535 /* ToDoTableViewController.swift */,
 				C3D7B4DB1BD6D92E002EB0DF /* ToDoCell.swift */,
-				C3B4A4991C0E6EB200863D11 /* ToDoSchedulingViewController.swift */,
 			);
 			path = InDueTime;
 			sourceTree = "<group>";
