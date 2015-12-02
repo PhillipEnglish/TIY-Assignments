@@ -86,9 +86,12 @@
                                 </date>
                             </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kIL-eF-IH3">
-                                <rect key="frame" x="277" y="328" width="46" height="30"/>
+                                <rect key="frame" x="283" y="328" width="34" height="30"/>
                                 <animations/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="saveButtonPressed:" destination="Hkn-Vy-Yuk" eventType="touchUpInside" id="Irm-hB-g9N"/>
+                                </connections>
                             </button>
                         </subviews>
                         <animations/>
@@ -104,6 +107,10 @@
                             <constraint firstItem="4NZ-Y3-P05" firstAttribute="top" secondItem="h4u-Gr-16N" secondAttribute="bottom" constant="1" id="uy6-Fc-36P"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="deadlinePicker" destination="4NZ-Y3-P05" id="Frv-jx-cL5"/>
+                        <outlet property="titleField" destination="h4u-Gr-16N" id="lMx-IH-9DH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wbk-0P-Xoz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

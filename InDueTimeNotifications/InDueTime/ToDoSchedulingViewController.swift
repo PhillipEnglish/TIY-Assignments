@@ -8,9 +8,15 @@
 
 import UIKit
 
-class ToDoSchedulingViewController: UIViewController {
+class ToDoSchedulingViewController: UIViewController
+{
 
-    override func viewDidLoad() {
+    @IBOutlet weak var titleField: UITextField!
+    
+    @IBOutlet weak var deadlinePicker: UIDatePicker!
+    
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
@@ -22,6 +28,8 @@ class ToDoSchedulingViewController: UIViewController {
     }
     
 
+    @IBAction func saveButtonPressed(sender: UIButton) {
+    }
     /*
     // MARK: - Navigation
 
