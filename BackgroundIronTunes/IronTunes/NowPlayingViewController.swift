@@ -30,6 +30,20 @@ class NowPlayingViewController: UIViewController
         setupAudioSession()
         configurePlaylist()
         loadCurrentSong()
+        
+        avQueuePlayer.addObserver(self, forKeyPath: "currentItem", options: [.New, .Initial], context: nil)
+//        avQueuePlayer.addPeriodicTimeObserverForInterval(CMTimeMake(1, 100), queue: dispatch_get_main_queue()) {
+//            [unowned self] time in
+//            let timeString = String(format: "%02.2f", CMTimeGetSeconds(time))
+//            if UIApplication.sharedApplication().applicationState == .Active
+//            {
+//                //self.timeLabel.text = timeString
+//            }
+//            else
+//            {
+//                print("Background: \(timeString)")
+//            }
+//        }
     }
 
     override func didReceiveMemoryWarning()
@@ -141,4 +155,6 @@ class NowPlayingViewController: UIViewController
             avQueuePlayer.pause()
         }
     }
+    
+    
 }
