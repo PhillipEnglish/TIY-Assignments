@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -18,35 +17,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KxB-EP-XCM">
-                                <rect key="frame" x="133" y="236" width="182" height="128"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tQY-th-pJD">
+                                <rect key="frame" x="195" y="285" width="49" height="30"/>
                                 <animations/>
-                                <state key="normal" title="Record" image="record.png"/>
+                                <state key="normal" title="Record"/>
+                                <connections>
+                                    <action selector="recordSound:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BlP-Hg-4T8"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jOM-dj-af1">
-                                <rect key="frame" x="290" y="236" width="182" height="128"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tkg-3Y-j57">
+                                <rect key="frame" x="366" y="285" width="30" height="30"/>
                                 <animations/>
-                                <state key="normal" title="Play" image="play.png"/>
+                                <state key="normal" title="Play"/>
+                                <connections>
+                                    <action selector="playSound:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Yy7-jX-Ig2"/>
+                                </connections>
                             </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="jOM-dj-af1" secondAttribute="trailing" constant="128" id="38E-nu-Ihq"/>
-                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="jOM-dj-af1" secondAttribute="trailing" constant="60" id="4a0-m8-Tti"/>
-                            <constraint firstItem="KxB-EP-XCM" firstAttribute="baseline" secondItem="jOM-dj-af1" secondAttribute="baseline" id="aws-TQ-yyi"/>
-                            <constraint firstItem="KxB-EP-XCM" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="60" id="owc-wb-fi7"/>
-                            <constraint firstItem="KxB-EP-XCM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="133" id="uu2-st-Vvv"/>
-                            <constraint firstItem="jOM-dj-af1" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="xJJ-6T-VAH"/>
+                            <constraint firstItem="tQY-th-pJD" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="EjZ-jM-JrY"/>
+                            <constraint firstItem="Tkg-3Y-j57" firstAttribute="baseline" secondItem="tQY-th-pJD" secondAttribute="baseline" id="TNE-dJ-hLv"/>
+                            <constraint firstAttribute="trailing" secondItem="Tkg-3Y-j57" secondAttribute="trailing" constant="204" id="YPN-Vt-EOH"/>
+                            <constraint firstItem="tQY-th-pJD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="195" id="alo-6s-Ijb"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="playButton" destination="Tkg-3Y-j57" id="hZD-lD-AdG"/>
+                        <outlet property="recordButton" destination="tQY-th-pJD" id="V9a-RC-fgd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="380" y="198"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="play.png" width="128" height="128"/>
-        <image name="record.png" width="128" height="128"/>
-    </resources>
 </document>

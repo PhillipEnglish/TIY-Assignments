@@ -9,7 +9,7 @@
 import UIKit
 import AVFoundation
 
-class ViewController: UIViewController, AVAudioRecorderDelegate, AVAudioPlayerDelegate
+class ViewController: UIViewController, AVAudioRecorderDelegate, AVAudioPlayerDelegate //AVAudioPlayerDelegate
 {
 
     @IBOutlet weak var recordButton: UIButton!
@@ -17,6 +17,10 @@ class ViewController: UIViewController, AVAudioRecorderDelegate, AVAudioPlayerDe
     
     var soundRecorder: AVAudioRecorder!
     var soundPlayer: AVAudioPlayer!
+    //var engine: AVAudioEngine!
+    //var playerAV: AVAudioPlayerNode!
+    //var audiofile: AVAudioFile
+    
     
     var fileName = "audioFile.m4a"
     
@@ -28,6 +32,14 @@ class ViewController: UIViewController, AVAudioRecorderDelegate, AVAudioPlayerDe
         super.viewDidLoad()
         setupRecorder()
         
+//        engine = AVAudioEngine()
+//        audiofile = try! AVAudioFile(forReading: getFileURL())
+//        do {
+//            Player = try AVAudioPlayer(contentsOfURL: getFileURL())
+//            Player.enableRate = true
+//        } catch _ {
+//            
+//        }
     }
 
     
@@ -38,21 +50,72 @@ class ViewController: UIViewController, AVAudioRecorderDelegate, AVAudioPlayerDe
             soundRecorder.record()
             sender.setTitle("Stop", forState: .Normal)
             playButton.enabled = false
-            recordButton.setImage(UIImage(named: "stop"), forState: UIControlState.Normal)
         }
         else
         {
             soundRecorder.stop()
             sender.setTitle("Record", forState: .Normal)
-            recordButton.setImage(UIImage(named: "record"), forState: UIControlState.Normal)
         }
     }
+    
+    @IBAction func playSound(sender: UIButton) {
+        if (sender.titleLabel?.text == "Play")
+        {
+            recordButton.enabled = false
+            sender.setTitle("Stop", forState: .Normal)
+            preparePlayer()
+            soundPlayer.play()
+        }
+        else
+        {
+            soundPlayer.stop()
+            sender.setTitle("Play", forState: .Normal)
+        }
+    }
+//    @IBAction func recordSound(sender: UIButton)
+//    {
+//        if (sender.titleLabel?.text == "Record")
+//        {
+//            soundRecorder.record()
+//            sender.setTitle("Stop", forState: .Normal)
+//            playButton.enabled = false
+//            recordButton.setImage(UIImage(named: "stop"), forState: UIControlState.Normal)
+//        }
+//        else
+//        {
+//            soundRecorder.stop()
+//            sender.setTitle("Record", forState: .Normal)
+//            recordButton.setImage(UIImage(named: "record"), forState: UIControlState.Normal)
+//        }
+//    }
     
     
     override func didReceiveMemoryWarning()
     {
         super.didReceiveMemoryWarning()
        
+    }
+    
+    // MARK: - AVPlayer Setup
+    
+    func preparePlayer()
+    {
+        var error: NSError?
+        
+        do {
+            soundPlayer = try AVAudioPlayer(contentsOfURL: getFileURL())
+        } catch let error1 as NSError {
+            error = error1
+            soundPlayer = nil
+        }
+        
+        if let err = error {
+            print("AVAudioPlayer error: \(err.localizedDescription)")
+        } else {
+            soundPlayer.delegate = self
+            soundPlayer.prepareToPlay()
+            soundPlayer.volume = 1.0
+        }
     }
 
     // MARK: - AVRecorder Setup
@@ -77,6 +140,7 @@ class ViewController: UIViewController, AVAudioRecorderDelegate, AVAudioPlayerDe
         } else {
             soundRecorder.delegate = self
             soundRecorder.prepareToRecord()
+            print("recorder set up")
         }
     }
     
@@ -97,5 +161,65 @@ class ViewController: UIViewController, AVAudioRecorderDelegate, AVAudioPlayerDe
         
         return filePath
     }
+    
+
+    
+    
+    // Mark: - Audio Engine
+//    func setupAudioEngine ()
+//    {
+//        engine = AVAudioEngine()
+//        playerAV = AVAudioPlayerNode()
+//        playerAV.volume = 0.5
+//        
+//        let url: NSURL = getFileURL()
+////        var file = AVAudioFile(forReading: url)
+////        
+////        var buffer = AVAudioPCMBuffer(PCMFormat: file.processingFormat, frameCapacity: AVAudioFrameCount(file.length))
+////        file.readIntoBuffer(buffer, error: nil)
+//        var file: AVAudioFile?
+//        
+//        do {
+//            file = try AVAudioFile(forReading: url)
+//            
+//            guard let file = file else {
+//                fatalError("file must not be nil in function.")
+//            }
+//            
+//            engine.attachNode(playerAV)
+//            
+//            //let format = file.processingFormatxxxx
+//            
+//            do {
+//                try engine.start()
+//            } catch {
+//                fatalError("Could not start engine. error")
+//            }
+//        }
+//        
+//    }
+    
+    // MARK:- AVAudioPlayer delegate methods
+    
+    func audioPlayerDidFinishPlaying(player: AVAudioPlayer, successfully flag: Bool)
+    {
+        recordButton.enabled = true
+        playButton.setTitle("Play", forState: .Normal)
+    }
+    
+    func audioPlayerDecodeErrorDidOccur(player: AVAudioPlayer, error: NSError?) {
+        print("Error while playing audio \(error!.localizedDescription)")
+    }
+    // MARK:- AVAudioRecorder delegate methods
+    
+    func audioRecorderDidFinishRecording(recorder: AVAudioRecorder, successfully flag: Bool) {
+        playButton.enabled = true
+        recordButton.setTitle("Record", forState: .Normal)
+    }
+    
+    func audioRecorderEncodeErrorDidOccur(recorder: AVAudioRecorder, error: NSError?) {
+        print("Error while recording audio \(error!.localizedDescription)")
+    }
+
 }
 
