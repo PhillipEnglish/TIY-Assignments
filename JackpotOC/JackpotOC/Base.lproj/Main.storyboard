@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="rkY-Qo-hI8">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tickets Table View Controller-->
+        <scene sceneID="o6l-MX-yLr">
+            <objects>
+                <tableViewController id="1fT-QW-Q0O" customClass="TicketsTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="66" sectionHeaderHeight="28" sectionFooterHeight="28" id="Gfo-F9-pf2">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellNumber" textLabel="Wqs-de-MtE" detailTextLabel="1yO-XO-6fU" rowHeight="66" style="IBUITableViewCellStyleValue1" id="6qM-q7-6lk">
+                                <rect key="frame" x="0.0" y="92" width="600" height="66"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6qM-q7-6lk" id="MYS-1i-Mjx">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="65"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Wqs-de-MtE">
+                                            <rect key="frame" x="15" y="23" width="32" height="20"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <animations/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1yO-XO-6fU">
+                                            <rect key="frame" x="543" y="23" width="42" height="20"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <animations/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <animations/>
+                                </tableViewCellContentView>
+                                <animations/>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="1fT-QW-Q0O" id="8ez-Mq-MK8"/>
+                            <outlet property="delegate" destination="1fT-QW-Q0O" id="mOK-Ud-R4j"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="9Ls-Pu-llv">
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="play" id="JZF-uA-L3O">
+                                <connections>
+                                    <segue destination="C5d-WY-OGm" kind="show" identifier="ShowSegueGenerateWinner" id="b3w-qK-iTd"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="add" id="EUM-I8-5n4">
+                                <connections>
+                                    <action selector="addTicket:" destination="1fT-QW-Q0O" id="AGE-st-UAP"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zxR-xV-7er" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1614" y="345"/>
+        </scene>
+        <!--Generate Winners View Controller-->
+        <scene sceneID="rRB-VX-grU">
+            <objects>
+                <viewController id="C5d-WY-OGm" customClass="GenerateWinnersViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="g6w-k5-zaF"/>
+                        <viewControllerLayoutGuide type="bottom" id="ltr-Le-A5i"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pnx-h1-oq3">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WzS-zB-9nF">
+                                <rect key="frame" x="0.0" y="200" width="600" height="200"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="QX1-bd-oUx"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="C5d-WY-OGm" id="b0B-94-RFe"/>
+                                    <outlet property="delegate" destination="C5d-WY-OGm" id="hAM-ff-fb3"/>
+                                </connections>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ai-uc-cfE">
+                                <rect key="frame" x="236" y="90" width="128" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Generate Winners!"/>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="WzS-zB-9nF" secondAttribute="trailing" id="13n-rH-ffy"/>
+                            <constraint firstItem="WzS-zB-9nF" firstAttribute="width" secondItem="pnx-h1-oq3" secondAttribute="width" id="CoC-Bd-8gO"/>
+                            <constraint firstItem="9ai-uc-cfE" firstAttribute="top" secondItem="g6w-k5-zaF" secondAttribute="bottom" constant="70" id="Fu2-9Z-MAK"/>
+                            <constraint firstItem="WzS-zB-9nF" firstAttribute="leading" secondItem="pnx-h1-oq3" secondAttribute="leadingMargin" id="efO-uR-hVe"/>
+                            <constraint firstItem="WzS-zB-9nF" firstAttribute="centerY" secondItem="pnx-h1-oq3" secondAttribute="centerY" id="jNI-0K-rSb"/>
+                            <constraint firstItem="WzS-zB-9nF" firstAttribute="centerX" secondItem="pnx-h1-oq3" secondAttribute="centerX" id="lBK-WY-tWd"/>
+                            <constraint firstItem="9ai-uc-cfE" firstAttribute="centerX" secondItem="pnx-h1-oq3" secondAttribute="centerX" id="mrr-yD-Nl4"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="13n-rH-ffy"/>
+                                <exclude reference="efO-uR-hVe"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="ticketPicker" destination="WzS-zB-9nF" id="jum-8Z-Qxv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="27Y-pr-rDx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2345" y="336"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="t0o-Zq-6l2">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rkY-Qo-hI8" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="IKU-dG-Jop">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="1fT-QW-Q0O" kind="relationship" relationship="rootViewController" id="eke-Fe-S5e"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Hz-RM-OMI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="802" y="345"/>
+        </scene>
+    </scenes>
+</document>
