@@ -1,0 +1,324 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C305B9E41BD6BAA2004C2535 /* ToDoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C305B9E31BD6BAA2004C2535 /* ToDoTableViewController.swift */; };
+		C305B9E71BD6BCE8004C2535 /* ToDo+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C305B9E51BD6BCE8004C2535 /* ToDo+CoreDataProperties.swift */; };
+		C305B9E81BD6BCE8004C2535 /* ToDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C305B9E61BD6BCE8004C2535 /* ToDo.swift */; };
+		C3AE2B601BD6ABB000819B9A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AE2B5F1BD6ABB000819B9A /* AppDelegate.swift */; };
+		C3AE2B651BD6ABB000819B9A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3AE2B631BD6ABB000819B9A /* Main.storyboard */; };
+		C3AE2B681BD6ABB000819B9A /* InDueTime.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C3AE2B661BD6ABB000819B9A /* InDueTime.xcdatamodeld */; };
+		C3AE2B6A1BD6ABB000819B9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3AE2B691BD6ABB000819B9A /* Assets.xcassets */; };
+		C3AE2B6D1BD6ABB000819B9A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3AE2B6B1BD6ABB000819B9A /* LaunchScreen.storyboard */; };
+		C3B4A49A1C0E6EB200863D11 /* ToDoSchedulingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B4A4991C0E6EB200863D11 /* ToDoSchedulingViewController.swift */; };
+		C3D7B4DC1BD6D92E002EB0DF /* ToDoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D7B4DB1BD6D92E002EB0DF /* ToDoCell.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C305B9E31BD6BAA2004C2535 /* ToDoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoTableViewController.swift; sourceTree = "<group>"; };
+		C305B9E51BD6BCE8004C2535 /* ToDo+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "ToDo+CoreDataProperties.swift"; path = "../ToDo+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		C305B9E61BD6BCE8004C2535 /* ToDo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ToDo.swift; path = ../ToDo.swift; sourceTree = "<group>"; };
+		C3AE2B5C1BD6ABB000819B9A /* InDueTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InDueTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3AE2B5F1BD6ABB000819B9A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C3AE2B641BD6ABB000819B9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C3AE2B671BD6ABB000819B9A /* InDueTime.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = InDueTime.xcdatamodel; sourceTree = "<group>"; };
+		C3AE2B691BD6ABB000819B9A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C3AE2B6C1BD6ABB000819B9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C3AE2B6E1BD6ABB000819B9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C3B4A4991C0E6EB200863D11 /* ToDoSchedulingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoSchedulingViewController.swift; sourceTree = "<group>"; };
+		C3D7B4DB1BD6D92E002EB0DF /* ToDoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoCell.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C3AE2B591BD6ABB000819B9A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C3AE2B531BD6ABAF00819B9A = {
+			isa = PBXGroup;
+			children = (
+				C3AE2B5E1BD6ABB000819B9A /* InDueTime */,
+				C3AE2B5D1BD6ABB000819B9A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C3AE2B5D1BD6ABB000819B9A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C3AE2B5C1BD6ABB000819B9A /* InDueTime.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C3AE2B5E1BD6ABB000819B9A /* InDueTime */ = {
+			isa = PBXGroup;
+			children = (
+				C305B9E31BD6BAA2004C2535 /* ToDoTableViewController.swift */,
+				C3B4A4991C0E6EB200863D11 /* ToDoSchedulingViewController.swift */,
+				C305B9E51BD6BCE8004C2535 /* ToDo+CoreDataProperties.swift */,
+				C305B9E61BD6BCE8004C2535 /* ToDo.swift */,
+				C3AE2B5F1BD6ABB000819B9A /* AppDelegate.swift */,
+				C3AE2B631BD6ABB000819B9A /* Main.storyboard */,
+				C3AE2B691BD6ABB000819B9A /* Assets.xcassets */,
+				C3AE2B6B1BD6ABB000819B9A /* LaunchScreen.storyboard */,
+				C3AE2B6E1BD6ABB000819B9A /* Info.plist */,
+				C3AE2B661BD6ABB000819B9A /* InDueTime.xcdatamodeld */,
+				C3D7B4DB1BD6D92E002EB0DF /* ToDoCell.swift */,
+			);
+			path = InDueTime;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C3AE2B5B1BD6ABB000819B9A /* InDueTime */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C3AE2B711BD6ABB000819B9A /* Build configuration list for PBXNativeTarget "InDueTime" */;
+			buildPhases = (
+				C3AE2B581BD6ABB000819B9A /* Sources */,
+				C3AE2B591BD6ABB000819B9A /* Frameworks */,
+				C3AE2B5A1BD6ABB000819B9A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = InDueTime;
+			productName = InDueTime;
+			productReference = C3AE2B5C1BD6ABB000819B9A /* InDueTime.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C3AE2B541BD6ABAF00819B9A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "The Iron Yard";
+				TargetAttributes = {
+					C3AE2B5B1BD6ABB000819B9A = {
+						CreatedOnToolsVersion = 7.0.1;
+					};
+				};
+			};
+			buildConfigurationList = C3AE2B571BD6ABAF00819B9A /* Build configuration list for PBXProject "InDueTime" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C3AE2B531BD6ABAF00819B9A;
+			productRefGroup = C3AE2B5D1BD6ABB000819B9A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C3AE2B5B1BD6ABB000819B9A /* InDueTime */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C3AE2B5A1BD6ABB000819B9A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3AE2B6D1BD6ABB000819B9A /* LaunchScreen.storyboard in Resources */,
+				C3AE2B6A1BD6ABB000819B9A /* Assets.xcassets in Resources */,
+				C3AE2B651BD6ABB000819B9A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C3AE2B581BD6ABB000819B9A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3AE2B681BD6ABB000819B9A /* InDueTime.xcdatamodeld in Sources */,
+				C3D7B4DC1BD6D92E002EB0DF /* ToDoCell.swift in Sources */,
+				C305B9E81BD6BCE8004C2535 /* ToDo.swift in Sources */,
+				C3B4A49A1C0E6EB200863D11 /* ToDoSchedulingViewController.swift in Sources */,
+				C305B9E71BD6BCE8004C2535 /* ToDo+CoreDataProperties.swift in Sources */,
+				C305B9E41BD6BAA2004C2535 /* ToDoTableViewController.swift in Sources */,
+				C3AE2B601BD6ABB000819B9A /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C3AE2B631BD6ABB000819B9A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C3AE2B641BD6ABB000819B9A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C3AE2B6B1BD6ABB000819B9A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C3AE2B6C1BD6ABB000819B9A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C3AE2B6F1BD6ABB000819B9A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C3AE2B701BD6ABB000819B9A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C3AE2B721BD6ABB000819B9A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = InDueTime/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tiy.InDueTime;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		C3AE2B731BD6ABB000819B9A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = InDueTime/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tiy.InDueTime;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C3AE2B571BD6ABAF00819B9A /* Build configuration list for PBXProject "InDueTime" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C3AE2B6F1BD6ABB000819B9A /* Debug */,
+				C3AE2B701BD6ABB000819B9A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C3AE2B711BD6ABB000819B9A /* Build configuration list for PBXNativeTarget "InDueTime" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C3AE2B721BD6ABB000819B9A /* Debug */,
+				C3AE2B731BD6ABB000819B9A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		C3AE2B661BD6ABB000819B9A /* InDueTime.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C3AE2B671BD6ABB000819B9A /* InDueTime.xcdatamodel */,
+			);
+			currentVersion = C3AE2B671BD6ABB000819B9A /* InDueTime.xcdatamodel */;
+			path = InDueTime.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = C3AE2B541BD6ABAF00819B9A /* Project object */;
+}
