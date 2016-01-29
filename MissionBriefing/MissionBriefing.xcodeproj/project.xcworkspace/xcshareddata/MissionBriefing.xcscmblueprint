@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "3F2E14F93351AB85F12D451777AFA55BD97E8731",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "3F2E14F93351AB85F12D451777AFA55BD97E8731" : 0,
+    "89E727A5E6C8B296863B8F03774E7D8824858771" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "DB6D782A-6442-49CE-9334-A1DC421A87C1",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "3F2E14F93351AB85F12D451777AFA55BD97E8731" : "TIY-Assignments\/",
+    "89E727A5E6C8B296863B8F03774E7D8824858771" : "2015--FALL--iOS\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "MissionBriefing",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "MissionBriefing\/MissionBriefing.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/PhillipEnglish\/TIY-Assignments.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "3F2E14F93351AB85F12D451777AFA55BD97E8731"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/TheIronYard--Orlando\/2015--FALL--iOS.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "89E727A5E6C8B296863B8F03774E7D8824858771"
+    }
+  ]
+}
