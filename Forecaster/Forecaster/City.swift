@@ -14,91 +14,82 @@ let kZipCodeKey = "zipCode"
 let kLatitudeKey = "latitude"
 let kLongitudeKey = "longitude"
 
-//^ Set up here per common convention named with a k for konstant. Set up here to prevent misspelling when used in multiple functions and so that you can change them here and that will be universal- as per Ben.
+//^ Set up here per common convention named with a k for konstant. Set up here to prevent misspelling when used in multiple functions and so that you can change them here and that will be universal
+
+
 
 class City: NSObject, NSCoding
-
 {
-    let name: String
+    let name: String!
     let zipCode: String
-    let latitude: Double
-    let longitude: Double
-
+    let lat: Double?
+    let lng: Double?
+    var currentWeather: Weather?
     
-    init(name: String, zip: String, lat: Double, lng: Double)
+    // create weather object
+    
+    init(name: String, zipCode: String, lat: Double, lng: Double, weather: Weather?)
     {
         self.name = name
-        self.zipCode = zip
-        latitude = lat
-        longitude = lng
+        self.zipCode = zipCode
+        self.lat = lat
+        self.lng = lng
+        
+        if weather != nil
+        {
+            self.currentWeather = weather!
+        }
+        else
+        {
+            self.currentWeather = nil
+        }
     }
     
+    // MARK: - NSCoding (serialization)
     
-    // MARK: - NSCoding
-    
-    required convenience init?(coder aDecoder: NSCoder) //a decoder. Basically this is an initializer. is an optional initializer.
+    required convenience init?(coder aDecoder: NSCoder)
     {
-        guard let name = aDecoder.decodeObjectForKey(kNameKey) as? String,  //guard statement is new in swift 2.0
-        let zipCode = aDecoder.decodeObjectForKey(kZipCodeKey) as? String
+        // guard = if the 2 statements after guard are true, continue to self.init code. otherwise move to else statment and break
+        guard let name = aDecoder.decodeObjectForKey(kNameKey) as? String, let zipCode = aDecoder.decodeObjectForKey(kZipCodeKey) as? String
             else { return nil }
         
-        self.init(name: name, zip: zipCode, lat: aDecoder.decodeDoubleForKey(kLatitudeKey), lng: aDecoder.decodeDoubleForKey(kLongitudeKey))
+        self.init(name: name, zipCode: zipCode, lat: aDecoder.decodeDoubleForKey(kLatitudeKey), lng: aDecoder.decodeDoubleForKey(kLongitudeKey), weather: nil)
     }
     
-    func encodeWithCoder(aCoder: NSCoder) //an encoder.
+    func encodeWithCoder(aCoder: NSCoder)
     {
         aCoder.encodeObject(self.name, forKey: kNameKey)
         aCoder.encodeObject(self.zipCode, forKey: kZipCodeKey)
-        aCoder.encodeObject(self.latitude, forKey: kLatitudeKey)
-        aCoder.encodeObject(self.longitude, forKey: kLongitudeKey)
-        
+        aCoder.encodeDouble(self.lat!, forKey: kLatitudeKey)
+        aCoder.encodeDouble(self.lng!, forKey: kLongitudeKey)
     }
-
     
-//    static func cityWithJSON(results: NSArray) -> City
-//    {
-//        var city: City
-//        var cityName = ""
-//        var latStr = ""
-//        var lngStr = ""
-//        
-//        
-//        if results.count > 0
-//        {
-//            for result in results
-//            {
-//                let formattedAddress = result["formatted_address"] as? String
-//                if formattedAddress != nil
-//                {
-//                    let addressComponentsForCity = formattedAddress!.componentsSeparatedByString(",")
-//                    cityName = String(addressComponentsForCity[0])
-//                }
-//                
-//                let geometry = result["geometry"] as? NSDictionary
-//                if geometry != nil
-//                {
-//                    let latLong = geometry?["location"] as? NSDictionary
-//                    if latLong != nil
-//                    {
-//                        let lat = latLong?["lat"] as! Double
-//                        let lng = latLong?["lng"] as! Double
-//                        
-//                        latStr = String(lat)
-//                        lngStr = String(lng)
-//                    }
-//                }
-//            }
-//            
-//
-//        }
-//        
-//        // print(cityName) ; print(latStr) ; print(lngStr)
-//        city = City(name: cityName, zip: <#T##String#>, lat: <#T##Double#>, lng: <#T##Double#>)
-//        
-//        return city
-//    
-//    }
+    // MARK: - Parse JSON
+    
+    static func cityWithJSON(results: NSDictionary) -> City
+    {
+        var aCity: City!
+        
+        if results.count > 0
+        {
+            
+            let formattedAddress = results.valueForKey("formatted_address") as? String
+            let addressComponents = formattedAddress!.characters.split(",").map { String($0) }
+            let name =  addressComponents[0]
+            var zipCode = addressComponents[1]
+            zipCode = zipCode.substringFromIndex(zipCode.endIndex.advancedBy(-5))
+            let geometry = results.valueForKey("geometry") as? NSDictionary
+            
+            let location = geometry!.valueForKey("location") as? NSDictionary
+            let lat = location?.valueForKey("lat") as? Double
+            let lng = location?.valueForKey("lng") as? Double
+            
+            aCity = (City(name: name, zipCode: zipCode, lat: lat!, lng: lng!, weather: nil))
+            
+        }
+        return aCity
+    }
     
     
-
 }
+

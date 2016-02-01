@@ -17,6 +17,20 @@
 		C3B9E94A1BE2741300502E6F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3B9E9491BE2741300502E6F /* Assets.xcassets */; };
 		C3B9E94D1BE2741300502E6F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3B9E94B1BE2741300502E6F /* LaunchScreen.storyboard */; };
 		C3D3243E1BE2781F000B43C5 /* CityTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D3243D1BE2781F000B43C5 /* CityTableViewController.swift */; };
+		C3ECAE571C5F8B1D0061DEF1 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3ECAE561C5F8B1D0061DEF1 /* Weather.swift */; };
+		C3ECAE651C5FA7390061DEF1 /* clear-day.png in Resources */ = {isa = PBXBuildFile; fileRef = C3ECAE591C5FA7390061DEF1 /* clear-day.png */; };
+		C3ECAE661C5FA7390061DEF1 /* clear-night.png in Resources */ = {isa = PBXBuildFile; fileRef = C3ECAE5A1C5FA7390061DEF1 /* clear-night.png */; };
+		C3ECAE671C5FA7390061DEF1 /* cloudy.png in Resources */ = {isa = PBXBuildFile; fileRef = C3ECAE5B1C5FA7390061DEF1 /* cloudy.png */; };
+		C3ECAE681C5FA7390061DEF1 /* fog.png in Resources */ = {isa = PBXBuildFile; fileRef = C3ECAE5C1C5FA7390061DEF1 /* fog.png */; };
+		C3ECAE691C5FA7390061DEF1 /* na.png in Resources */ = {isa = PBXBuildFile; fileRef = C3ECAE5D1C5FA7390061DEF1 /* na.png */; };
+		C3ECAE6A1C5FA7390061DEF1 /* partly-cloudy-day.png in Resources */ = {isa = PBXBuildFile; fileRef = C3ECAE5E1C5FA7390061DEF1 /* partly-cloudy-day.png */; };
+		C3ECAE6B1C5FA7390061DEF1 /* partly-cloudy-night.png in Resources */ = {isa = PBXBuildFile; fileRef = C3ECAE5F1C5FA7390061DEF1 /* partly-cloudy-night.png */; };
+		C3ECAE6C1C5FA7390061DEF1 /* rain.png in Resources */ = {isa = PBXBuildFile; fileRef = C3ECAE601C5FA7390061DEF1 /* rain.png */; };
+		C3ECAE6D1C5FA7390061DEF1 /* sleet.png in Resources */ = {isa = PBXBuildFile; fileRef = C3ECAE611C5FA7390061DEF1 /* sleet.png */; };
+		C3ECAE6E1C5FA7390061DEF1 /* snow.png in Resources */ = {isa = PBXBuildFile; fileRef = C3ECAE621C5FA7390061DEF1 /* snow.png */; };
+		C3ECAE6F1C5FA7390061DEF1 /* wind.png in Resources */ = {isa = PBXBuildFile; fileRef = C3ECAE631C5FA7390061DEF1 /* wind.png */; };
+		C3ECAE701C5FA7390061DEF1 /* windspeed.png in Resources */ = {isa = PBXBuildFile; fileRef = C3ECAE641C5FA7390061DEF1 /* windspeed.png */; };
+		C3ECAE721C5FA8FF0061DEF1 /* WeatherAPIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3ECAE711C5FA8FF0061DEF1 /* WeatherAPIController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +46,20 @@
 		C3B9E94C1BE2741300502E6F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C3B9E94E1BE2741400502E6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C3D3243D1BE2781F000B43C5 /* CityTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityTableViewController.swift; sourceTree = "<group>"; };
+		C3ECAE561C5F8B1D0061DEF1 /* Weather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		C3ECAE591C5FA7390061DEF1 /* clear-day.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clear-day.png"; sourceTree = "<group>"; };
+		C3ECAE5A1C5FA7390061DEF1 /* clear-night.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clear-night.png"; sourceTree = "<group>"; };
+		C3ECAE5B1C5FA7390061DEF1 /* cloudy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cloudy.png; sourceTree = "<group>"; };
+		C3ECAE5C1C5FA7390061DEF1 /* fog.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fog.png; sourceTree = "<group>"; };
+		C3ECAE5D1C5FA7390061DEF1 /* na.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = na.png; sourceTree = "<group>"; };
+		C3ECAE5E1C5FA7390061DEF1 /* partly-cloudy-day.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "partly-cloudy-day.png"; sourceTree = "<group>"; };
+		C3ECAE5F1C5FA7390061DEF1 /* partly-cloudy-night.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "partly-cloudy-night.png"; sourceTree = "<group>"; };
+		C3ECAE601C5FA7390061DEF1 /* rain.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rain.png; sourceTree = "<group>"; };
+		C3ECAE611C5FA7390061DEF1 /* sleet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sleet.png; sourceTree = "<group>"; };
+		C3ECAE621C5FA7390061DEF1 /* snow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = snow.png; sourceTree = "<group>"; };
+		C3ECAE631C5FA7390061DEF1 /* wind.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wind.png; sourceTree = "<group>"; };
+		C3ECAE641C5FA7390061DEF1 /* windspeed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = windspeed.png; sourceTree = "<group>"; };
+		C3ECAE711C5FA8FF0061DEF1 /* WeatherAPIController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherAPIController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,19 +92,73 @@
 		C3B9E9411BE2741300502E6F /* Forecaster */ = {
 			isa = PBXGroup;
 			children = (
-				C3B9E9421BE2741300502E6F /* AppDelegate.swift */,
-				C3D3243D1BE2781F000B43C5 /* CityTableViewController.swift */,
-				C3A29D011BE3F2BD001B70D7 /* ModalZipCodeViewController.swift */,
+				C3ECAE581C5FA7290061DEF1 /* weather-icons */,
+				C3ECAE551C5F833E0061DEF1 /* Models */,
+				C3ECAE541C5F83150061DEF1 /* API Controllers */,
+				C3ECAE531C5F82E90061DEF1 /* Misc */,
+				C3ECAE521C5F826A0061DEF1 /* ViewControllers */,
 				C3B9E9461BE2741300502E6F /* Main.storyboard */,
-				C3B9E9491BE2741300502E6F /* Assets.xcassets */,
-				C3B9E94B1BE2741300502E6F /* LaunchScreen.storyboard */,
-				C3B9E94E1BE2741400502E6F /* Info.plist */,
-				C3302AFE1BE3FC9000CF6C7E /* CityDetailViewController.swift */,
-				C310ECB11BE52EF300F0CAFF /* City.swift */,
-				C3A3C5DD1BE6842B00490DC6 /* CityAPIController.swift */,
-				C357D5591BE7FBE80009D3BE /* CityWeatherTableViewCell.swift */,
 			);
 			path = Forecaster;
+			sourceTree = "<group>";
+		};
+		C3ECAE521C5F826A0061DEF1 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				C3302AFE1BE3FC9000CF6C7E /* CityDetailViewController.swift */,
+				C3D3243D1BE2781F000B43C5 /* CityTableViewController.swift */,
+				C3A29D011BE3F2BD001B70D7 /* ModalZipCodeViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		C3ECAE531C5F82E90061DEF1 /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				C357D5591BE7FBE80009D3BE /* CityWeatherTableViewCell.swift */,
+				C3B9E9421BE2741300502E6F /* AppDelegate.swift */,
+				C3B9E94E1BE2741400502E6F /* Info.plist */,
+				C3B9E9491BE2741300502E6F /* Assets.xcassets */,
+				C3B9E94B1BE2741300502E6F /* LaunchScreen.storyboard */,
+			);
+			name = Misc;
+			sourceTree = "<group>";
+		};
+		C3ECAE541C5F83150061DEF1 /* API Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C3A3C5DD1BE6842B00490DC6 /* CityAPIController.swift */,
+				C3ECAE711C5FA8FF0061DEF1 /* WeatherAPIController.swift */,
+			);
+			name = "API Controllers";
+			sourceTree = "<group>";
+		};
+		C3ECAE551C5F833E0061DEF1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C310ECB11BE52EF300F0CAFF /* City.swift */,
+				C3ECAE561C5F8B1D0061DEF1 /* Weather.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		C3ECAE581C5FA7290061DEF1 /* weather-icons */ = {
+			isa = PBXGroup;
+			children = (
+				C3ECAE591C5FA7390061DEF1 /* clear-day.png */,
+				C3ECAE5A1C5FA7390061DEF1 /* clear-night.png */,
+				C3ECAE5B1C5FA7390061DEF1 /* cloudy.png */,
+				C3ECAE5C1C5FA7390061DEF1 /* fog.png */,
+				C3ECAE5D1C5FA7390061DEF1 /* na.png */,
+				C3ECAE5E1C5FA7390061DEF1 /* partly-cloudy-day.png */,
+				C3ECAE5F1C5FA7390061DEF1 /* partly-cloudy-night.png */,
+				C3ECAE601C5FA7390061DEF1 /* rain.png */,
+				C3ECAE611C5FA7390061DEF1 /* sleet.png */,
+				C3ECAE621C5FA7390061DEF1 /* snow.png */,
+				C3ECAE631C5FA7390061DEF1 /* wind.png */,
+				C3ECAE641C5FA7390061DEF1 /* windspeed.png */,
+			);
+			name = "weather-icons";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,9 +219,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3ECAE691C5FA7390061DEF1 /* na.png in Resources */,
+				C3ECAE6D1C5FA7390061DEF1 /* sleet.png in Resources */,
+				C3ECAE661C5FA7390061DEF1 /* clear-night.png in Resources */,
+				C3ECAE671C5FA7390061DEF1 /* cloudy.png in Resources */,
 				C3B9E94D1BE2741300502E6F /* LaunchScreen.storyboard in Resources */,
 				C3B9E94A1BE2741300502E6F /* Assets.xcassets in Resources */,
+				C3ECAE6C1C5FA7390061DEF1 /* rain.png in Resources */,
+				C3ECAE651C5FA7390061DEF1 /* clear-day.png in Resources */,
+				C3ECAE701C5FA7390061DEF1 /* windspeed.png in Resources */,
+				C3ECAE6B1C5FA7390061DEF1 /* partly-cloudy-night.png in Resources */,
+				C3ECAE6F1C5FA7390061DEF1 /* wind.png in Resources */,
+				C3ECAE6E1C5FA7390061DEF1 /* snow.png in Resources */,
 				C3B9E9481BE2741300502E6F /* Main.storyboard in Resources */,
+				C3ECAE6A1C5FA7390061DEF1 /* partly-cloudy-day.png in Resources */,
+				C3ECAE681C5FA7390061DEF1 /* fog.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,9 +244,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3ECAE571C5F8B1D0061DEF1 /* Weather.swift in Sources */,
 				C3302AFF1BE3FC9000CF6C7E /* CityDetailViewController.swift in Sources */,
 				C310ECB21BE52EF300F0CAFF /* City.swift in Sources */,
 				C357D55A1BE7FBE80009D3BE /* CityWeatherTableViewCell.swift in Sources */,
+				C3ECAE721C5FA8FF0061DEF1 /* WeatherAPIController.swift in Sources */,
 				C3D3243E1BE2781F000B43C5 /* CityTableViewController.swift in Sources */,
 				C3A3C5DE1BE6842B00490DC6 /* CityAPIController.swift in Sources */,
 				C3B9E9431BE2741300502E6F /* AppDelegate.swift in Sources */,

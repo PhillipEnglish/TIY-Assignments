@@ -12,42 +12,39 @@ let kCitiesKey = "cities"
 
 protocol modalZipCodeViewControllerDelegate
 {
-    func zipCodeWasChosen(zipCode: String)
+    func zipCodeWasChosen(zipCode: Int)
 }
 
 protocol CityAPIControllerProtocol
 {
-    func didReceiveMapsAPIResults(results: NSArray)
+    func didReceiveMapsAPIResults(results: NSDictionary)
 }
 
-class CityTableViewController: UITableViewController, modalZipCodeViewControllerDelegate, CityAPIControllerProtocol
+protocol WeatherAPIResultsProtocol
+{
+    func didReceiveWeatherAPIResults(results: NSDictionary)
+}
+
+class CityTableViewController: UITableViewController, modalZipCodeViewControllerDelegate, CityAPIControllerProtocol, WeatherAPIResultsProtocol
 {
     var cities = [City]()
 
     var cityAPI: CityAPIController!
     
-    override func viewDidLoad() {
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
         
         title = "Forecaster"
         
-        //zipCodeWasChosen("32801")
-        
         //Coloring
         navigationController?.navigationBar.barTintColor = UIColor.purpleColor()
-        //self.tableView.backgroundColor = UIColor.lightGrayColor()
        
-        
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
 
-    override func didReceiveMemoryWarning() {
+    override func didReceiveMemoryWarning()
+    {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
     // MARK: - Table view data source
@@ -57,13 +54,13 @@ class CityTableViewController: UITableViewController, modalZipCodeViewController
         cell.backgroundColor = UIColor.clearColor()
     }
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
+    override func numberOfSectionsInTableView(tableView: UITableView) -> Int
+    {
         return 1
     }
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    {
         return cities.count
     }
 
@@ -73,33 +70,85 @@ class CityTableViewController: UITableViewController, modalZipCodeViewController
         
        let aCity = cities[indexPath.row]
         
-        cell.cityLabel?.text = aCity.cityName
-        
-      
-        
-        // Configure the cell...
-        //cell.textLabel!.text = "Orlando"
-        //cell.detailTextLabel?.text = "79 Degrees"
-        
+        cell.cityLabel?.text = aCity.name
+        cell.tempLabel.text = "--°F"
+        cell.quickWeatherLabel.text = ""
 
+        if aCity.currentWeather != nil
+        {
+            cell.tempLabel.text = String(Int(aCity.currentWeather!.temperature)) + "°F"
+            cell.quickWeatherLabel.text = String(aCity.currentWeather!.summary)
+            cell.iconImage.image = UIImage(named: "\(aCity.currentWeather!.icon).png")
+
+        }
+        
         return cell
+        
+        
     }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
+    {
+        print(cities[indexPath.row])
+      let selectedCity = cities[indexPath.row]
+       let cityDetailVC = storyboard?.instantiateViewControllerWithIdentifier("CityDetail") as! CityDetailViewController
+      cityDetailVC.city = selectedCity
+        navigationController?.pushViewController(cityDetailVC, animated: true)
+    }
+
+    // Override to support editing the table view.
+    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if editingStyle == .Delete {
+            // Delete the row from the data source
+            cities.removeAtIndex(indexPath.row)
+            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+            tableView.reloadData()
+            
+        } else if editingStyle == .Insert {
+            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+        }
+        saveCityData()
+    }
+
     
     // MARK: - API Controller Protocols
     
-    func didReceiveMapsAPIResults(results: NSArray)
+    func didReceiveMapsAPIResults(results: NSDictionary)
     {
         dispatch_async(dispatch_get_main_queue(), {
             let aCity = City.cityWithJSON(results)
             self.cities.append(aCity)
             
+            let weatherAPI = WeatherAPIController(weatherDelegate: self)
+            weatherAPI.searchForecastFor(aCity.lat!, lng: aCity.lng!)
+            
             self.tableView.reloadData()
         })
     }
     
+    func didReceiveWeatherAPIResults(results: NSDictionary)
+    {
+        dispatch_async(dispatch_get_main_queue(), {
+            let weather = Weather.weatherWithJSON(results)
+            
+            for aCity in self.cities
+            {
+                if weather.latitude == aCity.lat
+                {
+                    aCity.currentWeather = weather as Weather!
+//                    let cityCopy = aCity
+//                    self.cities.popLast()
+//                    self.cities.append(cityCopy)
+                }
+            }
+            self.tableView.reloadData()
+            UIApplication.sharedApplication().networkActivityIndicatorVisible = false
+        })
+    }
+
     
     // MARK: - Loction Delegate
-    func zipCodeWasChosen(zipCode: String)
+    func zipCodeWasChosen(zipCode: Int)
     {
         print(zipCode)
         
@@ -108,7 +157,7 @@ class CityTableViewController: UITableViewController, modalZipCodeViewController
         
         self.cityAPI = CityAPIController(cityDelegate: self)
         
-        cityAPI.searchGoogleForCity(zipCode)
+        //cityAPI.searchGoogleForCity(zipCode)
         //tableView.reloadData()
         //navigationController?.dismissViewControllerAnimated(true, completion: nil)
         
@@ -121,42 +170,12 @@ class CityTableViewController: UITableViewController, modalZipCodeViewController
         
         self.tableView.reloadData()
         print (zipCodeArray)
+        print(cities)
     }
 
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
+ 
 
-    /*
-    // Override to support editing the table view.
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
-            // Delete the row from the data source
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
+  
 
     /*
     // MARK: - Navigation
@@ -167,6 +186,19 @@ class CityTableViewController: UITableViewController, modalZipCodeViewController
         // Pass the selected object to the new view controller.
     }
     */
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
+    {
+        if segue.identifier == "PresentModalZipCodeVCModally"
+        {
+            let nav = segue.destinationViewController as! UINavigationController
+            let modalVC = nav.topViewController as! ModalZipCodeViewController
+            modalVC.delegate = self
+            modalVC.cities = cities
+        }
+    }
+    
+
     
     // MARK: -MISC
     
@@ -184,7 +216,7 @@ class CityTableViewController: UITableViewController, modalZipCodeViewController
     
     func saveCityData() //this is how we persist data to the disk
     {
-        let cityData = NSKeyedArchiver.archivedDataWithRootObject(cities!) // you can only archive data like this if every object in the array has nscoding enabled in it. This is why we implemented nscoding in our city class
+        let cityData = NSKeyedArchiver.archivedDataWithRootObject(cities) // you can only archive data like this if every object in the array has nscoding enabled in it. 
         NSUserDefaults.standardUserDefaults().setObject(cityData, forKey: kCitiesKey)
     }
 

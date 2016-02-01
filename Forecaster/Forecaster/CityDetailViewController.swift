@@ -7,29 +7,77 @@
 //
 
 import UIKit
+import MapKit
+import CoreLocation
 
-class CityDetailViewController: UIViewController {
+class CityDetailViewController: UIViewController
+{
 
-    override func viewDidLoad() {
+    var city = City!()
+    
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var iconImage: UIImageView!
+    @IBOutlet weak var currentTempLabel: UILabel!
+    @IBOutlet weak var apparentTempLabel: UILabel!
+    @IBOutlet weak var humidityLabel: UILabel!
+    @IBOutlet weak var precipProbLabel: UILabel!
+    @IBOutlet weak var mapView: MKMapView!
+    
+    
+    
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setLabels()
+        mapLocation()
+        
     }
 
-    override func didReceiveMemoryWarning() {
+    override func didReceiveMemoryWarning()
+    {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
     }
     
+    // MARK: - Setup View
+    
+    func setLabels()
+    {
+        nameLabel.text = city!.name
+        iconImage.image = UIImage(named: "\(city.currentWeather!.icon).png")
+        currentTempLabel.text = "\(Int(city.currentWeather!.temperature))°F"
+        apparentTempLabel.text = "\(Int(city.currentWeather!.apparentTemperature))°F"
+        humidityLabel.text = "\(Int((city.currentWeather!.humidity) * 100))%"
+        precipProbLabel.text = "\(Int((city.currentWeather!.precipProbability) * 100))%"
+        
+    }
 
-    /*
+    
+    // MARK: - Map Display
+    
+    func mapLocation()
+    {
+        // helper: http://stackoverflow.com/questions/27495328/reverse-geocode-location-in-swift
+        
+        let latitude: CLLocationDegrees = (city?.lat)!
+        let longitude: CLLocationDegrees = (city?.lng)!
+        let location = CLLocation(latitude: latitude, longitude: longitude)
+        
+        CLGeocoder().reverseGeocodeLocation(location, completionHandler: {(placemarks, error) -> Void in
+            let mappedLocation = CLLocationCoordinate2DMake(latitude,longitude)
+            let viewRegion = MKCoordinateRegionMakeWithDistance(mappedLocation, 10000, 10000)
+            self.mapView.setRegion(viewRegion, animated: true)
+        })
+    }
+
+
+    
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func doneButton(sender: UIBarButtonItem)
+    {
+        navigationController?.popViewControllerAnimated(true)
     }
-    */
+    
 
 }

@@ -13,8 +13,9 @@ class CityWeatherTableViewCell: UITableViewCell
 {
 
     @IBOutlet weak var cityLabel: UILabel!
-    
     @IBOutlet weak var tempLabel: UILabel!
+    @IBOutlet weak var quickWeatherLabel: UILabel!
+    @IBOutlet weak var iconImage: UIImageView!
     
     
     
